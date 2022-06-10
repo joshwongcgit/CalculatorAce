@@ -1,0 +1,839 @@
+/* result section */
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+#app
+{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+}
+
+body
+{
+  overflow: none;
+}
+
+.leftContainer
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.item
+{
+  display: flex;
+} 
+
+.resultboxMiddle > div
+{
+  display:flex;
+  flex-direction: column;
+  margin-left:5px;
+}
+
+#resultbox
+{
+  display: flex;
+  flex-direction: column;
+  background-color:#2d3b3d;
+  height:208px;
+  width:470px;
+  z-index: 3;
+  border-radius:3px;
+  border:1px solid green;
+}
+
+.resultboxTop 
+{
+  height:28px;
+  width:470px;
+  display: flex;
+}
+
+.trigmode
+{
+  margin-right:420px;
+}
+
+#calculation
+{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  margin-top: 30px;
+  margin-left:0px;
+  font-size:23px;z
+  font-weight:300;
+  overflow-x: auto;
+}
+
+.exitResult
+{
+  display: flex;
+  justify-content: flex-start;  
+  font-size:25px;
+  color:red;
+  cursor: pointer;
+}
+
+.trigmode
+{
+  color:yellow;
+  font-weight:700;
+}
+
+.sepEqs b
+{
+  font-weight: 300;
+}
+
+.currentCalc
+{
+  background-color:#333129; /* #33129*/
+  height:160px;
+  width:575px;
+  font-size:34px;
+}
+
+#exitResult
+{
+  font-size:26px;
+  color:red;
+}
+
+.instantAnswer
+{
+  color:rgb(9, 198, 145);
+  font-size: 23px;
+  text-shadow: 0px 0px 8px rgb(9, 198, 145);
+  font-weight: 500;
+  height:90px;
+  margin-top:55px;
+  margin-left:2px;
+  overflow-x: auto;
+}
+
+/* backspace */
+input #backspace
+{
+  color:purple;
+  background-color: 'black';
+  z-index: 1;
+}
+
+/* buttons section  */
+#buttonbox
+{
+  display: flex;
+  background-color:#2b2f35;
+  height:302px;
+  width:470px;
+  outline: none;
+  border:1px red solid;
+  border-right:2px solid black;
+}
+
+/* buttons */
+
+#buttonbox input, #buttonbox button
+{
+  background-size: 2px 2px;
+  font-family: Arial;
+  font-size: 22px;
+  text-decoration: none;
+  border:0px black solid;
+  top: 0px;
+  left:0px;
+  height:50px;
+  width:50px;
+  margin:0px;
+  text-shadow:rgba(34, 106, 124, 0.4) 0 0 35px, rgba(34,106,124, 0.95) 0 0 25px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 1px inset;
+  background-color: #2d2d2d;
+  border-spacing: 0px;
+  z-index:4;
+}
+
+#buttonbox .root, #buttonbox #reset
+{
+  color:#9226ab;
+} 
+
+/* other  mathematical function color and font size */
+
+
+#buttonbox .trigswitch
+{
+  color:#0008ff;
+  font-weight:700;
+}
+
+#buttonbox input:hover
+{
+  background-color:rgb(32, 71, 135);
+}
+
+#buttonbox input[value = "x&sup2"]
+{
+  font-size:10px;
+}
+
+#buttonbox input[data-log="yes"]
+{
+  font-size:25px;
+}
+
+#buttonbox input[value="log"]
+{
+  padding-left:7px;
+  padding-top:3px;
+}
+
+#buttonbox #equal
+{
+  color:red;
+}
+
+
+/* trig buttons colors */
+#buttonbox .trig
+{
+  font-size:20px;
+  color:orange;
+  padding-left:8px;
+}
+
+#buttonbox .log
+{
+  font-size:20px;
+  color:#09ad32;
+  padding-left:8px;
+}
+
+#buttonbox .trig:hover
+{
+  font-size: 28px;
+  padding-left:2px;
+}
+
+#buttonbox #longtrig
+{
+  font-size:15px;
+  color:orange;
+  padding-left:8px;
+}
+
+#buttonbox #longtrig:hover
+{
+  font-size: 23px;
+  padding-left:0px;
+}
+
+#buttonbox #longertrig
+{
+  font-size:13px;
+  color:orange;
+  padding-left:6px;
+}
+
+#buttonbox #longertrig:hover
+{
+  font-size: 18px;
+  padding-left:0px;
+}
+
+#buttonbox .arrow
+{
+  font-size: 15px;
+  font-weight:900;
+}
+
+.degTrigMode button
+{
+  padding-left:7px;
+}
+
+.nav-tabs>li
+{
+  color:pink;
+}
+
+.functionTabs
+{
+  margin-right:88px;
+
+}
+
+.functionTabs a
+{
+  color:black;
+  border:0.5px black solid;
+  width:10px;
+  padding-left:2px;
+  padding-right:2px;
+  height:55px;
+  background-color:white;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:2px;
+}
+
+.functionTabs div
+{
+  transform:rotate(90deg);
+}
+
+.functionTabs>li>a:hover
+{ 
+  color:black;
+  background-color: #434543 !important;
+}
+
+.functionTabs>li>a 
+{
+  padding-left:10px;
+  padding-top:3px;
+}
+
+.functionTabs>li.active>a,.functionTabs>li.active>a:hover
+{
+  color:black;
+}
+
+#archyperbolic span
+{
+
+}
+
+/* negative positive switcher */
+
+.switchSign:hover
+{
+	font-size: 25px;
+  padding-left:5px;
+}
+
+/* Unknown */
+
+/* utility (helper) buttons  */
+
+.utilitybuttons
+{
+  display: flex;
+  flex-direction: column;
+  width:50px;
+}
+
+.tool .tooltiptext 
+{
+  font-size: 10px;
+  visibility:hidden;
+  width: 120px;
+  background-color:#19181a;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 144444444444444;
+}
+
+.tool:hover .tooltiptext 
+{
+  visibility: visible;
+}
+
+.utilitybuttons button
+{
+  color:#b019a1;
+  text-shadow:#fa00f2 0 0 30px, #fa00f2 0 0 30px;
+}
+
+.btnOpt
+{
+  border-radius:15px;
+}
+
+.tool:hover
+{
+  background-color:#4f4f78 !important;
+}
+
+.coolie button
+{
+  margin-top: 15px;
+  display:block;
+}
+
+.coolie2 button
+{
+  display:block;
+}
+
+
+/* console */
+
+.alert-danger
+{
+
+}
+
+.alert-custom
+{
+  z-index:1000;
+  color:red;
+  background-color: #3b3838;
+  border-radius: 150px;
+  border:3px #e02d00 solid;
+}
+
+.errorContent
+{
+  font-size: 18px;
+}
+
+.alert
+{
+  height:40px;
+  color:white;
+  font-weight: 200;
+}
+
+.errorClose
+{
+  color:red;
+  cursor:pointer;
+  font-size:27px;
+}
+
+/* History section */
+
+/* top history (title section) */
+
+#historySection
+{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+}
+
+span 
+{
+  content: "\2699";
+}
+
+#history 
+{
+  display: flex;
+  justify-content: center;
+  background: rgb(15,38,140);
+  background: linear-gradient(338deg, rgba(15,38,140,1) 0%, rgba(10,19,59,1) 50%, rgba(15,38,140,1) 100%);
+  height: 40px;
+  width:422px;
+  z-index:1;
+  font-size: 28px;
+  color:white;
+  font-weight:300;
+}
+
+/* The history header */
+.historia
+{
+  color:white;
+  font-family: 'Belleza', sans-serif;
+  font-size: 30px;
+  z-index: 3;
+}
+
+/* The history body where elements are placed at*/
+#bottomhistory
+{
+  display: flex;
+  flex-direction: column;
+  background: rgb(25,33,73);
+  background: linear-gradient(13deg, rgba(25,33,73,1) 0%, rgba(21,31,73,1) 47%, rgba(25,33,73,1) 100%);
+  height:470px;
+  width:422px;
+  z-index: 0;
+  font-size: 44px;
+  border-top:2px #2f449e solid;
+  border-right:2px #2f449e solid;
+  border-bottom:2px #2f449e solid;
+}
+
+#bottomhistory .item
+{
+  margin-bottom:5px;
+}
+/* Tabs */
+
+.digits
+{
+  margin-left: 190px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  color:#7dd4be;
+  font-size:15px;
+  font-weight:700;
+  z-index: 100;
+}
+
+.tab-content
+{
+
+}
+
+.exitLine
+{
+  color:white;
+  margin-left:10px;
+  width:26px;
+  height:36px;
+  font-size:23px;
+}
+
+.tabContainer .item
+{
+  margin-right:0px;
+}
+
+/* the whole tab */
+.tabby
+{
+  z-index: 3;
+  height:30px;
+}
+
+.addTab
+{
+  color:red;
+  height:30px;
+  font-size:28px;
+  cursor: pointer;
+}
+
+.addingTab
+{
+  margin-top: -3px;
+  height:14px;
+}
+
+.tabby #addTab:hover
+{
+  color:red;
+  font-size:24px;
+}
+
+/* The element that goes in the history  */
+
+.tabby li a span
+{
+  font-size: 15px;
+  font-family:'Oswald', sans-serif;
+  color:black;
+  font-weight:900;
+}
+
+.tabby li a
+{
+  display: flex;
+  height:30px;
+  width:80px;
+  background-color: brown;
+}
+
+.tabby li a:hover
+{
+  cursor:pointer;
+
+}
+
+.tabby li.active a
+{
+
+}
+
+.tabby li.active a:hover
+{
+  cursor: pointer;
+}
+
+.tabby li a input
+{
+  text-shadow: 0 0 0 #000;
+  color:black;
+  font-size: 14px;
+  font-family: Oswald;
+  border:none; /* #026efc */
+  width:62px;  
+  height:30px;
+  margin-top:-11px;
+  margin-left:-12px;
+  background-color: brown;
+}
+
+.tabby li.active input
+{
+  background-color: pink;
+}
+
+.tabby li.active a input
+{
+  text-shadow: 0 0 0 #000;
+  border:none;
+}
+
+.functionTabs li a
+{
+  background-color: yellow;
+}
+
+.functionTabs li a:hover
+{
+  cursor: pointer;
+}
+
+.functionTabs li.active a
+{
+  background-color: green
+}
+
+.functionTabs li.active a:hover
+{
+  cursor: pointer;
+}
+
+
+
+
+.tabby li.active a input:focus
+{
+  outline: none;
+}
+
+.tabby li a button
+{
+  background:none;
+  border:none;
+  padding:0;
+}
+
+.tabby>li>a,.tabby>li>a:hover
+{
+  background-color:brown;
+  border:none;
+}
+
+.tabby>li.active>a,.tabby>li.active>a:hover
+{
+  background-color:pink;
+  border:none;
+}
+
+/* the x to exit */
+.tabby .exitTab
+{
+  /* dont delete yet */
+  font-size: 16px;
+  font-weight:900;
+  color:red;
+  margin-top: -18px;
+  margin-left:4px;
+}
+
+.tabby .exitTab:hover
+{
+  /* dont delete yet */ 
+
+  font-size:16px;
+  color:red;
+}
+
+.exitHistory
+{
+  font-size:22px;
+  color:red;
+  margin-top:-7px;
+  cursor: pointer;
+}
+
+.nav-tabs
+{
+  border:none;
+}
+
+hr
+{
+
+}
+
+/* Digit Mode */
+#digitmode
+{
+  display: flex;
+}
+
+#digitmode div
+{
+  margin-right: 140px;
+}
+
+.sepEqs
+{
+  cursor:pointer;
+  color:white;
+  display: flex;
+}
+
+#calculation .sepEqs
+{
+  height:60px;
+  margin-bottom:0px;
+}
+
+.historyTab
+{
+  overflow-y: auto;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+.historyInputs
+{
+
+}
+
+.historyInputs .sepEqs
+{
+  margin-bottom: 40px;
+  margin-left:5px;
+}
+
+.number,.number:hover
+{
+  color:#4cbeff;
+}
+
+.historyInputs .number:hover
+{
+  background-color:#4cbeff;
+}
+
+.trig
+{
+  color:orange;
+}
+
+.historyInputs  .trig:hover
+{
+  background-color:orange;
+}
+
+.sign,.sign:hover,.equal
+{
+  color:red;
+  margin-left:5px;
+  margin-right:5px;
+}
+
+.historyInputs  .sign:hover
+{
+  background-color: pink;
+}
+
+.paren,.paren:hover
+{
+  color:yellow;
+}
+
+.historyInputs  .paren:hover
+{
+  background-color: yellow;
+}
+
+.pi
+{
+  color:#8253c9;
+}
+
+.historyInputs .pi:hover
+{
+  background-color:#8253c9;
+}
+
+.backspace
+{
+  color:#d10054;
+}
+
+.log
+{
+  color:#09ad32;
+}
+
+.historyInputs .log:hover
+{
+  background-color:#09ad32;
+}
+
+.decimal,.decimal:hover
+{
+  color: white;
+}
+
+.historyInputs .decimal:hover
+{
+  background-color: white;
+}
+
+
+
+.miscBtn,.miscBtn:hover, .power,.power:hover
+{
+  color:beige;
+}
+
+.factorial,.factorial:hover
+{
+  color:#7a7eff;
+}
+
+.historyInputs  .factorial:hover
+{
+  background-color:#7a7eff;
+}
+
+.root,.root:hover
+{
+  color:purple;
+}
+
+.historyInputs .root:hover
+{
+  background-color: purple
+}
+
+.commas
+{
+  text-shadow:rgba(34, 106, 124, 0.4) 0 0 9px, rgba(34,106,124, 0.95) 0 0 9px;
+  color: #4cbeff;
+}
+
+.showie
+{
+  font-size:19px;
+  background-color:yellow;
+}
+
+#calculation
+{
+  color:#899ba1;
+}
+

@@ -1,0 +1,195 @@
+#keys .modal-dialog
+{
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content
+{
+  background-color:#333129;
+}
+
+#keys .modal-title
+{
+  margin-top:-10px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
+#keys .modal-header
+{
+  display: flex;
+  justify-content:center; 
+}
+
+#keys .modal-header .item
+{
+  margin-left: 110px;
+}
+
+.modal-header
+{
+  height:50px;
+  color:black;
+  display: flex;
+
+}
+
+.key-body
+{
+  overflow-y: scroll;
+  height:600px;
+}
+
+.key-body #myCarousel
+{
+  height:470px;
+}
+
+.key-body .carousel-inner
+{
+  height:470px;
+}
+
+#keyCarousel .header
+{
+  font-size:23px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.key-body p
+{
+  color:#578adb;
+  font-family: 'Work Sans', sans-serif;
+  font-size:20px;
+  font-weight:600;
+}
+
+.key-body h2
+{
+  color:#6fcdf2;
+  font-size:24px;
+  font-family: Oswald;
+  margin-bottom:7%;
+}
+
+.key-body .math
+{
+  position:absolute;
+  left:320px;
+  top:-25px;
+}
+
+.key-body .colorHotKeys
+{
+  color:#C62D42;
+  font-family: 'Merriweather', serif;
+  font-weight:900;
+  font-size:22px;
+  position: relative;
+  left:5px;
+}
+
+.key-body .second
+{
+  color:#0f37ff;
+  font-family: 'Merriweather', serif;
+  font-weight:900;
+  font-size:24px;
+}
+
+.key-body .arrows
+{
+  color:white;
+  position: relative;
+  top:-5px;
+}
+
+#keys .modal-content
+{
+  background-color:#1d1d1f;
+  width:370px;
+}
+
+.key-body .descrip
+{
+  color:white;
+  font-size:14px;
+  font-family: 'Bitter', sans-serif;
+}
+
+.key-body .trig
+{
+  position: relative;
+  top:0px;
+  left:5px;
+}
+
+.key-body .carousel-control
+{
+  position: absolute;
+  top:420px;
+}
+
+.key-body .bottom
+{
+  position: absolute;
+  left:49%;
+  top:99%;
+}
+
+.colorHotKeys  .commas
+{
+  color:white;
+  font-size:20px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.dots
+{
+  color: white;
+  font-size:20px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+ .arrows
+{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.bottom
+{
+  font-weight:600;
+}
+
+::-webkit-scrollbar 
+{
+  width:8px;
+  height:6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track 
+{
+  background:#2a9beb; 
+    width:8px;
+  height:6px;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+{
+  background:#1a5782; 
+  border-radius:30px;
+  width:8px;
+  height:6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+{
+
+}

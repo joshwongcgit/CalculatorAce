@@ -1,0 +1,545 @@
+<html>
+<meta charset="utf-8">
+</meta>
+
+<head>  
+<script src="jquery-3.1.1.min.js"></script>
+<script src = "jquery.nicescroll.js"> </script>
+<script src = "jquery-ui.min.js"> </script>
+<link rel = "stylesheet" href = "animate.min.css" type = "text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel = "stylesheet" href = "bootstrap.min.css" type = "text/css">
+<script src = "bootstrap.min.js"> </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <scriptsx/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="an onymous"></script> -->
+
+<link href = UI/layout.css type = "text/css" rel = "stylesheet">
+<link href = UI/hotkeysModal.css type = "text/css" rel = "stylesheet">
+<link href = UI/settingsModal.css type = "text/css" rel = "stylesheet">
+<link href = UI/helpModal.css type = "text/css" rel = "stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheset">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.go
+ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Belleza" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ledger" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+<style>
+
+body
+{
+  
+}
+
+</style>
+
+<p class = "prompt"> </p>
+<div class = 'app' id = 'app'>
+
+  <div class = "leftContainer">
+    <div id = "resultbox" class = "item"> 
+      <div class = "resultboxTop">
+        <div class = "trigmode top"> </div>
+        <div class = "exitResult top tool"> &times;  </div>
+      </div>
+      
+      <div class = "resultboxMiddle tab-content">
+      </div> 
+
+    </div> <!-- resultbox -->
+
+  <!--Buttons (bottom left side) -->
+    <div id = "buttonbox" class = "item">
+    <div class = "tab-content">
+      <div class = "tab-pane active" id = "firstfunc" role="tabpanel">
+        <!-- Button with signs -->
+        <div id = "rowone" class = "btn-group">
+          <input type = "button" value = '&divide' class = "sign btn">
+          <input type = "button" value = '&times' class = "sign btn">
+          <input type = "button" value = "+" class = "sign btn">
+          <input type = "button" value = "&#x2212;" class = "sign btn">
+          <input type = "button" value = "(" class = "paren btn">
+           <input type = "button" value = ")" class = "paren btn">
+        </div> <!-- rowone -->
+
+        <div id = "rowtwo" class = "btn-group">
+          <input type = "button" value = "1" class = "number btn">
+          <input type = "button" value = "2" class = "number btn">
+          <input type = "button" value = '3' class = "number btn">
+          <input type = "button" value = "4" class = "number btn">
+          <input type = "button" value = "5" class = "number btn">
+          <input type = "button" id = "equal" value = '=' class = "btn">
+        </div> <!-- rowtwo -->
+
+      <div id = "rowthree" class = "btn-group">
+        <input type = "button" value = '6' class = "number btn">
+        <input type = "button" value = "7" class = "number btn">
+        <input type = "button" value = '8' class = "number btn">
+        <input type = "button" value = "9" class = "number btn">
+        <input type = "button" value = '0' class = "number btn">
+        <input type = "button" value = "." class = "decimal btn">
+      </div> <!-- rowthree -->
+
+      <div id = "special3" class = "btn-group">
+        <input type = "button" value = "^" class = " miscBtn btn" id = "onlyPower">
+        <input type = "button" value = "-" class = "negative miscBtn btn">
+        <input type = "button" value = "&#8731;" class = "root btn" id = "functions">
+        <input type = "button" value = "&radic;" class = "root btn" id = "functions">
+        <input type = "button" id = "reset" value = "C" class = "clearBtn btn">
+        <input type = "button" id = "backspace" value = "&#8592;" class = "backspace btn">
+      </div> <!-- special3 -->
+
+      <!-- problem exist here -->
+      <div id = "special2" class = "btn-group">   
+        <button class = "button log btn" value = "log" class = "log btn" data-log = "yes" id = "functions"> log </button>
+        <button class = "button log btn" id = "functions" value = "log2"> <span> log<sub>2</sub> </span> </button>
+        <button class = "btn log" value = "ln" class = "log btn" id = "functions"> ln </button>
+        <button class = "btn button log" value = "e" class = "log btn" id = "functions"> e </button>
+        <button class = "factorial btn button" value = "!" class = "factorial btn"> ! </button>
+      </div>
+
+      <div id = "special3" class = "btn-group btn-block">
+        <input type = "button" value = "&larr;" class = "miscBtn left arrow btn">
+        <input type = "button" value = "&rarr;" class = "miscBtn right arrow btn"> 
+      </div>
+
+      </div> <!-- first function -->
+    <div class = "tab-pane fade secondfunc" id = "secondfunc" role="tabpanel">
+      <div id = "trig" class = "btn-group"> <!-- trig -->
+        <input type = "button" value = "sin" class = "trig btn">
+        <input type = "button" value = "cos" class = "trig btn">
+        <input type = "button" value = "tan" class = "trig btn">
+        <input type = "button" value = "sec" class = "trig btn">
+        <input type = "button" value = "csc" class = "trig btn">
+        <input type = "button" value = "cot" class = "trig btn">
+      </div> <!-- trig -->
+
+      <div id = "arctrig" class = "btn-group">
+        <button class = "trig btn" id = "longtrig" value = "sin-1">sin<sup>-1</sup></button>
+        <button class = "trig btn" id = "longtrig" value = "cos-1">cos<sup>-1</sup></button>
+        <button class = "trig btn" id = "longtrig" value = "tan-1">tan<sup>-1</sup></button>
+        <button class = "trig btn" id = "longtrig" value = "csc-1">csc<sup>-1</sup></button>
+        <button class = "trig btn" id = "longtrig" value = "sec-1">sec<sup>-1</sup></button>
+        <button class = "trig btn" id = "longtrig" value = "cot-1">cot<sup>-1</sup></button>
+      </div>  <!-- arctrig -->
+
+      <div id = "hyperbolic" class = "btn-group">
+        <input type = "button" value = "sinh" class = "trig btn" id = "longtrig">
+        <input type = "button" value = "cosh" class = "trig btn" id = "longtrig">
+        <input type = "button" value = "tanh" class = "trig btn" id = "longtrig">
+        <input type = "button" value = "sech" class = "trig btn" id = "longtrig">
+        <input type = "button" value = "csch" class = "trig btn" id = "longtrig">
+        <input type = "button" value = "coth" class = "trig btn" id = "longtrig">
+      </div>  <!-- hyperbolic -->
+
+      <div id = "archyperbolic" class = "btn-group">
+        <button class = "trig btn" id = "longtrig" value = "sinh-1"><span>sinh<sup>-1</sup></span></button>
+        <button class = "trig btn" id = "longtrig" value = "cosh-1"><span>cosh<sup>-1</sup></span></button>
+        <button class = "trig btn" id = "longtrig" value = "tanh-1"><span>tanh<sup>-1</sup></span></button>
+        <button class = "trig btn" id = "longtrig" value = "csch-1"><span>csch<sup>-1</sup></span></button> 
+        <button class = "trig btn" id = "longtrig" value = "sech-1"><span>sech<sup>-1</sup></span></button>
+        <button class = "trig btn" id = "longtrig" value = "coth-1"><span>coth<sup>-1</sup></span></button>
+      </div> <!-- archyperbolic -->
+
+      <div class = "btn-group btn-block degTrigMode">
+        <input type = "button" value = "&pi;" class = "pi btn" id = "special">
+        <button class = "trigswitch degree btn" value = "Deg" data-log = "yes" style = "font-size:19px;"><span style = ""> Deg </span> </button>
+        <button class = "trigswitch radian btn" value = "Rad" data-log = "yes" style = "font-size:19px;"><span style = ""> Rad </span> </button>
+      </div>   <!-- radians or degree mode  -->
+    </div> <!-- second function -->
+   </div> <!-- tab contents -->
+  <!-- utility buttons -->
+
+<!-- tabs to switch function -->
+<ul class = "functionTabs nav nav-tabs" role="tablist">
+    <li class = "active"> 
+      <a data-toggle = "tab" href="#firstfunc"> 
+        <div> Basic </div> 
+     </a> 
+    </li>
+
+    <li> 
+      <a data-toggle = "tab" href="#secondfunc"> 
+        <div> Trig </div> 
+      </a> 
+    </li>
+</ul>
+
+<div class = "utilitybuttons">  
+   <button class = "btnOpt tool" id = "first" data-toggle="modal" data-placement="bottom" title="Settings" data-target = "#preferences"><span>&#9881;</span>  <span class="tooltiptext">Settings</span> </button>  <!--  setting -->
+   <button class = "btnOpt tool" id = "second" data-placement="bottom" title="Hotkeys"> <i class=
+    "material-icons" data-toggle = "modal" data-target = "#keys" style = "font-size:24px;">keyboard </i>  <span class="tooltiptext">Keyboard</span> </button>  <!-- hotkeys -->
+   <button class = "btnOpt tool" id = "third" data-toggle="modal" data-target = "#help" data-placement="bottom" title="Info"> <span style> ? </span>  <span class="tooltiptext">Info</span> </button> <!-- help or info -->
+   <button class = "btnOpt tool" id = "fourth" data-placement="bottom" title="Start new equation">  <span class="glyphicon glyphicon-plus" style = "font-size:35px;position:relative;top:-2px;" onclick = "newEquation()"> </span>  <span class="tooltiptext">Start new equation </span></button> <!-- add new equations -->
+
+   <button class = "btnOpt tool clearEntire" id = "seventh" data-placement="bottom" title="Clear entire calculation"> <i class="fa fa-eraser"> </i>  <span class="tooltiptext">Clear entire equation </span> </button> <!-- erase entire -->
+   <button class = "btnOpt tool digitConverter" id = "eighth" data-placement="bottom" title="Switch digits selection"> <i class="fa fa-arrows-h" style = "position:relative;left:-1px;top:-1px;"></i>  <span class="tooltiptext">Switch digits selection </span> </button> <!-- switch digits mode -->
+</div> <!-- utility buttons -->
+
+
+  </div> <!-- button box -->
+ </div> <!-- left container -->
+<!-- Top side of the history section -->
+
+<div id = "historySection" class = "item">
+
+  <!-- history text -->
+  <div id = "history" class = "item">
+    <div class = 'historia'> 
+      History 
+    </div>
+  </div>
+  <!-- history results -->
+  <div id = "bottomhistory" class = "item">
+
+  <div class = "tabContainer item">
+    <ul class="item nav nav-tabs tabby tabList"> 
+    </ul>
+    <!-- add tab -->
+    <span class = "item addingTab"> 
+      <span class = "addTab"> + </span>
+    </span> 
+  </div>
+    
+    <!-- digitmode -->
+    <div id = "digitmode" class = "item">
+      <div class = "digits">Single</div>
+      <div class = "exitHistory tool"> &times; <span class="tooltiptext">Clear entire history </span> </div>
+    </div> 
+
+    <div class = "historyInputs tab-content"> 
+    </div>
+
+    </div> <!-- bottom history -->
+</div> <!-- history section -->
+
+</div> <!-- app -->
+
+  <div class="modal fade" id="help" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-toggle="modal">
+  <div class="modal-dialog modal-dialozg-centered modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="modal-title thetitle item" id="exampleModalLongTitle"> About </h2>
+        <button type= "button" class="item close" data-dismiss="modal" aria-label="Close">
+          <span class = "close">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body help-body">
+              <div>
+                <p class = "first holder" style = "font-size:25px;"> History </p> 
+                <p class = "first nested" style = "font-size: 15px;">
+              The history section keeps track of your past calculations. This will enable users to have an easier and efficient way of solving long mathematical problems </p>
+              </div>
+
+              <div>
+                <p class = "five holder" style = "font-size:25px;"> Using history to reselect </p>
+                <p class = "fifth nested" style = "font-size:15px;"> You can click on any elements to add to your current calculation. You can actually visualize previous results so you input them into your next problem
+                talk about result section </p>
+              </div>
+
+              <div>
+                <p class = "six holder" style = "font-size:25px;">Color indicators </p>
+                <p class = "sixth nested" style = "font-size:15px"> Hovering on elements in the history section creates colorful indexes that helps you distinguish the different  kinds of elements. All types of elements are shown in different colors. </p>
+              </div>
+            
+              <div>
+                <p class = "eight holder" style = "font-size:25px;"> Console messages</p>
+                <p class = "eighth nested" style = "font-size:15px"> Console message appear below the instant answer section when you made an error in your calculation. The message displayed will alert you the type of error. All events will be stopped and the incorrect value will not be inserted into your current calculation. This would prevent calculation error after even after sleecting equal sign.  The console message visibility button allows you to either show or hide the console message.</p>
+              </div>
+              
+
+              <div>
+                <p class = "seven holder" style = "font-size:25px;"> Hotkeys </p>
+                <p class = "seventh nested" style = "font-size:15px"> Click on the hotkeys button to take a look. Certain mathematical values can be typed using the keyboard.</p>
+              </div>
+                
+              <div> 
+                <p class = "four holder" style = "font-size:25px;"> Single and whole digits </p>
+                <p class = "fourth nested" style = "font-size:15px"> The numeric values can be reseelected in the history section as separate digits or as a whole. Reclicking the single or whole digit converter toggles it. </p>
+              </div> 
+
+        </div> <!-- modal body -->
+      </div> <!-- modal content -->
+    </div> <!-- modal dialog -->
+  </div> <!-- modal -->
+
+<div class="modal fade" id="keys" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="modal-title thetitle item" id="exampleModalLongTitle"> Hotkeys </h2>
+        <button type="button" id = "keysX" class="item close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body key-body">
+        
+                <h2 class = "header"> Math symbols </h2>
+      
+                 <div>
+                    <p class = ""> Numbers </p>
+                    <p class = "colorHotKeys ten"> 0<span class = "commas">,</span>1<span class = "commas">,</span>2<span class = "commas">,</span>3<span class = "commas">,</span><span class = "dots">...</span><span class = "commas">,</span>9</p>
+                    <p class = "tenth"> <span class = "descrip"> Outputs the corresponding number </span> </p>
+                   </div>
+
+                  <div>
+                    <p class = ""> Operators </p>
+                    <p> <span class = "colorHotKeys">+</span>  <span class = "arrows"> &#8594; </span> <span class = "second"> + </span> </p>
+                    <p> <span class = "colorHotKeys"> &#x2212; </span> <span class = "arrows"> &#8594; </span> <span class= "second"> &#x2212; </span> </p>
+                    <p> <span class = "colorHotKeys"> * </span> <span class = "arrows"> &#8594; </span> <span class = "second"> &times; </span> </p>
+                    <p> <span class = "colorHotKeys"> / </span> <span class = "arrows"> &#8594; </span> <span class = "second"> &divide; </span> </p>
+                    <p> <span class = "colorHotKeys">  = </span> <span class = "arrows"> &#8594; </span> <span class = "second"> =  </span> </p>
+                    <p> <span class = "colorHotKeys"> ^ </span> <span class = "arrows"> &#8594;</span> <span class = "second"> ^  </span> </p>
+                  </div>
+
+                  <div>
+                    <p class = ""> Parentheses </p>
+                    <p> <span class = "colorHotKeys"> ( </span> <span class = "arrows"> &#8594; </span> <span class = "second"> ( </span> </p>
+                    <p> <span class = "colorHotKeys"> ) </span> <span class = "arrows"> &#8594; </span> <span class = "second"> ) </span> </p>
+                  </div>
+
+              
+           
+                  <div>
+                    <p class = ""> Trignometric </p>
+                    <p class = "colorHotKeys twelve"> S <span class = "descrip trig"> sin </span> </p>
+                    <p class = "colorHotKeys thirteen"> C <span class = "descrip trig"> cos </span> </p>
+                    <p class = "colorHotKeys fourteen"> T <span class = "descrip trig"> tan </span> </p>
+                  </div>
+
+                  <div>
+                    <p class = "header"> Other mathematical functions </p>
+                    <p class = "colorHotKeys fifthteen"> E <span class = "descrip trig"> e </span> </p>
+                    <p class = "colorHotKeys sixteen"> L <span class = "descrip trig"> log </span> </p>
+                  </div>
+            <!-- end first slide -->
+
+                  <h2 class="header"> Toggable hotkeys </h2>
+                  <p class = "colorHotKeys one"> Q </p> <p class = "descrip"> Toggles between single and whole numbers selection for the history </p>
+                  <p class = "colorHotKeys six"> Z </p> <p class = "descrip"> Toggles the quick answer visibility </p>
+                  <p class = "colorHotKeys five"> V </p> <p class = "descrip"> Toggles the guide menu </p>
+                  <p class = "colorHotKeys seven"> X </p> <p class = "descrip"> Toggles the setting menu </p>
+                  <p class = "colorHotKeys eleven"> K </p> <p class = "descrip"> Toggles the hotkey menu 
+
+                  <h2 class = "header"> Clearing hotkeys </h2>
+                
+                  <p class = "colorHotKeys four"> A </p> <p class = "descrip"> Clear both calculation and the whole history </p>
+                  <p class = "colorHotKeys four"> R </p> <p class = "descrip"> Clear both calculation only </p>
+                  <p class = "colorHotKeys four"> H </p> <p class = "descrip"> Clear the whole history only </p>
+
+              
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  <div>
+  
+
+
+  <div class="modal fade" id="preferences" role="dialog">
+    <div class="modal-dialog modal-dialog preferences-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content preferences">
+
+        <div class="modal-header">
+        <h2 class="modal-title preferences-header item" id="exampleModalLongTitle"
+        > Preferences </h2>
+        <button type="button" id = "preferencesX" class="item close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+          <div class="preferences-body">
+
+            <div class = "preferencesContainer">
+              <div class = "preferencesTopics"> Current answer display </div>
+                <div class = "prefer"> <input type = "radio" name = "currentAnswer" value = "show" id = "showCurrentAnswer" checked = "checked"> Show quick answer
+                  <input type = "radio" id = "hideCurrentAnswer" name = "currentAnswer" value = "hide" style = "position:relative;left:35px">
+                  <span style = "position:relative;left:35px"> Hide quick answer </span>
+               
+            </div>
+          </div>
+
+            <div class = "preferencesContainer">
+              <div class = "preferencesTopics"> Guide messages display </div>
+                <div class = "prefer">
+                  <input type = "radio" id = "showConsole" value = "show" name = "consoleDisplay" checked = "checked"> Show console message
+                  <input type = "radio" id = "hideConsole" value = "hide" name = "consoleDisplay" style = "position:relative;left:35px">
+                   <span style = "position:relative;left:35px"> Disable console messages</span>
+                </div>
+            </div>
+       
+
+            <div class = "preferencesContainer">  
+              <div class = "preferencesTopics"> History display  </div>
+                <div class = "prefer"> <input type = "radio" id = "showHistory" value = "show" name = "history" checked = "checked"> Show history 
+                   <input type = "radio" id = "hideHistory" value = "hide" name = "history" style = "position:relative;left:15px">
+                    <span style = "position:relative;left:15px"> Hide history </span>
+            </div>
+          </div>
+
+            <!-- <div class = "preferencesContainer">
+              <div class = "preferencesTopics"> Clear history </div>
+                <div class = "prefer">
+                  <input type = "radio" id = "manually" value = "manual" name = "clearHistory" checked = "checked"> Manually clear history</div>
+                <div>
+                  <input type = "radio" id = "autoclearEvery" value = "autoEvery" name = "clearHistory">
+                   <span> Automatically clear whole history for every finished equations </span>
+                </div>
+                <div>
+                  <input type = "radio" id = "autoclearFull" name = "clearHistory" value = "autoTab"> Automatically clear whole history on full set
+                </div>
+            </div>  --> 
+           <div class = "preferencesContainer">  
+              <div class = "preferencesTopics"> Text colors </div>
+                <div class = "prefer"> <input type = "radio" id = "textColor" value = "variety" name = "textColor" checked = "checked"> Show different colors
+                   <input type = "radio" id = "textColor" value = "none" name = "textColor" style = "position:relative;left:15px">
+                    <span style = "position:relative;left:15px"> No colors </span>
+            </div>
+          </div>
+
+            <div class = "preferencesContainer">  
+              <div class = "preferencesTopics"> Button Colors  </div>
+                <div class = "prefer"> <input type = "radio" id = "buttonColor" value = "variety" name = "buttonColor" checked = "checked"> Show different colors
+                   <input type = "radio" id = "buttonColor" value = "none" name = "buttonColor" style = "position:relative;left:15px">
+                    <span style = "position:relative;left:15px"> No colors </span>
+                </div>
+            </div> 
+        
+          <div class = "preferencesButton">
+            <button class = "btn btn-primary apply" data-target = "#preferences" data-toggle = "modal"> Apply </button>
+            <button class = "btn btn-info cancel" data-target = "#preferences" data-toggle = "modal"> Cancel </button>
+            <button class = "btn btn-warning resetSetting"> Reset Settings </button>
+        </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<!-- Carousel for Help -->
+
+
+   <!-- history -->
+<!-- End -->
+</body>
+
+<script src = "Usefulfunc/decode.js"> </script>
+<script src = "Variables/variables.js"> </script>
+<script src = "Usefulfunc/autofocus.js"> </script>
+<script src = "Usefulfunc/parenRule.js"> </script>
+<script src = "Usefulfunc/factorial.js"> </script>
+<script src = "Console/console.js"> </script>
+
+<script src = "SolveItNow/solver.js"> </script>
+<script src = "SolveItNow/009_checkAnswerValue.js"> </script>
+<script src = "SolveItNow/008_solveItNow.js"> </script>
+<script src = "SolveItNow/007_specialSignsWithoutParen.js"> </script>
+<script src = "SolveItNow/006_solveAllParen.js"> </script>
+<script src = "SolveItNow/004_combineNumbersTogether.js"> </script>
+<script src = "SolveItNow/002_filterMultiAndDivide.js"> </script>
+<script src = "SolveItNow/checkInputValue.js"> </script>
+
+<script src = "Usefulfunc/deleteHistoryAnywhere.js"> </script>
+<script src = "ButtonInputs/gettingValues.js"> </script>
+<script src = "Usefulfunc/addZero.js"> </script>
+<script src = "ButtonInputs/buttonpad.js"> </script>
+<script src = "ButtonInputs/negative.js"> </script>
+<script src = "ButtonInputs/decimal.js"> </script>
+<script src = "Hotkeys/hotkeys.js"> </script>
+
+<script src = "Events/events.js"> </script>
+<script src = "Tab/nameTab.js"> </script>
+<script src = "Tab/newEquationSet.js"> </script>
+<script src = "Tab/tabs.js"> </script>
+<script src = "Tab/tabfunctions.js"> </script>
+
+<script src = "HistoryInputs/clearHistoryEquations.js"> </script>
+<script src = "HistoryInputs/stringmod.js"> </script>
+
+<script src = "Answers/answerDecimalCheck.js"> </script>
+
+<script src = "View/render.js"> </script>
+<script src = "Result/caret.js"> </script>
+
+<script src = "Buttons/hideConsole.js"> </script>
+
+<script src = "ButtonInputs/reset.js"> </script>
+<script src = "Buttons/clear.js"> </script>
+<script src = "Buttons/clearall.js"> </script>
+<script src = "Buttons/digitSwitch.js"> </script>
+<script src = "Buttons/radianDegree.js"> </script>
+
+<script src = "Buttons/preferencesFunctions.js"> </script>
+
+<script src = "Usefulfunc/backspace.js"> </script>
+<script src = "Usefulfunc/radianMode.js"> </script>
+<script src = "Usefulfunc/resizeCalculation.js"> </script>
+<script src = "Usefulfunc/deleteButton.js"> </script>
+<script src = "Usefulfunc/lk.js"> </script>
+
+<script>
+
+  $(document).ready(function()
+  { 
+    $('.addTab').off().click(function()
+  {
+    newEquation();
+  });
+   
+  var newTab = false;
+
+  $('#historyInputs').empty();
+  newEquation();
+
+  $('.exitResult, .clearBtn').click(function()
+  {
+    $currentCalc.empty();
+    $instantAnswer.empty();
+    equalPressed = true;
+    equalArray[activeTabNumber] = true;
+  });
+
+  $('.exitHistory').click(function()
+  {
+    $historyTab.empty();
+  });
+
+  $(".functionTabs li a ").click(function()
+  {
+
+  });
+});
+
+</script>
+
+</html>

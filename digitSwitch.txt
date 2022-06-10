@@ -1,0 +1,13 @@
+<b class = "number"> 2 </b> <b class = "number"> 3 </b> <b class = "sign"> + </b> <b class = "number"> 4 </b> <b class = "number"> 5 </b>
+
+press whole
+
+<b class = "number"> 23 </b> <b class = "sign"> + </b> <b class = "number"> 45 </b>
+
+
+
+<b class = "number"> 23 </b> <b class = "sign"> + </b> <b class = "number"> 45 </b>
+
+press single
+
+<b class = "number"> 2 </b> <b class = "number"> 3 </b> <b class = "sign"> + </b> <b class = "number"> 4 </b> <b class = "number"> 5 </b>

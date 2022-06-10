@@ -1,0 +1,115 @@
+#preferences .modal-dialog
+{
+  display: flex;
+  justify-content: center;
+}
+
+/* the exit icon to leave the modal */
+#preferencesX
+{
+  font-size:40px;
+  margin-top: -10px;
+  cursor: pointer;
+  opacity: .5;
+  z-index: 2;
+}
+
+#preferencesX:hover
+{
+  color:#b50000;
+}
+
+.preferences
+{
+  font-family: 'Coda', cursive;
+  color:#2054a8;
+  font-weight:900;
+  font-size:30px;
+}
+
+.preferences-content
+{
+  width:600px;
+}
+
+.preferences-header
+{
+  font-weight:700;
+  height:35px;
+  margin-left:-45px;
+}
+
+#preferences .modal-header
+{
+  display: flex;
+  justify-content: center;
+}
+
+#preferences .modal-title
+{
+  margin-top: -10px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
+#preferences .modal-header .item
+{
+  margin-left: 200px;
+}
+
+.preferencesContainer
+{
+  margin-bottom:15px;  
+}
+
+.preferences-body
+{
+	font-weight:900;
+	color:white;
+	height:365px;
+	font-size:13px;
+	font-family:'Ledger', serif;
+	position: relative;
+	top:-40px;
+}
+
+.preferences-body div
+{
+	position: relative;
+	left:30px;
+	top:25px;
+  font-family:'Ledger', serif;
+  font-weight: 900;
+  font-size:15px;
+}
+
+.preferences-body > .container div
+{
+
+}
+
+.preferencesButton
+{
+  display: flex;
+  justify-content: center;
+  margin-top:9%;
+}
+
+.preferencesButton button
+{
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.preferences-footer
+{
+
+}
+
+.preferencesTopics
+{
+	font-weight: 500;
+	color:#87a2cc;
+	font-size:18px;
+}
