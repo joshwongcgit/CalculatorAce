@@ -3,7 +3,6 @@ var wholeDigit = false;;
 var numberStore = [];
 var switchedDigits = false;
 
-
 // text
 $(".digits").click(function()
 {
@@ -16,22 +15,17 @@ $('.digitConverter').click(function()
   switchMode();
 });
 
-
 // render
-
-
 function switchMode()
 {
-  if (singleDigit)
+  if ($digitTab.text() == "Single")
   {
-    singleDigit = false;
-    $(".digits").html("Whole");
+    $digitTab.html("Whole");
   }
 
   else
   {
-    singleDigit = true;
-    $(".digits").html("Single");
+    $digitTab.html("Single");
   }
 
   switchedDigits = true;
@@ -40,14 +34,12 @@ function switchMode()
   historyContent = historyContent.trim();
   historyContent = historyContent.split("");
 
-  if (!singleDigit && historyContent.length != 0)
+  if ($digitTab.text() == "Whole" && historyContent.length != 0)
   {
     historyContent = processNumbers(historyContent);
   }
 
-
-
-    renderContent(historyContent);
+  renderContent(historyContent);
 }
 
 /* function convertmode(bool)

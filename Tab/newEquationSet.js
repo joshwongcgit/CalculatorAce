@@ -35,24 +35,30 @@
       $("input[class*=" + tabNumber +"]").val(tabNumber);
 
       // creates new history
-
       $(".historyInputs  .tab-pane").removeClass("active")
-      $(".historyInputs").append("<div id = " + idValue + " class = 'tab-pane active historyTab historyTab" + tabNumber + "'>")
+      $(".historyInputs").append("<div id = " + idValue + " class = 'tab-pane active historyTab historyTab" + tabNumber + "'>");
       $historyTab = $('.historyTab' + tabNumber);
       $historyTab.css('font-size','20px').css('z-index','5');
-    
 
-      $(".resultboxMiddle  .tab-pane").removeClass("active")
+      $(".digitsMode .tab-pane").removeClass("active");
+      $(".digitsMode").append("<div id = " + idValue + " class = 'tab-pane active digits digitsTab digitsTab" + tabNumber + "'>Single</div>")
+      $digitTab = $('.digitsTab' + tabNumber);
+
+      $(".trigMode .tab-pane").removeClass("active");
+      $(".trigMode").append("<div id = " + idValue + " class = 'tab-pane active trigTab trigTab" + tabNumber + "'> Deg </div>")
+      $trigTab = $('.trigTab' + tabNumber);
+
+      $(".resultboxMiddle  .tab-pane").removeClass("active");
       // create tab content to store calculation
-      $(".resultboxMiddle").append("<div id = " + idValue + " class = 'tab-pane active result" + tabNumber + "'>");
-      $('.result' + tabNumber).append('<div contenteditable = "true" id = "calculation" class = resultTab' + tabNumber + '> </div>');
+      $(".resultboxMiddle").append("<div contenteditable = 'true' id = 'calculation "  + idValue + "' class = 'tab-pane active resultTab resultTab" + tabNumber + "'> </div>");
       $currentCalc = $('.resultTab' + tabNumber);
       $currentCalc.css("outline","0px solid transparent");
       $currentCalc.focus();
       $currentCalc.css("white-space","nowrap");
 
+      // $(".resultboxMiddle  .tab-pane").removeClass("active");
       // creates tab content to store instant answer view (current or preview answer)
-      $('.result' + tabNumber).append('<div class = instantAnswerTab' + tabNumber + '> </div>');
+      $('.resultboxMiddle').append("<div class = 'tab-pane active instantAnswerTab instantAnswerTab" + tabNumber + "'> </div>");
       $instantAnswer = $('.instantAnswerTab' + tabNumber);
       $instantAnswer.addClass('instantAnswer');
       $instantAnswer.empty();
@@ -85,7 +91,7 @@
         renamingTab();
         checkPreferences();
         initiateKeydown();
-        autofocus();
+        // autofocus();
     }
   
 

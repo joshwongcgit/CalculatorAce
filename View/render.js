@@ -14,10 +14,21 @@ function dragIt()
 
 function renderScrolling()
 {
+  var width = $historyTab.children(".sepEqs").width();
   //alert($currentCalc.text().split(""))
-  $currentCalc.scrollLeft(2000000);
+  $currentCalc.scrollLeft(20000);
   $historyTab.scrollTop(200000);
-  $historyTab.scrollLeft(210000);
+
+  if (width > 300)
+  {
+    $historyTab.scrollLeft(width);
+  }
+
+  else
+  {
+    $historyTab.scrollLeft(0);
+  }
+
 }
 
 function initiatePostRenderEvents()
@@ -28,19 +39,18 @@ function initiatePostRenderEvents()
       {
         newContentLength++;
       }
-
-      */
+  */
   resetBoolType();
   deleteLines();
   historyClicking();
   initiateKeydown();  
-  autofocus();
+  // autofocus();
   renderScrolling();
 }
 
 function renderContent(content,value) 
 {
-  if (singleDigit)
+    if ($digitTab.text() == "Single")
     {
       var elemArr = [];
       var singleDigitArr = [];
@@ -66,6 +76,8 @@ function renderContent(content,value)
       }
         content = singleDigitArr;
     }
+
+    
 
      var str = "";
 

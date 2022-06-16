@@ -4,6 +4,8 @@ var $historyTab;
 var $currentCalc;
 var $prompt;
 var $instantAnswer;
+var $digitTab;
+var $trigTab;
 
 var activeTabNumber = 0;
 

@@ -11,6 +11,16 @@ function activeTab()
     var value = $(this).attr("data-value");
     $(".historyTab" + value).addClass("active");
 
+    $(".resultTab").removeClass("active")
+    $(".resultTab" + value).addClass("active");
+
+
+    $(".instantAnswerTab").removeClass("active")
+    $(".instantAnswerTab" + value).addClass("active");
+
+    $(".digitsTab").removeClass("active")
+    $(".digitsTab" + value).addClass("active");
+
     tabObjects(value);
   });
 }
@@ -20,6 +30,8 @@ function tabObjects(value)
   $currentCalc = $(".resultTab" + value);
   $instantAnswer = $(".instantAnswerTab" + value);
   $historyTab = $(".historyTab" + value);
+  $digitTab = $(".digitsTab" + value);
+  $trigTab = $(".trigTab" + value);
 
   getData(value);
 }

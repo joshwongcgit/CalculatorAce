@@ -59,7 +59,7 @@ currentCalc.keydown(function(event)
 	  }
 	    str = str.concat('<b class = "equal">' + equal + '</b>');
 
-		if (singleDigit)
+		if ($digitTab.text() == "Single")
 		{
 		  var ans = answer.split("");
 

@@ -1,5 +1,4 @@
 $('.degree').css("background-color","#e6f5f5");
-$(".trigmode").html('Deg');
 
 $(".trigswitch").click(function()
 {
@@ -26,13 +25,13 @@ $(".trigswitch").click(function()
   if (mode == "Deg")
   {
     $(".radian").css("background-color","");
-    $(".trigmode").html('Deg');
+    $trigTab.html('Deg');
   }
 
   else if (mode == "Rad")
   {
     $(".degree").css("background-color","");
-    $(".trigmode").html('Rad');
+    $trigTab.html('Rad');
   }
     answer = getAnswer();
     $instantAnswer.html(answer);

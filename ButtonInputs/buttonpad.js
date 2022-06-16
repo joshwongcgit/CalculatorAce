@@ -84,6 +84,11 @@ function processValue(value)
 		
 	}
 
+	else if (value == undefined)
+	{
+
+	}
+
 	else if (value == "=")
 	{
 		if (!equalPressed)
@@ -98,7 +103,7 @@ function processValue(value)
 		  var historyContent = $historyTab.html().splitter("</b>");
 		  historyContent.splice(historyContent.length-2,0,"<b class = 'equal'>=</b>");
 
-		  if (singleDigit)
+		  if ($digitTab.text() == "Single")
 		  {
 		  	for (var x = 0; x < answer.length; x++)
 		  	{
@@ -175,6 +180,7 @@ function processValue(value)
 		  	// value is inside the array 
 		  	if ((typeArray[k].includes(value) || (typeArray[k].includes(value[value.length-1]) && !shortenInverseTrigArray.includes(value) && !shortenLogArray.includes(value))) && ((typeBool[k] && typeBool2[k]) || equalPressed))
 		  	{
+
 				  if (equalPressed)
 				  {
 						$historyTab.scrollLeft(0);
@@ -251,12 +257,11 @@ function processValue(value)
 			}
 	}
 
-	 calcContent = splitPowerWithNumbers(calcContent);
-	 calcContent = groupLetters(calcContent);
-	 calcContent = groupTrigWithNegativeOne(calcContent);
-	 calcContent = processNumbers(calcContent);
-	 $(".functionTabs li a").click(function(){alert("hey")})
-	 renderContent(calcContent,value);
+	calcContent = splitPowerWithNumbers(calcContent);
+	calcContent = groupLetters(calcContent);
+	calcContent = groupTrigWithNegativeOne(calcContent);
+	calcContent = processNumbers(calcContent);
+	renderContent(calcContent,value);
 }
 
 }

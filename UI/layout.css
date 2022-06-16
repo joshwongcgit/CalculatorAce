@@ -34,6 +34,8 @@ body
   display:flex;
   flex-direction: column;
   margin-left:5px;
+  margin-top:8%;
+  margin-bottom:15%;
 }
 
 #resultbox
@@ -44,8 +46,8 @@ body
   height:208px;
   width:470px;
   z-index: 3;
-  border-radius:3px;
-  border:1px solid green;
+  border-radius:1px;
+  border:1px solid black;
 }
 
 .resultboxTop 
@@ -65,11 +67,15 @@ body
   display: flex;
   flex-direction: row;
   width:100%;
-  margin-top: 30px;
   margin-left:0px;
-  font-size:23px;z
+  font-size:23px;
   font-weight:300;
   overflow-x: auto;
+}
+
+.instantAnswerTab
+{
+  margin-top:45px;
 }
 
 .exitResult
@@ -90,6 +96,11 @@ body
 .sepEqs b
 {
   font-weight: 300;
+}
+
+.resultTab .sepEqs
+{
+  font-size: 25px;
 }
 
 .currentCalc
@@ -134,7 +145,7 @@ input #backspace
   height:302px;
   width:470px;
   outline: none;
-  border:1px red solid;
+  border:1px blacksolid;
   border-right:2px solid black;
 }
 
@@ -161,7 +172,7 @@ input #backspace
 
 #buttonbox .root, #buttonbox #reset
 {
-  color:#9226ab;
+  color:#c738e8;
 } 
 
 /* other  mathematical function color and font size */
@@ -211,7 +222,7 @@ input #backspace
 #buttonbox .log
 {
   font-size:20px;
-  color:#09ad32;
+  color:#0dd43f;
   padding-left:8px;
 }
 
@@ -261,49 +272,8 @@ input #backspace
 .nav-tabs>li
 {
   color:pink;
-}
+}'
 
-.functionTabs
-{
-  margin-right:88px;
-
-}
-
-.functionTabs a
-{
-  color:black;
-  border:0.5px black solid;
-  width:10px;
-  padding-left:2px;
-  padding-right:2px;
-  height:55px;
-  background-color:white;
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:2px;
-}
-
-.functionTabs div
-{
-  transform:rotate(90deg);
-}
-
-.functionTabs>li>a:hover
-{ 
-  color:black;
-  background-color: #434543 !important;
-}
-
-.functionTabs>li>a 
-{
-  padding-left:10px;
-  padding-top:3px;
-}
-
-.functionTabs>li.active>a,.functionTabs>li.active>a:hover
-{
-  color:black;
-}
 
 #archyperbolic span
 {
@@ -331,7 +301,7 @@ input #backspace
 
 .tool .tooltiptext 
 {
-  font-size: 10px;
+  font-size:13px;
   visibility:hidden;
   width: 120px;
   background-color:#19181a;
@@ -434,7 +404,7 @@ span
   display: flex;
   justify-content: center;
   background: rgb(15,38,140);
-  background: linear-gradient(338deg, rgba(15,38,140,1) 0%, rgba(10,19,59,1) 50%, rgba(15,38,140,1) 100%);
+  background: linear-gradient(338deg, rgba(4,14,43,1) 0%, rgba(22,40,92,1) 50%, rgba(4,14,43,1) 100%);
   height: 40px;
   width:422px;
   z-index:1;
@@ -447,8 +417,9 @@ span
 .historia
 {
   color:white;
-  font-family: 'Belleza', sans-serif;
-  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size:25px;
+  font-weight:800;
   z-index: 3;
 }
 
@@ -457,8 +428,7 @@ span
 {
   display: flex;
   flex-direction: column;
-  background: rgb(25,33,73);
-  background: linear-gradient(13deg, rgba(25,33,73,1) 0%, rgba(21,31,73,1) 47%, rgba(25,33,73,1) 100%);
+  background-color:#06102e;
   height:470px;
   width:422px;
   z-index: 0;
@@ -546,23 +516,27 @@ span
   display: flex;
   height:30px;
   width:80px;
-  background-color: brown;
+  background-color:#7a7a7a;
+  border-radius:0px;
 }
 
 .tabby li a:hover
 {
   cursor:pointer;
-
+  background-color:#4f4d4d;
 }
 
 .tabby li.active a
 {
-
+ background-color:#96bdd9;
+ border:1px;
 }
 
 .tabby li.active a:hover
 {
   cursor: pointer;
+  background-color:#7699b3;
+  border: 1px;
 }
 
 .tabby li a input
@@ -576,42 +550,90 @@ span
   height:30px;
   margin-top:-11px;
   margin-left:-12px;
-  background-color: brown;
+  background-color:#7a7a7a;
+}
+
+.tabby li a input:hover
+{
+  background-color:#4f4d4d;
+  cursor:pointer;
 }
 
 .tabby li.active input
 {
-  background-color: pink;
+  background-color:#96bdd9;
+  text-shadow:0 0 0 #000;
 }
 
-.tabby li.active a input
+.tabby li.active input:hover
 {
-  text-shadow: 0 0 0 #000;
-  border:none;
+  background-color:#7699b3;
+  cursor:pointer;
+}
+
+.functionTabs
+{
+  margin-right:88px;
+
+}
+
+.functionTabs a
+{
+  color:black;
+  border:0.5px black solid;
+  width:10px;
+  padding-left:2px;
+  padding-right:2px;
+  height:55px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:2px;
 }
 
 .functionTabs li a
 {
-  background-color: yellow;
+  background-color: #969997;
 }
 
 .functionTabs li a:hover
 {
-  cursor: pointer;
+
 }
 
 .functionTabs li.active a
 {
-  background-color: green
+  background-color:#393b3a;
+  color: white;
+  border:1px black solid;
 }
 
 .functionTabs li.active a:hover
 {
-  cursor: pointer;
+  cursor:pointer;
+  color:white;
 }
 
+.functionTabs div
+{
+  transform:rotate(90deg);
+}
 
+.functionTabs>li>a:hover
+{ 
+  background-color:#7e827f;
+  color: white;
+}
 
+.functionTabs>li>a 
+{
+  padding-left:10px;
+  padding-top:3px;
+}
+
+.functionTabs>li.active>a,.functionTabs>li.active>a:hover
+{ 
+  background-color: #393b3a;
+}
 
 .tabby li.active a input:focus
 {
@@ -625,16 +647,20 @@ span
   padding:0;
 }
 
-.tabby>li>a,.tabby>li>a:hover
+.tabby>li>a,
 {
-  background-color:brown;
+  background-color:#7a7a7a;
   border:none;
 }
 
-.tabby>li.active>a,.tabby>li.active>a:hover
+.tabby>li>a:hover
 {
-  background-color:pink;
-  border:none;
+
+}
+
+.tabby>li.active>a:hover
+{
+
 }
 
 /* the x to exit */
@@ -675,14 +701,14 @@ hr
 }
 
 /* Digit Mode */
-#digitmode
+#historyTop
 {
   display: flex;
 }
 
-#digitmode div
+#historyTop div
 {
-  margin-right: 140px;
+  margin-right:77px;
 }
 
 .sepEqs
@@ -695,7 +721,6 @@ hr
 #calculation .sepEqs
 {
   height:60px;
-  margin-bottom:0px;
 }
 
 .historyTab
@@ -716,24 +741,21 @@ hr
   margin-left:5px;
 }
 
+.historyInputs .sepEqs b:hover
+{
+  background-color:#ebeff5;
+}
+
 .number,.number:hover
 {
   color:#4cbeff;
 }
 
-.historyInputs .number:hover
-{
-  background-color:#4cbeff;
-}
+
 
 .trig
 {
   color:orange;
-}
-
-.historyInputs  .trig:hover
-{
-  background-color:orange;
 }
 
 .sign,.sign:hover,.equal
@@ -743,29 +765,14 @@ hr
   margin-right:5px;
 }
 
-.historyInputs  .sign:hover
-{
-  background-color: pink;
-}
-
 .paren,.paren:hover
 {
   color:yellow;
 }
 
-.historyInputs  .paren:hover
-{
-  background-color: yellow;
-}
-
 .pi
 {
   color:#8253c9;
-}
-
-.historyInputs .pi:hover
-{
-  background-color:#8253c9;
 }
 
 .backspace
@@ -775,25 +782,13 @@ hr
 
 .log
 {
-  color:#09ad32;
-}
-
-.historyInputs .log:hover
-{
-  background-color:#09ad32;
+  color:#0dd43f;
 }
 
 .decimal,.decimal:hover
 {
   color: white;
 }
-
-.historyInputs .decimal:hover
-{
-  background-color: white;
-}
-
-
 
 .miscBtn,.miscBtn:hover, .power,.power:hover
 {
@@ -805,19 +800,9 @@ hr
   color:#7a7eff;
 }
 
-.historyInputs  .factorial:hover
-{
-  background-color:#7a7eff;
-}
-
 .root,.root:hover
 {
-  color:purple;
-}
-
-.historyInputs .root:hover
-{
-  background-color: purple
+  color:#c738e8;
 }
 
 .commas
@@ -830,10 +815,5 @@ hr
 {
   font-size:19px;
   background-color:yellow;
-}
-
-#calculation
-{
-  color:#899ba1;
 }
 

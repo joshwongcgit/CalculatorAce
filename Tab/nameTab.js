@@ -19,25 +19,18 @@ function enableAutoFocus()
 
 function renamingTab()
 {
-  $(".tabby li a input").keydown(function(evt)
-  {
-    if (evt.keyCode == "13")
-    {
-      $(".tabby li a input").blur();
-      $currentCalc.focus();
-    }
-  })
-
   $(".tabby li a input").click(function()
   {
-      $(this).blur();
+    $(this).blur();
   });
 
   $(".tabby li a input").dblclick(function()
   {
+
     tabBeingFocused = true;
     $(this).focus();
     $(this).css("color","black");
+    $currentCalc.blur();
   });
 
   $(".tabby li a input").blur(function()
