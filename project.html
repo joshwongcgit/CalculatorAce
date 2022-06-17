@@ -476,6 +476,8 @@ body
 <!-- End -->
 </body>
 
+
+<script src = "index.js"> </script>
 <script src = "Usefulfunc/decode.js"> </script>
 <script src = "Variables/variables.js"> </script>
 <script src = "Usefulfunc/autofocus.js"> </script>
@@ -527,40 +529,5 @@ body
 <script src = "Usefulfunc/resizeCalculation.js"> </script>
 <script src = "Usefulfunc/deleteButton.js"> </script>
 <script src = "Usefulfunc/lk.js"> </script>
-
-<script>
-
-  $(document).ready(function()
-  { 
-    $('.addTab').off().click(function()
-  {
-    newEquation();
-  });
-   
-  var newTab = false;
-
-  $('#historyInputs').empty();
-  newEquation();
-
-  $('.exitResult, .clearBtn').click(function()
-  {
-    $currentCalc.empty();
-    $instantAnswer.empty();
-    equalPressed = true;
-    equalArray[activeTabNumber] = true;
-  });
-
-  $('.exitHistory').click(function()
-  {
-    $historyTab.empty();
-  });
-
-  $(".functionTabs li a ").click(function()
-  {
-
-  });
-});
-
-</script>
 
 </html>

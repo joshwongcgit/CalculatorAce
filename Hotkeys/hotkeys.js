@@ -4,19 +4,19 @@ function initiateKeydown()
 {
 	$(window).off().on("keydown",function(event)
 	{
-	 if ($("#keys").hasClass("in") || $("#help").hasClass("in") || $("#preferences").hasClass("in") || $("#nameTab").hasClass("in"))
+	 if ($(".modal").hasClass("in"))
 	 {
-	   if (event.keyCode == 75) 
+	   if (event.keyCode == 75  && $("#keys").hasClass("in")) 
 	   {
 	   	 $("#keys").modal("toggle"); 
 	   }
 
-	   else if (event.keyCode == 88) 
+	   else if (event.keyCode == 88 && $("#").hasClass("in")) 
 	   {
 	   	 $("#preferences").modal("toggle"); 
 	   }
 
-	   else if (event.keyCode == 86) 
+	   else if (event.keyCode == 86 && $("#keys").hasClass("in")) 
 	   {
 	   	 $("#help").modal("toggle"); 
 	   }
