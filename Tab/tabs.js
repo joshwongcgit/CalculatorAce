@@ -5,7 +5,7 @@ var $storeHistory;
 // switch tabs
 function activeTab()
 {
-  $('.tabby li a ').off().click(function()
+  $('.tabby li a').off().click(function()
   {
     $(".historyTab").removeClass("active")
     var value = $(this).attr("data-value");

@@ -7,17 +7,20 @@ var newCaretPosition = 0;
 
 $("#buttonbox input, #buttonbox button").not(".exitLine").click(function()
 {
-  var value = $(this).val();
+	if (!$(this).hasClass("btnOpt"))
+	{
+	  var value = $(this).val();
 
-  if ($(this).hasClass("backspace"))
-  {
-		backspace();
-  }
+	  if ($(this).hasClass("backspace"))
+	  {
+			backspace();
+	  }
 
-  else
-  {
-		processValue(value);
-  }	
+	  else
+	  {
+			processValue(value);
+	  }	
+	}
 });
 
 $(".left").click(function()

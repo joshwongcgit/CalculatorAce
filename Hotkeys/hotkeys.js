@@ -4,16 +4,27 @@ function initiateKeydown()
 {
 	$(window).off().on("keydown",function(event)
 	{
-
-	 if (modal.to)
+	 if ($("#keys").hasClass("in") || $("#help").hasClass("in") || $("#preferences").hasClass("in") || $("#nameTab").hasClass("in"))
 	 {
+	   if (event.keyCode == 75) 
+	   {
+	   	 $("#keys").modal("toggle"); 
+	   }
 
+	   else if (event.keyCode == 88) 
+	   {
+	   	 $("#preferences").modal("toggle"); 
+	   }
+
+	   else if (event.keyCode == 86) 
+	   {
+	   	 $("#help").modal("toggle"); 
+	   }
+	   	event.preventDefault();
 	 }
 
-	 else
+	 else if (event.shiftKey)
 	 {
-		 if (event.shiftKey)
-			{
 				if (event.keyCode == 57)
 				{
 				  var paren = "(";
@@ -51,7 +62,7 @@ function initiateKeydown()
 				  processValue(sign);
 				}
 
-			}
+		}
 
 		else
 		{
@@ -264,17 +275,15 @@ function initiateKeydown()
 				{
 
 				}
-			
-		}
+		  }
 
 			if (!enableKeys.includes(event.keyCode))
 			{
 				stop(event);
 			}
-		}
 	});
 
-}
+} // windows hotkey
 
 function stop(event)
 {

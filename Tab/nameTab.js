@@ -26,11 +26,10 @@ function renamingTab()
 
   $(".tabby li a input").dblclick(function()
   {
-
+    $("#nameTab").modal("show");
     tabBeingFocused = true;
-    $(this).focus();
-    $(this).css("color","black");
     $currentCalc.blur();
+    $("#nameTab input").focus()
   });
 
   $(".tabby li a input").blur(function()
