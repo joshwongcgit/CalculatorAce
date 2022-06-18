@@ -28,8 +28,9 @@ function renamingTab()
   {
     $("#nameTab").modal("show");
     tabBeingFocused = true;
-    $currentCalc.blur();
     $("#nameTab input").focus()
+    $currentCalc.blur();
+
   });
 
   $(".tabby li a input").blur(function()

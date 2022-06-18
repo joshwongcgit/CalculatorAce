@@ -1,5 +1,6 @@
 var http = require('http');
 var fs = require("fs");
+var jquery = require("jQuery")
 
 http.createServer(function(req, res) {
  fs.readFile("project.html","utf8" ,function(err, contents){
