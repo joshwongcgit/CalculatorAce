@@ -6,7 +6,10 @@ function autofocus()
   {
 	  $currentCalc.blur(function()
 	  {
-	    $currentCalc.focus();
+      if (!$("#nameTab input").is(":focus"))
+      {
+        $currentCalc.focus();
+      }
 	  });
   }
 

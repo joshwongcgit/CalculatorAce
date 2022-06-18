@@ -28,7 +28,8 @@ function renamingTab()
   {
     $("#nameTab").modal("show");
     tabBeingFocused = true;
-    $("#nameTab input").focus()
+    $("#nameTab input").focus();
+    alert($("#nameTab input").is(":focus"))
     $currentCalc.blur();
 
   });
