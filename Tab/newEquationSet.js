@@ -91,7 +91,7 @@
         renamingTab();
         checkPreferences();
         initiateKeydown();
-        // autofocus();
+        autofocus();
     }
   
 

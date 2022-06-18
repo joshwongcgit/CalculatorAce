@@ -92,6 +92,13 @@
   color:#578adb;
 }
 
+#nameTab
+{
+  position: absolute;
+  left:0%;
+  top:20%;
+}
+
 #nameTab .modal-content
 {
   

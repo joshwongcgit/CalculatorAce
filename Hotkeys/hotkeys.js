@@ -11,15 +11,16 @@ function initiateKeydown()
 	   	 $("#keys").modal("toggle"); 
 	   }
 
-	   else if (event.keyCode == 88 && $("#").hasClass("in")) 
+	   else if (event.keyCode == 88 && $("#preferences").hasClass("in")) 
 	   {
 	   	 $("#preferences").modal("toggle"); 
 	   }
 
-	   else if (event.keyCode == 86 && $("#keys").hasClass("in")) 
+	   else if (event.keyCode == 86 && $("#help").hasClass("in")) 
 	   {
 	   	 $("#help").modal("toggle"); 
 	   }
+	   
 	   	event.preventDefault();
 	 }
 

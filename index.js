@@ -1,30 +1,13 @@
-$(document).ready(function()
-  { 
-    $('.addTab').off().click(function()
-  {
-    newEquation();
-  });
-   
-  var newTab = false;
+var http = require('http');
+var fs = require("fs");
 
-  $('#historyInputs').empty();
-  newEquation();
+http.createServer(function(req, res) {
+ fs.readFile("project.html","utf8" ,function(err, contents){
+ res.writeHead(200, {'Content-Type': 'text/html'});
+ res.write(contents);
+ res.end();
+ 
+ });
+}).listen(3000);
 
-  $('.exitResult, .clearBtn').click(function()
-  {
-    $currentCalc.empty();
-    $instantAnswer.empty();
-    equalPressed = true;
-    equalArray[activeTabNumber] = true;
-  });
 
-  $('.exitHistory').click(function()
-  {
-    $historyTab.empty();
-  });
-
-  $(".functionTabs li a ").click(function()
-  {
-
-  });
-});
