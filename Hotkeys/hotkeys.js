@@ -8,20 +8,26 @@ function initiateKeydown()
 	 {
 	   if (event.keyCode == 75  && $("#keys").hasClass("in")) 
 	   {
-	   	 $("#keys").modal("toggle"); 
+	   	 $("#keys").modal("toggle");
+	   	 event.preventDefault(); 
 	   }
 
 	   else if (event.keyCode == 88 && $("#preferences").hasClass("in")) 
 	   {
-	   	 $("#preferences").modal("toggle"); 
+	   	 $("#preferences").modal("toggle");
+	   	 event.preventDefault(); 
 	   }
 
 	   else if (event.keyCode == 86 && $("#help").hasClass("in")) 
 	   {
-	   	 $("#help").modal("toggle"); 
+	   	 $("#help").modal("toggle");
+	   	 event.preventDefault(); 
 	   }
-	   
-	   	event.preventDefault();
+
+	   else if ($("#nameTab").hasClass("in"))
+	   {
+
+	   }
 	 }
 
 	 else if (event.shiftKey)
