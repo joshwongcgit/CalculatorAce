@@ -9,6 +9,7 @@ function activeTab()
   {
     $(".historyTab").removeClass("active")
     var value = $(this).attr("data-value");
+
     $(".historyTab" + value).addClass("active");
 
     $(".resultTab").removeClass("active")
@@ -22,6 +23,8 @@ function activeTab()
     $(".digitsTab" + value).addClass("active");
 
     tabObjects(value);
+
+    $currentCalc.focus();
   });
 }
 

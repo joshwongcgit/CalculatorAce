@@ -122,21 +122,35 @@
 
 #nameTab .close
 {
-  margin-bottom:-80%;
+  margin-top:-1%;
+  margin-right: 2%;
 }
 
 #nameTab p 
 {
   margin-left:30%;
-  margin-top:5%;
+  margin-top:2%;
 }
 
 #nameTab input
 {
-  margin-left:0%;
+  margin-left:45%;
 }
 
 #nameTab span 
 {
   margin-left:5%;
 }
+
+
+#nameTab button
+{
+  font-size: 13px;
+}
+
+#nameTab .buttons
+{
+  margin-left:20%;
+  margin-top:5%;
+}
+

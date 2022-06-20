@@ -1,4 +1,6 @@
 var enableKeys = [45,46,112,113,114,115,116,117,118,119,120,121,122,123];
+var numericKeys = ["0","1","2","3","4","5","6","7","8","9"];
+var alphabetKeys = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","v","W","X","Y","Z"];
 
 function initiateKeydown()
 {
@@ -26,7 +28,20 @@ function initiateKeydown()
 
 	   else if ($("#nameTab").hasClass("in"))
 	   {
+	     var character = String.fromCharCode(event.keyCode);
+	     var value = $("#nameTab input").val();
+	 
+	     if ((numericKeys.includes(character) || alphabetKeys.includes(character)) && value.length < 6)
+	     {
+		    value =  value + character;
+		    $('#nameTab input').val(value);
+	     }
 
+	     if (event.keyCode == 8)
+	     {
+	     	 value = value.slice(0,value.length-1);
+	     	 $('#nameTab input').val(value);
+	     }
 	   }
 	 }
 
