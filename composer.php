@@ -1,2 +1,2 @@
-$ echo '<?php include_once("index.html"); ?>' > index.php
-$ echo '{}' > composer.json
+$ echo '<?php include_once("home.html"); 
+$ echo '{}' > composer.json;
