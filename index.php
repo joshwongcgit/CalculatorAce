@@ -1,1 +1,1 @@
-$ echo '<?php include_once("project.html");
+ <?php include_once("project.html");
