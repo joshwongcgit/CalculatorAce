@@ -1,2 +1,5 @@
-$ echo '<?php include_once("project.html"); 
+
+<?php 
+$ echo include_once("project.html"); 
 $ echo '{}' > composer.json;
+?>
