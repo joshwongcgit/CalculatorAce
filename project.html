@@ -45,7 +45,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
 </head>
 
-<body>
+
 
 <style>
 
@@ -56,23 +56,30 @@ body
 
 </style>
 
+<body>
+
 <p class = "prompt"> </p>
 <div class = 'app' id = 'app'>
 
   <div class = "leftContainer">
+    <!-- tabs to switch function -->
+
     <div id = "resultbox" class = "item"> 
       <div class = "resultboxTop">
         <div class = "tab-content trigmode top"> </div>
         <div class = "exitResult top tool"> &times;  </div>
-      </div>
+      </div>  <!-- resultBoxTop --> 
       
-      <div class = "resultboxMiddle tab-content">
-      </div> 
+       <div class = "resultboxMiddle tab-content">
+       </div>   <!-- resultBoxMiddle --> 
 
     </div> <!-- resultbox -->
 
+    
+
   <!--Buttons (bottom left side) -->
     <div id = "buttonbox" class = "item">
+
     <div class = "tab-content">
       <div class = "tab-pane active" id = "firstfunc" role="tabpanel">
         <!-- Button with signs -->
@@ -112,21 +119,21 @@ body
         <input type = "button" id = "backspace" value = "&#8592;" class = "backspace btn">
       </div> <!-- special3 -->
 
-      <!-- problem exist here -->
       <div id = "special2" class = "btn-group">   
         <button class = "button log btn" value = "log" class = "log btn" data-log = "yes" id = "functions"> log </button>
         <button class = "button log btn" id = "functions" value = "log2"> <span> log<sub>2</sub> </span> </button>
         <button class = "btn log" value = "ln" class = "log btn" id = "functions"> ln </button>
         <button class = "btn button log" value = "e" class = "log btn" id = "functions"> e </button>
         <button class = "factorial btn button" value = "!" class = "factorial btn"> ! </button>
-      </div>
+      </div> <!-- special 2 -->
 
       <div id = "special3" class = "btn-group btn-block">
         <input type = "button" value = "&larr;" class = "miscBtn left arrow btn">
         <input type = "button" value = "&rarr;" class = "miscBtn right arrow btn"> 
-      </div>
+      </div> <!-- special 3 -->
 
-      </div> <!-- first function -->
+    </div> <!-- first function -->
+
     <div class = "tab-pane fade secondfunc" id = "secondfunc" role="tabpanel">
       <div id = "trig" class = "btn-group"> <!-- trig -->
         <input type = "button" value = "sin" class = "trig btn">
@@ -171,32 +178,18 @@ body
       </div>   <!-- radians or degree mode  -->
     </div> <!-- second function -->
    </div> <!-- tab contents -->
-  <!-- utility buttons -->
+<!-- utility buttons -->
 
-<!-- tabs to switch function -->
-<ul class = "functionTabs nav nav-tabs" role="tablist">
-    <li class = "active"> 
-      <a data-toggle = "tab" href="#firstfunc"> 
-        <div> Basic </div> 
-     </a> 
-    </li>
-
-    <li> 
-      <a data-toggle = "tab" href="#secondfunc"> 
-        <div> Trig </div> 
-      </a> 
-    </li>
-</ul>
 
 <div class = "utilitybuttons">  
-   <button class = "btnOpt tool" id = "first" data-toggle="modal" data-placement="bottom" title="Settings" data-target = "#preferences"><span>&#9881;</span>  <span class="tooltiptext">Settings</span> </button>  <!--  setting -->
+   <button class = "btnOpt tool" id = "first" data-toggle="modal" data-placement="bottom" title="Settings" data-target = "#preferences"><span>&#9881;</span>  <span class="tooltiptext">Settings (<b>X</b>) </span> </button>  <!--  setting -->
    <button class = "btnOpt tool" id = "second" data-placement="bottom" title="Hotkeys"> <i class=
-    "material-icons" data-toggle = "modal" data-target = "#keys" style = "font-size:24px;">keyboard </i>  <span class="tooltiptext">Keyboard</span> </button>  <!-- hotkeys -->
-   <button class = "btnOpt tool" id = "third" data-toggle="modal" data-target = "#help" data-placement="bottom" title="Info"> <span style> ? </span>  <span class="tooltiptext">Info</span> </button> <!-- help or info -->
-   <button class = "btnOpt tool" id = "fourth" data-placement="bottom" title="Start new equation">  <span class="glyphicon glyphicon-plus" style = "font-size:35px;position:relative;top:-2px;" onclick = "newEquation()"> </span>  <span class="tooltiptext">Start new equation </span></button> <!-- add new equations -->
+    "material-icons" data-toggle = "modal" data-target = "#keys" style = "font-size:24px;">keyboard </i>  <span class="tooltiptext">Keyboard (K) </span> </button>  <!-- hotkeys -->
+   <button class = "btnOpt tool" id = "third" data-toggle="modal" data-target = "#help" data-placement="bottom" title="Info"> <span style> ? </span>  <span class="tooltiptext">Info (<b>V</b>) </span> </button> <!-- help or info -->
+   <button class = "btnOpt tool" id = "fourth" data-placement="bottom" title="Start new equation">  <span class="glyphicon glyphicon-plus" style = "font-size:35px;position:relative;top:-2px;" onclick = "newEquation()"> </span>  <span class="tooltiptext">Start new equation (<b>O</b>) </span></button> <!-- add new equations -->
 
-   <button class = "btnOpt tool clearEntire" id = "seventh" data-placement="bottom" title="Clear entire calculation"> <i class="fa fa-eraser"> </i>  <span class="tooltiptext">Clear entire equation </span> </button> <!-- erase entire -->
-   <button class = "btnOpt tool digitConverter" id = "eighth" data-placement="bottom" title="Switch digits selection"> <i class="fa fa-arrows-h" style = "position:relative;left:-1px;top:-1px;"></i>  <span class="tooltiptext">Switch digits selection </span> </button> <!-- switch digits mode -->
+   <button class = "btnOpt tool clearEntire" id = "seventh" data-placement="bottom" title="Clear entire calculation"> <i class="fa fa-eraser"> </i>  <span class="tooltiptext">Clear entire equation (<b>A</b>) </span> </button> <!-- erase entire -->
+   <button class = "btnOpt tool digitConverter" id = "eighth" data-placement="bottom" title="Switch digits selection"> <i class="fa fa-arrows-h" style = "position:relative;left:-1px;top:-1px;"></i>  <span class="tooltiptext">Switch digits selection (<b>Q</b>) </span> </button> <!-- switch digits mode -->
 </div> <!-- utility buttons -->
 
 
@@ -290,26 +283,13 @@ body
                 talk about result section </p>
               </div>
 
-              <div>
-                <p class = "six holder" style = "font-size:25px;">Color indicators </p>
-                <p class = "sixth nested" style = "font-size:15px"> Hovering on elements in the history section creates colorful indexes that helps you distinguish the different  kinds of elements. All types of elements are shown in different colors. </p>
-              </div>
-            
-              <div>
-                <p class = "eight holder" style = "font-size:25px;"> Console messages</p>
-                <p class = "eighth nested" style = "font-size:15px"> Console message appear below the instant answer section when you made an error in your calculation. The message displayed will alert you the type of error. All events will be stopped and the incorrect value will not be inserted into your current calculation. This would prevent calculation error after even after sleecting equal sign.  The console message visibility button allows you to either show or hide the console message.</p>
-              </div>
-              
-
-              <div>
-                <p class = "seven holder" style = "font-size:25px;"> Hotkeys </p>
-                <p class = "seventh nested" style = "font-size:15px"> Click on the hotkeys button to take a look. Certain mathematical values can be typed using the keyboard.</p>
-              </div>
-                
               <div> 
                 <p class = "four holder" style = "font-size:25px;"> Single and whole digits </p>
                 <p class = "fourth nested" style = "font-size:15px"> The numeric values can be reseelected in the history section as separate digits or as a whole. Reclicking the single or whole digit converter toggles it. </p>
-              </div> 
+              </div>
+                <img src = "images/helpimage1.jpg">
+                <img src = "images/helpimage2.jpg">
+            
 
         </div> <!-- modal body -->
       </div> <!-- modal content -->
@@ -563,7 +543,7 @@ body
 
   $(".functionTabs li a ").click(function()
   {
-
+    alert("po")
   });
 });
 

@@ -22,6 +22,14 @@
   width:600px;
 }
 
+#help img
+{
+  width: 70%;
+  height:80%;
+  margin-top:5%;
+  margin-left:15%;
+}
+
 .modal-header
 {
   color: #2054a8;
@@ -54,7 +62,7 @@
 
 .help-body .holder
 {
-  color:#C62D42;
+  color:white;
   font-family:'Ledger', serif;
   font-weight:900;
 }

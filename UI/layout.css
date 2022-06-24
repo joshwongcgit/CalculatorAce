@@ -98,6 +98,11 @@ body
   font-weight: 300;
 }
 
+.resultTab
+{
+  overflow-x: auto;
+}
+
 .resultTab .sepEqs
 {
   font-size: 25px;
@@ -464,6 +469,7 @@ span
 {
   color:white;
   margin-left:10px;
+  margin-top:-0.5%;
   width:26px;
   height:36px;
   font-size:23px;
@@ -720,7 +726,7 @@ hr
 
 #calculation .sepEqs
 {
-  height:60px;
+  overflow-x: auto;
 }
 
 .historyTab
@@ -729,6 +735,8 @@ hr
   overflow-x: auto;
   word-wrap: break-word;
 }
+
+
 
 .historyInputs
 {
@@ -744,6 +752,8 @@ hr
 .historyInputs .sepEqs b:hover
 {
   background-color:#ebeff5;
+  height:auto;
+  width: auto;
 }
 
 .number,.number:hover

@@ -77,13 +77,11 @@ function initiateKeydown()
 					processValue(sign);
 				}
 
-		
 				else if (event.keyCode == 49)
 				{
 				  var sign = "!";
 				  processValue(sign);
 				}
-
 		}
 
 		else
@@ -273,9 +271,15 @@ function initiateKeydown()
 					clearResult();
 				}
 
-			    else if (event.keyCode == 72) // h
+			  else if (event.keyCode == 72) // h
 				{
 				  clearHistory();
+				}
+
+				else if (event.keyCode == 65) // a
+				{
+					clearHistory();
+					clearResult();
 				}
 
 				else if (event.keyCode == 79) // o

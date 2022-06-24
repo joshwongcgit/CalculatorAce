@@ -15,3 +15,5 @@ function autofocus()
   	$("#calculation").css("caret-color","transparent")
   }
 }
+
+

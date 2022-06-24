@@ -36,7 +36,7 @@
 
       // creates new history
       $(".historyInputs  .tab-pane").removeClass("active")
-      $(".historyInputs").append("<div id = " + idValue + " class = 'tab-pane active historyTab historyTab" + tabNumber + "'>");
+      $(".historyInputs").append("<div id = " + idValue + " class = 'tab-pane active historyTab historyTab" + tabNumber + "'> </div");
       $historyTab = $('.historyTab' + tabNumber);
       $historyTab.css('font-size','20px').css('z-index','5');
 

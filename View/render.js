@@ -14,21 +14,24 @@ function dragIt()
 
 function renderScrolling()
 {
-  var width = $historyTab.children(".sepEqs").width();
+  var width = $historyTab.find(".sepEqs").width();
+
+  if (!equalPressed)
+  {
   //alert($currentCalc.text().split(""))
-  $currentCalc.scrollLeft(20000);
-  $historyTab.scrollTop(200000);
+    $currentCalc.scrollLeft(20000);
+    $historyTab.scrollTop(200000);
+    
+    if (width > 300)
+    {
+      $historyTab.scrollLeft(width);
+    }
 
-  if (width > 300)
-  {
-    $historyTab.scrollLeft(width);
+    else
+    {
+      $historyTab.scrollLeft(20000)
+    }
   }
-
-  else
-  {
-    $historyTab.scrollLeft(0);
-  }
-
 }
 
 function initiatePostRenderEvents()
@@ -45,7 +48,7 @@ function initiatePostRenderEvents()
   historyClicking();
   initiateKeydown();  
   autofocus();
-  renderScrolling();
+  //renderScrolling();
 }
 
 function renderContent(content,value) 
@@ -250,6 +253,7 @@ function renderContent(content,value)
           $historyTab.html(historyContent); 
         } 
 
+        renderScrolling();
         caretRelocating();
         initiatePostRenderEvents(); 
   }
