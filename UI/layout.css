@@ -397,6 +397,7 @@ input #backspace
   display: flex;
   justify-content:center;
   flex-direction: column;
+
 }
 
 span 
@@ -726,21 +727,18 @@ hr
 
 #calculation .sepEqs
 {
-  overflow-x: auto;
+
 }
 
 .historyTab
 {
   overflow-y: auto;
-  overflow-x: auto;
-  word-wrap: break-word;
 }
-
-
 
 .historyInputs
 {
 
+  overflow-x: auto;
 }
 
 .historyInputs .sepEqs

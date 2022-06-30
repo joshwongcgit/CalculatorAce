@@ -165,7 +165,7 @@ function initiateKeydown()
 				  processValue(deci);
 				}
 
-			    else if (event.keyCode == 187) // =
+			  else if (event.keyCode == 187) // =
 				{
 				  var sign = "=";
 				  processValue(sign);
@@ -175,17 +175,30 @@ function initiateKeydown()
 				{
 				  var index = caretPositionsArr.indexOf(newCaretPosition);
 				  newCaretPosition = caretPositionsArr[index-1];
-				  $currentCalc.caret("pos",newCaretPosition);
+
+				  if (newCaretPosition == undefined)
+				  {
+				  	newCaretPosition = caretPositionsArr[index];
+					}
+
+					$currentCalc.caret("pos",newCaretPosition);
 				}
 
 				else if (event.keyCode == 39) // -->
 				{
 				  var index = caretPositionsArr.indexOf(newCaretPosition);
+
 				  newCaretPosition = caretPositionsArr[index+1];
-				  $currentCalc.caret("pos",newCaretPosition);
+				
+					if (newCaretPosition == undefined)
+				  {
+				  	newCaretPosition = caretPositionsArr[index];
+					}
+
+					$currentCalc.caret("pos",newCaretPosition);
 				}
 
-			    else if (event.keyCode == 76) // l
+			  else if (event.keyCode == 76) // l
 				{
 				  var func = "log";
 				  processValue(func);

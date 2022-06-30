@@ -22,12 +22,27 @@
   width:600px;
 }
 
-#help img
+#help .digitimg
 {
   width: 70%;
   height:80%;
   margin-top:5%;
   margin-left:15%;
+  border-bottom:1px solid white;
+  border-left: 1px solid white;
+}
+
+#help #helpimage2
+{
+  border-right:1px solid white;
+  border-top:1px solid white;
+}
+
+#help .description
+{
+  margin-top:4%;
+  margin-left:14%;
+  width:75%;
 }
 
 .modal-header
@@ -100,6 +115,13 @@
   color:#578adb;
 }
 
+#help .buttonimg
+{
+  height:30px;
+  width:30px;
+  border-radius: 12px;
+}
+
 #nameTab
 {
   position: absolute;
@@ -161,4 +183,5 @@
   margin-left:20%;
   margin-top:5%;
 }
+
 

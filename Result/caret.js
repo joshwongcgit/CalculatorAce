@@ -30,13 +30,7 @@ function clickCaret(previousPos,caretArr)
 
 function newLineProcess(newCalculationLength)
 {
-  if (equalPressed)
-  {
-    equalPressed = false;
-    equalArray[activeTabNumber] = false;
-  }
-
-  else if (newCalculationLength == 0 && $historyTab.text().length > 0)
+  if (newCalculationLength == 0 && $historyTab.text().length > 0)
   {
     equalPressed = true;
     equalArray[activeTabNumber] = true;
@@ -46,7 +40,7 @@ function newLineProcess(newCalculationLength)
 function caretRelocating()
 {
   var newCalculationLength = $currentCalc.text().split("").length;
- 
+
   newLineProcess(newCalculationLength);
 
   // caret was at the end

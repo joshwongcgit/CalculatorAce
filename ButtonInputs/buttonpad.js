@@ -25,16 +25,27 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").click(function()
 
 $(".left").click(function()
 {
-	var index = caretPositionsArr.indexOf(newCaretPosition);
-	newCaretPosition = caretPositionsArr[index-1];
-	$currentCalc.caret("pos",newCaretPosition);
+	 var index = caretPositionsArr.indexOf(newCaretPosition);
+
+	 newCaretPosition = caretPositionsArr[index-1];
+				
+	if (newCaretPosition == undefined)
+	{
+		newCaretPosition = caretPositionsArr[index];
+	}
+		$currentCalc.caret("pos",newCaretPosition);
 });
 
 $(".right").click(function()
 {
 	var index = caretPositionsArr.indexOf(newCaretPosition);
 	newCaretPosition = caretPositionsArr[index+1];
-	$currentCalc.caret("pos",newCaretPosition);
+				
+	if (newCaretPosition == undefined)
+	{
+		newCaretPosition = caretPositionsArr[index];
+	}
+		$currentCalc.caret("pos",newCaretPosition);
 });
 
 
@@ -101,9 +112,17 @@ function processValue(value)
 				answer = addCommas(answer);
 			}
 			
+			var cont = $currentCalc.text().split("");
+			var diff = checkOpenAndClose(cont);
 		  $instantAnswer.html(answer);
 		  $currentCalc.html("<div class = 'sepEqs'> <div>" + answer + "</div> </div>");
 		  var historyContent = $historyTab.html().splitter("</b>");
+
+			for (var i = 0; i < diff; i++)
+			{
+				historyContent.splice(historyContent.length-2,0,"<b class = 'paren'>)</b>")
+			}
+
 		  historyContent.splice(historyContent.length-2,0,"<b class = 'equal'>=</b>");
 
 		  if ($digitTab.text() == "Single")
@@ -178,6 +197,7 @@ function processValue(value)
 		  	}
 		  }
 
+		  
 		  for (k = 0; k < typeArray.length; k++)
 		  {
 		  	// value is inside the array 
@@ -186,7 +206,8 @@ function processValue(value)
 
 				  if (equalPressed)
 				  {
-						$historyTab.scrollLeft(0);
+				  	equalPressed = false;
+    				equalArray[activeTabNumber] = false;
 						calcContent = [];
 				  	$currentCalc.empty();
 				  	$instantAnswer.empty();

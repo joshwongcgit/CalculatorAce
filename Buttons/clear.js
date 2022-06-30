@@ -22,6 +22,7 @@ function clearResult()
 {
   if ($currentCalc.text().length > 0)
   {
+    alert("l")
     $currentCalc.empty();
     $instantAnswer.empty();
   }

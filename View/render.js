@@ -14,23 +14,13 @@ function dragIt()
 
 function renderScrolling()
 {
-  var width = $historyTab.find(".sepEqs").width();
+ 
+  $historyTab.scrollTop(50000000);
 
   if (!equalPressed)
   {
   //alert($currentCalc.text().split(""))
-    $currentCalc.scrollLeft(20000);
-    $historyTab.scrollTop(200000);
-    
-    if (width > 300)
-    {
-      $historyTab.scrollLeft(width);
-    }
-
-    else
-    {
-      $historyTab.scrollLeft(20000)
-    }
+    $currentCalc.scrollLeft(2000000);
   }
 }
 
@@ -53,6 +43,7 @@ function initiatePostRenderEvents()
 
 function renderContent(content,value) 
 {
+    $(".historyTab").scrollTop(50000000);
     if ($digitTab.text() == "Single")
     {
       var elemArr = [];

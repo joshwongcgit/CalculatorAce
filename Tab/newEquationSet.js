@@ -43,7 +43,7 @@
       $(".digitsMode .tab-pane").removeClass("active");
       $(".digitsMode").append("<div id = " + idValue + " class = 'tab-pane active digits digitsTab digitsTab" + tabNumber + "'>Single</div>")
       $digitTab = $('.digitsTab' + tabNumber);
-
+      alert("work?")
       $(".trigMode .tab-pane").removeClass("active");
       $(".trigMode").append("<div id = " + idValue + " class = 'tab-pane active trigTab trigTab" + tabNumber + "'> Deg </div>")
       $trigTab = $('.trigTab' + tabNumber);

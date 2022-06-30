@@ -180,11 +180,37 @@ body
    </div> <!-- tab contents -->
 <!-- utility buttons -->
 
+<!-- tabs to switch function -->
+<ul class = "functionTabs nav nav-tabs" role="tablist">
+    <li class = "active"> 
+      <a data-toggle = "tab" href="#firstfunc"> 
+        <div>  </div> 
+     </a> 
+    </li>
+
+    <li> 
+      <a data-toggle = "tab" href="#secondfunc"> 
+        <div> </div> 
+      </a> 
+    </li>
+
+     <li> 
+      <a data-toggle = "tab" href="#firstfunc"> 
+        <div> Basic </div> 
+     </a> 
+    </li>
+
+    <li class = "active"> 
+      <a data-toggle = "tab" href="#secondfunc"> 
+        <div> Trig </div> 
+      </a> 
+    </li>
+</ul>
 
 <div class = "utilitybuttons">  
    <button class = "btnOpt tool" id = "first" data-toggle="modal" data-placement="bottom" title="Settings" data-target = "#preferences"><span>&#9881;</span>  <span class="tooltiptext">Settings (<b>X</b>) </span> </button>  <!--  setting -->
    <button class = "btnOpt tool" id = "second" data-placement="bottom" title="Hotkeys"> <i class=
-    "material-icons" data-toggle = "modal" data-target = "#keys" style = "font-size:24px;">keyboard </i>  <span class="tooltiptext">Keyboard (K) </span> </button>  <!-- hotkeys -->
+    "material-icons" data-toggle = "modal" data-target = "#keys" style = "font-size:24px;">keyboard </i>  <span class="tooltiptext">Keyboard (<b>K</b>) </span> </button>  <!-- hotkeys -->
    <button class = "btnOpt tool" id = "third" data-toggle="modal" data-target = "#help" data-placement="bottom" title="Info"> <span style> ? </span>  <span class="tooltiptext">Info (<b>V</b>) </span> </button> <!-- help or info -->
    <button class = "btnOpt tool" id = "fourth" data-placement="bottom" title="Start new equation">  <span class="glyphicon glyphicon-plus" style = "font-size:35px;position:relative;top:-2px;" onclick = "newEquation()"> </span>  <span class="tooltiptext">Start new equation (<b>O</b>) </span></button> <!-- add new equations -->
 
@@ -274,21 +300,27 @@ body
               <div>
                 <p class = "first holder" style = "font-size:25px;"> History </p> 
                 <p class = "first nested" style = "font-size: 15px;">
-              The history section keeps track of your past calculations. This will enable users to have an easier and efficient way of solving long mathematical problems </p>
+              The history section keeps track of your past calculations. This will enable users to have an easier and friendly way of solving and track long mathematical problems </p>
               </div>
 
               <div>
                 <p class = "five holder" style = "font-size:25px;"> Using history to reselect </p>
-                <p class = "fifth nested" style = "font-size:15px;"> You can click on any elements to add to your current calculation. You can actually visualize previous results so you input them into your next problem
-                talk about result section </p>
+                <p class = "fifth nested" style = "font-size:15px;"> You can click or tap on any elements to add to your current calculation. It allows you visualize previous results so you  can input them into your next problem
+                </p>
               </div>
 
               <div> 
                 <p class = "four holder" style = "font-size:25px;"> Single and whole digits </p>
-                <p class = "fourth nested" style = "font-size:15px"> The numeric values can be reseelected in the history section as separate digits or as a whole. Reclicking the single or whole digit converter toggles it. </p>
+                <p class = "fourth nested" style = "font-size:15px">Using <img class = "buttonimg" src = "images/switchdigitimg.jpg"/> or the hotkey <b>Q</b>, the numeric values can be reseelected in the history section as separate digits or as a whole. </p>
               </div>
-                <img src = "images/helpimage1.jpg">
-                <img src = "images/helpimage2.jpg">
+
+
+                <img class = "digitimg" src = "images/helpimage1.jpg">
+                <p class = "nested description"> Above: The single digit selection is enabled, allowing us to reselect previously used numbers in single digit form. </p>
+
+                <img id = "helpimage2" class = "digitimg" src = "images/helpimage2.jpg">
+                <p class = "nested description"> Above: The whole number selection is enabled, allowing us to select previously used whole numbers.</p>
+
             
 
         </div> <!-- modal body -->
@@ -501,7 +533,6 @@ body
 
 <script src = "Buttons/hideConsole.js"> </script>
 
-<script src = "ButtonInputs/reset.js"> </script>
 <script src = "Buttons/clear.js"> </script>
 <script src = "Buttons/clearall.js"> </script>
 <script src = "Buttons/digitSwitch.js"> </script>
@@ -543,7 +574,7 @@ body
 
   $(".functionTabs li a ").click(function()
   {
-    alert("po")
+
   });
 });
 
