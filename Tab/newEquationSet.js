@@ -35,7 +35,7 @@
       $("input[class*=" + tabNumber +"]").val(tabNumber);
 
       // creates new history
-      $(".historyInputs  .tab-pane").removeClass("active")
+      $(".historyInputs .tab-pane").removeClass("active");
       $(".historyInputs").append("<div id = " + idValue + " class = 'tab-pane active historyTab historyTab" + tabNumber + "'> </div");
       $historyTab = $('.historyTab' + tabNumber);
       $historyTab.css('font-size','20px').css('z-index','5');
@@ -43,7 +43,6 @@
       $(".digitsMode .tab-pane").removeClass("active");
       $(".digitsMode").append("<div id = " + idValue + " class = 'tab-pane active digits digitsTab digitsTab" + tabNumber + "'>Single</div>")
       $digitTab = $('.digitsTab' + tabNumber);
-      alert("work?")
       $(".trigMode .tab-pane").removeClass("active");
       $(".trigMode").append("<div id = " + idValue + " class = 'tab-pane active trigTab trigTab" + tabNumber + "'> Deg </div>")
       $trigTab = $('.trigTab' + tabNumber);

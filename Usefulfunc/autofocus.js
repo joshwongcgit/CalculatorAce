@@ -1,7 +1,7 @@
 function autofocus()
 {
   $currentCalc.focus();
-
+  // alert("l")
   if (!equalPressed)
   {
 	  $currentCalc.blur(function()

@@ -43,9 +43,10 @@ function initiatePostRenderEvents()
 
 function renderContent(content,value) 
 {
-    $(".historyTab").scrollTop(50000000);
-    if ($digitTab.text() == "Single")
-    {
+  $(".historyInputs").scrollTop(50000000);
+
+  if ($digitTab.text() == "Single")
+  {
       var elemArr = [];
       var singleDigitArr = [];
 
@@ -70,8 +71,6 @@ function renderContent(content,value)
       }
         content = singleDigitArr;
     }
-
-    
 
      var str = "";
 

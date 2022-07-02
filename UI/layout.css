@@ -33,8 +33,8 @@ body
 {
   display:flex;
   flex-direction: column;
-  margin-left:5px;
-  margin-top:8%;
+  margin-left:1%;
+  margin-top:6%;
   margin-bottom:15%;
 }
 
@@ -44,7 +44,7 @@ body
   flex-direction: column;
   background-color:#2d3b3d;
   height:208px;
-  width:470px;
+  width:520px;
   z-index: 3;
   border-radius:1px;
   border:1px solid black;
@@ -75,7 +75,7 @@ body
 
 .instantAnswerTab
 {
-  margin-top:45px;
+  margin-top:0px;
 }
 
 .exitResult
@@ -85,6 +85,7 @@ body
   font-size:25px;
   color:red;
   cursor: pointer;
+  margin-left:50px;
 }
 
 .trigmode
@@ -129,7 +130,7 @@ body
   text-shadow: 0px 0px 8px rgb(9, 198, 145);
   font-weight: 500;
   height:90px;
-  margin-top:55px;
+  margin-top:5px;
   margin-left:2px;
   overflow-x: auto;
 }
@@ -147,8 +148,8 @@ input #backspace
 {
   display: flex;
   background-color:#2b2f35;
-  height:302px;
-  width:470px;
+  height:275px;
+  width:520px;
   outline: none;
   border:1px blacksolid;
   border-right:2px solid black;
@@ -156,7 +157,7 @@ input #backspace
 
 /* buttons */
 
-#buttonbox input, #buttonbox button
+#buttonbox input, #buttonbox .btn
 {
   background-size: 2px 2px;
   font-family: Arial;
@@ -165,8 +166,8 @@ input #backspace
   border:0px black solid;
   top: 0px;
   left:0px;
-  height:50px;
-  width:50px;
+  height:55px;
+  width:55px;
   margin:0px;
   text-shadow:rgba(34, 106, 124, 0.4) 0 0 35px, rgba(34,106,124, 0.95) 0 0 25px;
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 1px inset;
@@ -327,13 +328,30 @@ input #backspace
 
 .utilitybuttons button
 {
-  color:#b019a1;
-  text-shadow:#fa00f2 0 0 30px, #fa00f2 0 0 30px;
+  background-size: 2px 2px;
+  font-family: Arial;
+  font-size: 22px;
+  text-decoration: none;
+  color:#a124a6;
+  border:1px black solid;
+  border-bottom: 0.5px black solid;
+  border-right: 0.1px black solid;
+  border-radius:15px;
+  top: 0px;
+  left:0px;
+  height:55px;
+  width:52px;
+  margin:0px;
+  text-shadow:rgba(34, 106, 124, 0.4) 0 0 35px, rgba(34,106,124, 0.95) 0 0 25px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 1px inset;
+  background-color: #2d2d2d;
+  border-spacing: 0px;
+  z-index:4;
 }
 
 .btnOpt
 {
-  border-radius:15px;
+
 }
 
 .tool:hover
@@ -435,7 +453,7 @@ span
   display: flex;
   flex-direction: column;
   background-color:#06102e;
-  height:470px;
+  height:443px;
   width:422px;
   z-index: 0;
   font-size: 44px;
@@ -576,12 +594,11 @@ span
 {
   background-color:#7699b3;
   cursor:pointer;
-}
+}  
 
 .functionTabs
 {
-  margin-right:88px;
-
+  margin-right:21%;
 }
 
 .functionTabs a
@@ -595,6 +612,7 @@ span
   font-size:13px;
   font-weight:700;
   margin-bottom:2px;
+  z-index:4;
 }
 
 .functionTabs li a
@@ -732,13 +750,13 @@ hr
 
 .historyTab
 {
-  overflow-y: auto;
+
 }
 
 .historyInputs
 {
 
-  overflow-x: auto;
+  overflow: auto;
 }
 
 .historyInputs .sepEqs

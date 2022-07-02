@@ -53,8 +53,6 @@ function checkBoolForCloseParen(caretPosition)
   {
     return false;
   }
-
-
 }
 
 

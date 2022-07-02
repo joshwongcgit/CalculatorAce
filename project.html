@@ -67,7 +67,7 @@ body
     <div id = "resultbox" class = "item"> 
       <div class = "resultboxTop">
         <div class = "tab-content trigmode top"> </div>
-        <div class = "exitResult top tool"> &times;  </div>
+        <div class = "exitResult top tool"> &times; </div>
       </div>  <!-- resultBoxTop --> 
       
        <div class = "resultboxMiddle tab-content">
@@ -89,7 +89,7 @@ body
           <input type = "button" value = "+" class = "sign btn">
           <input type = "button" value = "&#x2212;" class = "sign btn">
           <input type = "button" value = "(" class = "paren btn">
-           <input type = "button" value = ")" class = "paren btn">
+          <input type = "button" value = ")" class = "paren btn">
         </div> <!-- rowone -->
 
         <div id = "rowtwo" class = "btn-group">
@@ -111,8 +111,8 @@ body
       </div> <!-- rowthree -->
 
       <div id = "special3" class = "btn-group">
-        <input type = "button" value = "^" class = " miscBtn btn" id = "onlyPower">
-        <input type = "button" value = "-" class = "negative miscBtn btn">
+        <input type = "button" value = "^" class = "miscBtn btn" id = "onlyPower">
+        <button class = "factorial btn button" value = "!" class = "factorial btn"> ! </button>
         <input type = "button" value = "&#8731;" class = "root btn" id = "functions">
         <input type = "button" value = "&radic;" class = "root btn" id = "functions">
         <input type = "button" id = "reset" value = "C" class = "clearBtn btn">
@@ -124,12 +124,11 @@ body
         <button class = "button log btn" id = "functions" value = "log2"> <span> log<sub>2</sub> </span> </button>
         <button class = "btn log" value = "ln" class = "log btn" id = "functions"> ln </button>
         <button class = "btn button log" value = "e" class = "log btn" id = "functions"> e </button>
-        <button class = "factorial btn button" value = "!" class = "factorial btn"> ! </button>
       </div> <!-- special 2 -->
 
       <div id = "special3" class = "btn-group btn-block">
-        <input type = "button" value = "&larr;" class = "miscBtn left arrow btn">
-        <input type = "button" value = "&rarr;" class = "miscBtn right arrow btn"> 
+        <!-- <input type = "button" value = "&larr;" class = "miscBtn left arrow btn"> -->
+        <!-- <input type = "button" value = "&rarr;" class = "miscBtn right arrow btn"> -->
       </div> <!-- special 3 -->
 
     </div> <!-- first function -->
@@ -184,23 +183,11 @@ body
 <ul class = "functionTabs nav nav-tabs" role="tablist">
     <li class = "active"> 
       <a data-toggle = "tab" href="#firstfunc"> 
-        <div>  </div> 
+        <div>  Basic</div> 
      </a> 
     </li>
 
     <li> 
-      <a data-toggle = "tab" href="#secondfunc"> 
-        <div> </div> 
-      </a> 
-    </li>
-
-     <li> 
-      <a data-toggle = "tab" href="#firstfunc"> 
-        <div> Basic </div> 
-     </a> 
-    </li>
-
-    <li class = "active"> 
       <a data-toggle = "tab" href="#secondfunc"> 
         <div> Trig </div> 
       </a> 
@@ -208,10 +195,10 @@ body
 </ul>
 
 <div class = "utilitybuttons">  
-   <button class = "btnOpt tool" id = "first" data-toggle="modal" data-placement="bottom" title="Settings" data-target = "#preferences"><span>&#9881;</span>  <span class="tooltiptext">Settings (<b>X</b>) </span> </button>  <!--  setting -->
-   <button class = "btnOpt tool" id = "second" data-placement="bottom" title="Hotkeys"> <i class=
-    "material-icons" data-toggle = "modal" data-target = "#keys" style = "font-size:24px;">keyboard </i>  <span class="tooltiptext">Keyboard (<b>K</b>) </span> </button>  <!-- hotkeys -->
-   <button class = "btnOpt tool" id = "third" data-toggle="modal" data-target = "#help" data-placement="bottom" title="Info"> <span style> ? </span>  <span class="tooltiptext">Info (<b>V</b>) </span> </button> <!-- help or info -->
+   <button class = "btnOpt tool" data-toggle="modal" data-placement="bottom" title="Settings" data-target = "#preferences"><span>&#9881;</span>  <span class="tooltiptext">Settings (<b>X</b>) </span> </button>  <!--  setting -->
+   <button class = "btnOpt tool" data-placement="bottom" title="Hotkeys"> <i class=
+    "material-icons" data-toggle = "modal" data-target = "#keys" style = "">keyboard </i>  <span class="tooltiptext">Keyboard (<b>K</b>) </span> </button>  <!-- hotkeys -->
+   <button class = "btnOpt tool"  data-toggle="modal" data-target = "#help" data-placement="bottom" title="Info"> <span style> ? </span>  <span class="tooltiptext">Info (<b>V</b>) </span> </button> <!-- help or info -->
    <button class = "btnOpt tool" id = "fourth" data-placement="bottom" title="Start new equation">  <span class="glyphicon glyphicon-plus" style = "font-size:35px;position:relative;top:-2px;" onclick = "newEquation()"> </span>  <span class="tooltiptext">Start new equation (<b>O</b>) </span></button> <!-- add new equations -->
 
    <button class = "btnOpt tool clearEntire" id = "seventh" data-placement="bottom" title="Clear entire calculation"> <i class="fa fa-eraser"> </i>  <span class="tooltiptext">Clear entire equation (<b>A</b>) </span> </button> <!-- erase entire -->
@@ -248,7 +235,7 @@ body
       <div class = "tab-content digitsMode">
         
       </div>
-       <span class = "exitHistory tool"> &times; <span class="tooltiptext">Clear entire history </span> </span>
+       <span class = "exitHistory tool"> &times; <span class="tooltiptext">Clear history (this tab only) </span> </span>
     </div> 
 
     <div class = "historyInputs tab-content"> 

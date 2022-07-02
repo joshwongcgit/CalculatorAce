@@ -44,8 +44,13 @@ function historyClicking()
   $(".historyInputs b").not(".exitLine").off().click(function()
   {
     var value = $(this).text();
-    processValue(value);
-    $currentCalc.focus();
+
+    if (value != "." && !value.includes("."))
+    {
+      processValue(value);
+      $currentCalc.focus();
+    }
+  
   });
 }
 

@@ -274,7 +274,19 @@ function processValue(value)
 
 						else
 						{
-			  	  	calcContent.splice(caretPosition,0,value); 
+							var duplicate = cloneArray(calcContent)
+			  	  	duplicate.splice(caretPosition,0,value); 
+
+			  	  	if (checkNumLength(duplicate))
+							{
+
+								calcContent.splice(caretPosition,0,value)
+							}
+
+							else
+							{
+							
+							}
 			  	  }
 					}
 			  }
@@ -289,3 +301,38 @@ function processValue(value)
 }
 
 }
+
+	function checkNumLength(arr)
+	{
+		var numberLength = 0;
+	
+		for (var i = 0; i < arr.length; i++)
+		{
+			if (arr[i] == "," || numericArray.includes(arr[i]))
+			{
+				numberLength++;
+
+				if (numberLength >= 22)
+				{
+					return false;
+				}
+			}
+
+			else
+			{
+				numberLength = 0;
+			}
+		}
+			return true;
+  }
+
+  function cloneArray(arr)
+  {
+  	var newArray = [];
+
+  	for (var i = 0; i < arr.length; i++)
+  	{
+  		newArray.push(arr[i]);
+  	}
+  		return newArray;
+  }
