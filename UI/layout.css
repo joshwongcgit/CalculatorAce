@@ -6,11 +6,21 @@
   box-sizing: border-box;
 }
 
+
+
 #app
 {
   display: flex;
-  justify-content: center;
-  margin-left: auto;
+  flex-direction: row;
+  margin-left:20%;
+}
+
+@media (max-width: 800px) 
+{
+  #app 
+  {
+    flex-direction: column;
+  }
 }
 
 body
@@ -48,6 +58,29 @@ body
   z-index: 3;
   border-radius:1px;
   border:1px solid black;
+}
+
+@media screen and (max-width: 800px)
+{
+  #resultbox
+  {
+    width:100%; 
+  }
+
+  #buttonbox
+  {
+    width: 100%;
+  }
+
+  #historysection,#history,#bottomhistory
+  {
+    width: 190%;
+  }
+
+  #app
+  {
+    margin-left: 5%;
+  }
 }
 
 .resultboxTop 
