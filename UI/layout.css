@@ -73,6 +73,7 @@ body
   {
     flex-direction: column;
     margin-left:0%;
+    flex-wrap: wrap;
   }
 }
 
