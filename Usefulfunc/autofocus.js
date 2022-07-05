@@ -1,6 +1,5 @@
 function autofocus()
 {
-    alert("po")
   $currentCalc.focus();
   // alert("l")
   if (!equalPressed)
