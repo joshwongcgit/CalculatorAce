@@ -39,6 +39,7 @@ function newLineProcess(newCalculationLength)
 
 function caretRelocating()
 {
+  alert("pop")
   var newCalculationLength = $currentCalc.text().split("").length;
   navigator.virtualKeyboard.overlaysContent = true;
 
