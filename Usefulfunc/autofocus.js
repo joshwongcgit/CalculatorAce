@@ -1,5 +1,6 @@
 function autofocus()
 {
+  $currentCalc.attr("readonly","readonly")
   $currentCalc.focus();
   // alert("l")
   if (!equalPressed)
