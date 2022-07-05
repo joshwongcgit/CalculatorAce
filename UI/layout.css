@@ -23,7 +23,7 @@ body
 
 .leftContainer
 {
-
+  width: 520px;
 }
 
 
@@ -47,7 +47,7 @@ body
   flex-direction: column;
   background-color:#2d3b3d;
   height:208px;
-
+  width:100%;
   z-index:3;
   border-radius:1px;
   border:1px solid black;
@@ -86,9 +86,7 @@ body
   
   font-size:25px;
   color:red;
-  cursor: pointer;
-  align-items: flex;
-  
+  cursor: pointer;  
 }
 
 .trigmode
