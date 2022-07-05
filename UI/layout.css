@@ -15,14 +15,6 @@
   margin-left:20%;
 }
 
-@media (max-width: 800px) 
-{
-  #app 
-  {
-    flex-direction: column;
-  }
-}
-
 body
 {
   overflow: none;
@@ -55,7 +47,7 @@ body
   background-color:#2d3b3d;
   height:208px;
   width:520px;
-  z-index: 3;
+  z-index:3;
   border-radius:1px;
   border:1px solid black;
 }
@@ -64,19 +56,23 @@ body
 {
   #resultbox
   {
-    width:100%; 
+    width:80%; 
   }
 
   #buttonbox
   {
-    width:100%;
+    width:50%;
   }
 
- 
+  #historia
+  {
+    width:80%;
+  }
 
   #app
   {
-    margin-left:5%;
+    flex-direction: column;
+    margin-left:0%;
   }
 }
 
@@ -110,12 +106,11 @@ body
 
 .exitResult
 {
-  display: flex;
-  justify-content: flex-start;  
+  
   font-size:25px;
   color:red;
   cursor: pointer;
-  margin-left:50px;
+  margin-left:10%;
 }
 
 .trigmode
