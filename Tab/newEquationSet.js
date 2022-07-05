@@ -88,7 +88,6 @@
       }
         activeTab();
         renamingTab();
-        checkPreferences();
         initiateKeydown();
         autofocus();
     }
