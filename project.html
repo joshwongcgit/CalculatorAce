@@ -52,7 +52,13 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 @media only screen and (max-width: 800px) 
 {
   body {
-           
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
 }
   #resultbox
   {
@@ -588,7 +594,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   $(document).ready(function()
   { 
 
-  $("#app").click(function(event)
+  $("#app").off().click(function(event)
   {
   
   })
@@ -604,7 +610,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   $('#historyInputs').empty();
   newEquation();
 
-  $('.exitResult, .clearBtn').click(function()
+  $('.exitResult, .clearBtn').off().click(function()
   {
     $currentCalc.empty();
     $instantAnswer.empty();
@@ -612,12 +618,12 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     equalArray[activeTabNumber] = true;
   });
 
-  $('.exitHistory').click(function()
+  $('.exitHistory').off().click(function()
   {
     $historyTab.empty();
   });
 
-  $(".functionTabs li a ").click(function()
+  $(".functionTabs li a ").off().click(function()
   {
 
   });

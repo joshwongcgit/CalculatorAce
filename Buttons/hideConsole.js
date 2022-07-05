@@ -1,6 +1,6 @@
 var hideConsole = false;
 
-  $('.hideConsole').click(function()
+  $('.hideConsole').off().click(function()
   {
     hideTheConsole();
   });

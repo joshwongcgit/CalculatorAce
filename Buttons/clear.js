@@ -1,4 +1,4 @@
-$('.clearHistory').click(function()
+$('.clearHistory').off().click(function()
 {
   clearHistory();
 });

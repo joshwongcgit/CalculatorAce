@@ -1,4 +1,4 @@
-$('#equal').click(function()
+$('#equal').off().click(function()
 {
 	equalButton();
 });

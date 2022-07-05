@@ -1,27 +1,27 @@
 var autoClear = false;
 var tabAutoClear = false;
 
-$('.settings').click(function()
+$('.settings')off().click(function()
 {
   currentPreferences = $('input:checked');
 });
 
-$('.apply').click(function()
+$('.apply')off().click(function()
 {
   checkPreferences();
 });
 
-$('.cancel').click(function()
+$('.cancel')off().click(function()
 {
   revertBack();
 });
 
-$('#preferencesX').click(function()
+$('#preferencesX')off().click(function()
 {
   revertBack();
 });
 
-$(".resetSetting").click(function()
+$(".resetSetting")off().click(function()
 {
   $('.prefer input:first-child').prop('checked',true);
 })

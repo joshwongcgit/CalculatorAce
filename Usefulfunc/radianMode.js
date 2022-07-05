@@ -1,6 +1,6 @@
 $('.degree').css("background-color","#e6f5f5");
 
-$(".trigswitch").click(function()
+$(".trigswitch").off().click(function()
 {
   var mode = $(this).val();
 

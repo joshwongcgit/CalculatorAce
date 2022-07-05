@@ -4,13 +4,13 @@ var numberStore = [];
 var switchedDigits = false;
 
 // text
-$(".digits").click(function()
+$(".digits").off().click(function()
 {
   switchMode();
 });
 
 //button
-$('.digitConverter').click(function()
+$('.digitConverter').off().click(function()
 {
   switchMode();
 });

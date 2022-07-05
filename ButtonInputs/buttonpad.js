@@ -5,7 +5,7 @@ var calculationLength = 0;
 var caretPositionsArr = [];
 var newCaretPosition = 0;
 
-$("#buttonbox input, #buttonbox button").not(".exitLine").click(function()
+$("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 {
 	if (!$(this).hasClass("btnOpt"))
 	{
@@ -23,7 +23,7 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").click(function()
 	}
 });
 
-$(".left").click(function()
+$(".left").off().click(function()
 {
 	 var index = caretPositionsArr.indexOf(newCaretPosition);
 
@@ -36,7 +36,7 @@ $(".left").click(function()
 		$currentCalc.caret("pos",newCaretPosition);
 });
 
-$(".right").click(function()
+$(".right").off().click(function()
 {
 	var index = caretPositionsArr.indexOf(newCaretPosition);
 	newCaretPosition = caretPositionsArr[index+1];

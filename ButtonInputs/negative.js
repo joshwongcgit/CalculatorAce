@@ -1,7 +1,6 @@
-$('.negative').click(function()
+$('.negative').off().click(function()
 {
   var neg = $(this).val();
-  alert("bye")
   processNeg(neg);
 });
 

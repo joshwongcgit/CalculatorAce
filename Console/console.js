@@ -126,7 +126,7 @@ function noTabError()
 
 function activa()
 {
-	$('.errorClose').click(function()
+	$('.errorClose').off().click(function()
 	{
 		$(".alerta").empty();
 	});

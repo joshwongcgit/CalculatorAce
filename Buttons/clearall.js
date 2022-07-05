@@ -11,7 +11,7 @@ function clearEntire()
   }
 }
 
-$('.clearEntire').click(function()
+$('.clearEntire').off().click(function()
 {
   clearEntire();
 });

@@ -1,6 +1,6 @@
 var hideAnswer = false;
 
-$('.hideAnswer').click(function()
+$('.hideAnswer').off().click(function()
 {
   hideTheAnswer();
 });
