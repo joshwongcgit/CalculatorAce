@@ -1,7 +1,5 @@
 function autofocus()
 {
-  navigator.virtualKeyboard.hide();
-  $currentCalc.attr("readonly","readonly")
   $currentCalc.focus();
   // alert("l")
   if (!equalPressed)
@@ -16,6 +14,7 @@ function autofocus()
   {
   	$("#calculation").css("caret-color","transparent")
   }
+  navigator.virtualKeyboard.hide();
 }
 
 
