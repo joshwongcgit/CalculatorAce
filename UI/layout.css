@@ -449,6 +449,7 @@ span
   font-size:25px;
   font-weight:800;
   z-index: 3;
+ justify-content: center;
 }
 
 /* The history body where elements are placed at*/
