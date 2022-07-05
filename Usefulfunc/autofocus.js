@@ -18,7 +18,7 @@ function autofocus()
 }
 
 
- $("#calculation").on("keypress", function(e) {
+ $("#calculation").on("click", function(e) {
   alert("hey")
       e.preventDefault();
   });
