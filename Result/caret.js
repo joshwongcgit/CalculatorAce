@@ -16,6 +16,8 @@ function clickCaret(previousPos,caretArr)
     if (caretArr.includes(currentCaretPosition))
     {
       $currentCalc.caret("pos",currentCaretPosition);
+        navigator.virtualKeyboard.overlaysContent = true;
+  navigator.virtualKeyboard.hide();
       clickCaret(currentCaretPosition,caretArr)
     }
 
@@ -23,6 +25,8 @@ function clickCaret(previousPos,caretArr)
     else
     {
       $currentCalc.caret("pos",previousPos);
+        navigator.virtualKeyboard.overlaysContent = true;
+  navigator.virtualKeyboard.hide();
       clickCaret(previousPos,caretArr)
     }
   });
@@ -39,9 +43,7 @@ function newLineProcess(newCalculationLength)
 
 function caretRelocating()
 {
-  alert("pop")
   var newCalculationLength = $currentCalc.text().split("").length;
-  navigator.virtualKeyboard.overlaysContent = false;
 
   newLineProcess(newCalculationLength);
 
@@ -59,10 +61,8 @@ function caretRelocating()
     $currentCalc.caret("pos",newCaretPosition);
   }
 
-   navigator.virtualKeyboard.hide();
-   alert("hey")
-  var ghostInput = document.getElementById("ghostInput");
-  ghostInput.focus();
+   
+
   var calcContent = $currentCalc.text().split("");
   calcContent = groupLetters(calcContent);
   calcContent = groupTrigWithNegativeOne(calcContent);
