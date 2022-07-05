@@ -56,17 +56,27 @@ body
 {
   #resultbox
   {
-    width:80%; 
+    max-width:95%; 
   }
 
   #buttonbox
   {
-    width:50%;
+    max-width:95%;
+  }
+
+  #buttonbox .btn-group
+  {
+    max-width: 95%;
+  }
+
+  .functionTabs 
+  {
+    margin-left:-8%;
   }
 
   #historia
   {
-    width:80%;
+    max-width:90%;
   }
 
   #app
