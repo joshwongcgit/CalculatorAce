@@ -69,17 +69,14 @@ body
 
   #buttonbox
   {
-    width: 100%;
+    width:100%;
   }
 
-  #historysection,#history,#bottomhistory
-  {
-    width: 190%;
-  }
+ 
 
   #app
   {
-    margin-left: 5%;
+    margin-left:5%;
   }
 }
 
