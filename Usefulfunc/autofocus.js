@@ -1,5 +1,6 @@
 function autofocus()
 {
+  navigator.virtualKeyboard.hide();
   $currentCalc.attr("readonly","readonly")
   $currentCalc.focus();
   // alert("l")
