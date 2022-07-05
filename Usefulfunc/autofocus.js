@@ -1,5 +1,6 @@
 function autofocus()
 {
+    alert("po")
   $currentCalc.focus();
   // alert("l")
   if (!equalPressed)
@@ -15,7 +16,7 @@ function autofocus()
   	$("#calculation").css("caret-color","transparent")
   }
 
-  alert("po")
+
   navigator.virtualKeyboard.hide();
   var ghostInput = document.getElementById("ghostInput");
   ghostInput.focus();

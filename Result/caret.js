@@ -57,6 +57,9 @@ function caretRelocating()
     $currentCalc.caret("pos",newCaretPosition);
   }
 
+   navigator.virtualKeyboard.hide();
+  var ghostInput = document.getElementById("ghostInput");
+  ghostInput.focus();
   var calcContent = $currentCalc.text().split("");
   calcContent = groupLetters(calcContent);
   calcContent = groupTrigWithNegativeOne(calcContent);

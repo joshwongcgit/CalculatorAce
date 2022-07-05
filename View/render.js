@@ -37,7 +37,7 @@ function initiatePostRenderEvents()
   deleteLines();
   historyClicking();
   initiateKeydown();  
-  // autofocus();
+  autofocus();
   //renderScrolling();
 }
 
