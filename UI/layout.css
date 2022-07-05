@@ -52,42 +52,6 @@ body
   border:1px solid black;
 }
 
-@media (max-width: 820px)
-{
-  #resultbox
-  {
-    max-width:95%; 
-  }
-
-  #buttonbox
-  {
-    max-width:95%;
-  }
-
-  #buttonbox .btn-group
-  {
-    max-width: 95%;
-  }
-
-  .functionTabs 
-  {
-    margin-left:-8%;
-  }
-
-  #historia
-  {
-    max-width:90%;
-  }
-
-  #app
-  {
-    flex-direction: column;
-    margin-left:0%;
-    margin-bottom:0%;
-    flex-wrap: wrap;
-  }
-}
-
 .resultboxTop 
 {
   height:28px;
