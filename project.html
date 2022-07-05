@@ -585,11 +585,13 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   $(document).ready(function()
   { 
 
-      $('.app').off().touch(function()
+  $("#app").click(function(event)
   {
-    alert("l");
-  });
-   
+    alert("heyy")
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  })
+
 });
     $('.addTab').off().click(function()
   {
@@ -619,8 +621,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   });
 
-  $(".app").click(function(){event.preventDefault()})
-});
+
 
 </script>
 
