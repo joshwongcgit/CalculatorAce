@@ -55,7 +55,7 @@ body
 
 .resultboxTop 
 {
- 
+ height: 28px;
 }
 
 .trigmode
@@ -84,7 +84,8 @@ body
   
   font-size:25px;
   color:red;
-  cursor: pointer;  
+  cursor: pointer; 
+  margin-left:95%; 
 }
 
 .trigmode
