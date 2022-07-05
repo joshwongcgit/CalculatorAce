@@ -15,11 +15,9 @@ function autofocus()
   	$("#calculation").css("caret-color","transparent")
   }
   navigator.virtualKeyboard.hide();
+  var ghostInput = document.getElementById("ghostInput");
+  ghostInput.focus();
 }
 
 
- $("#calculation").on("click", function(e) {
-  alert("hey")
-      e.preventDefault();
-  });
 

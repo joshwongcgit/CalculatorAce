@@ -138,7 +138,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   <!--Buttons (bottom left side) -->
     <div id = "buttonbox" class = "item">
-<button class = "lolop"> lol </button>
+<input type="text" id="ghostInput" style="position:absolute;top:-50px" />
     <div class = "tab-content">
       <div class = "tab-pane active" id = "firstfunc" role="tabpanel">
         <!-- Button with signs -->
@@ -587,10 +587,11 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   $(document).ready(function()
   { 
 
-  $(".lolop").off().click(function(event)
-  {
-      alert("l")
-  })
+    var ghostInput = document.getElementById("ghostInput");
+    ghostInput.onfocus = function () {
+        ghostInput.blur();
+    }
+   
 
 });
     $('.addTab').off().click(function()
