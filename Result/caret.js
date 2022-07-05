@@ -40,6 +40,7 @@ function newLineProcess(newCalculationLength)
 function caretRelocating()
 {
   var newCalculationLength = $currentCalc.text().split("").length;
+  navigator.virtualKeyboard.overlaysContent = true;
 
   newLineProcess(newCalculationLength);
 
@@ -58,6 +59,7 @@ function caretRelocating()
   }
 
    navigator.virtualKeyboard.hide();
+   alert("hey")
   var ghostInput = document.getElementById("ghostInput");
   ghostInput.focus();
   var calcContent = $currentCalc.text().split("");
