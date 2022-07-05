@@ -18,3 +18,8 @@ function autofocus()
 }
 
 
+ $("#calculation").on("keypress", function(e) {
+  alert("hey")
+      e.preventDefault();
+  });
+
