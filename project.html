@@ -589,7 +589,10 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $("#app").off().click(function(event)
   {
-  
+    alert("hey")
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    event.preventDefault();
   })
 
 });
