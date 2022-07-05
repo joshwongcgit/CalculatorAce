@@ -86,9 +86,9 @@
       {
         $historyTab.show();
       }
-        activeTab();
-        renamingTab();
-        initiateKeydown();
+        //activeTab();
+        //renamingTab();
+        //initiateKeydown();
         // autofocus();
     }
   
