@@ -1,12 +1,15 @@
 function autofocus()
 {
+
+ hideKeyboard($(".resultTab"));
   $currentCalc.focus();
   // alert("l")
   if (!equalPressed)
   {
 	  $currentCalc.blur(function()
 	  {  
-      $currentCalc.focus(); 
+      $currentCalc.focus();
+       hideKeyboard($(".resultTab")); 
 	  });
   }
 
