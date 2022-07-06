@@ -16,13 +16,6 @@ function clickCaret(previousPos,caretArr)
     if (caretArr.includes(currentCaretPosition))
     {
       $currentCalc.caret("pos",currentCaretPosition);
-      alert("wo")
-      if ('virtualKeyboard' in navigator) {
-        alert("hey")
-  // The VirtualKeyboard API is supported!
-}
-        navigator.virtualKeyboard.overlaysContent = true;
-  navigator.virtualKeyboard.hide();
       clickCaret(currentCaretPosition,caretArr)
     }
 
@@ -30,13 +23,6 @@ function clickCaret(previousPos,caretArr)
     else
     {
       $currentCalc.caret("pos",previousPos);
-      alert("wo")
-          if ('virtualKeyboard' in navigator) {
-        alert("hey")
-  // The VirtualKeyboard API is supported!
-}
-        navigator.virtualKeyboard.overlaysContent = true;
-  navigator.virtualKeyboard.hide();
       clickCaret(previousPos,caretArr)
     }
   });
@@ -62,12 +48,7 @@ function caretRelocating()
   {
     newCaretPosition =  newCalculationLength;
     $currentCalc.caret("pos",newCaretPosition);
-          if ('virtualKeyboard' in navigator) {
-        alert("hey")
-  // The VirtualKeyboard API is supported!
-}
-        navigator.virtualKeyboard.overlaysContent = true;
-  navigator.virtualKeyboard.hide();
+    hideKeyboard($currentCalc)
   }
 
   else
@@ -75,12 +56,7 @@ function caretRelocating()
     var diff = calculationLength - caretPosition;
     newCaretPosition = newCalculationLength - diff;
     $currentCalc.caret("pos",newCaretPosition);
-          if ('virtualKeyboard' in navigator) {
-        alert("hey")
-  // The VirtualKeyboard API is supported!
-}
-        navigator.virtualKeyboard.overlaysContent = true;
-  navigator.virtualKeyboard.hide();
+    hideKeyboard($currentCalc)
   }
 
    
