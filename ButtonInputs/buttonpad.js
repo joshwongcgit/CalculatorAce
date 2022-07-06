@@ -160,7 +160,7 @@ function processValue(value)
 
 		  else if (lastValue == "(")
 		  {
-		  	//alert("hello")
+		  	
 		  }
 
 		  else if (checkOpenAndClose(calcContent) <= 0) 
