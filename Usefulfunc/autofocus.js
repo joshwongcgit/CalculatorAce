@@ -15,8 +15,6 @@ function autofocus()
   	$("#calculation").css("caret-color","transparent")
   }
 
-
-  navigator.virtualKeyboard.hide();
  
 }
 

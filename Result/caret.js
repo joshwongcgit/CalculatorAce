@@ -16,6 +16,10 @@ function clickCaret(previousPos,caretArr)
     if (caretArr.includes(currentCaretPosition))
     {
       $currentCalc.caret("pos",currentCaretPosition);
+      if ('virtualKeyboard' in navigator) {
+        alert("hey")
+  // The VirtualKeyboard API is supported!
+}
         navigator.virtualKeyboard.overlaysContent = true;
   navigator.virtualKeyboard.hide();
       clickCaret(currentCaretPosition,caretArr)
@@ -25,6 +29,10 @@ function clickCaret(previousPos,caretArr)
     else
     {
       $currentCalc.caret("pos",previousPos);
+          if ('virtualKeyboard' in navigator) {
+        alert("hey")
+  // The VirtualKeyboard API is supported!
+}
         navigator.virtualKeyboard.overlaysContent = true;
   navigator.virtualKeyboard.hide();
       clickCaret(previousPos,caretArr)

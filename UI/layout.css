@@ -107,11 +107,6 @@ body
   font-size:34px;
 }
 
-#exitResult
-{
-  font-size:26px;
-  color:red;
-}
 
 .instantAnswer
 {
@@ -709,7 +704,8 @@ span
   color:red;
   cursor: pointer;
   line-height: 0.9;
-  margin-right: 100%;
+  margin-left:1%;
+
 }
 
 .nav-tabs
