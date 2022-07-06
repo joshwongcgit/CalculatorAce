@@ -709,6 +709,7 @@ span
   color:red;
   cursor: pointer;
   line-height: 0.9;
+  margin-right: 100%;
 }
 
 .nav-tabs
