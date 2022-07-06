@@ -17,8 +17,7 @@ function autofocus()
 
 
   navigator.virtualKeyboard.hide();
-  var ghostInput = document.getElementById("ghostInput");
-  ghostInput.focus();
+ 
 }
 
 
