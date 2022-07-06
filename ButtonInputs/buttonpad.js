@@ -10,7 +10,7 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 	if (!$(this).hasClass("btnOpt"))
 	{
 	  var value = $(this).val();
-
+	  alert(value)
 	  if ($(this).hasClass("backspace"))
 	  {
 			backspace();
