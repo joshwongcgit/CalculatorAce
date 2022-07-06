@@ -4,13 +4,13 @@ var caretPosition = 0;
 var calculationLength = 0;
 var caretPositionsArr = [];
 var newCaretPosition = 0;
-alert("heyyyy")
+
 $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 {
 	if (!$(this).hasClass("btnOpt"))
 	{
 	  var value = $(this).val();
-	  alert(value)
+	
 	  if ($(this).hasClass("backspace"))
 	  {
 			backspace();
