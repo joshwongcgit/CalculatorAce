@@ -46,7 +46,7 @@ body
   display: flex;
   flex-direction: column;
   background-color:#2d3b3d;
-  height:208px;
+
   width:100%;
   z-index:3;
   border-radius:1px;
