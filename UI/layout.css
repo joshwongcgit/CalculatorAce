@@ -709,7 +709,6 @@ span
   color:red;
   cursor: pointer;
   line-height: 0.9;
-  margin-left:18%;
 }
 
 .nav-tabs
@@ -725,8 +724,9 @@ hr
 /* Digit Mode */
 #historyTop
 {
-  
+  display: flex;
 }
+
 #historyTop div
 {
   margin-right:77px;
