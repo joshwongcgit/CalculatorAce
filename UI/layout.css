@@ -75,7 +75,7 @@ body
   color:red;
   cursor: pointer; 
   margin-left:95%;
-  line-height:0.2;
+  line-height:0;
 }
 
 .trigmode
