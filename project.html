@@ -50,11 +50,16 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 <style type="text/css">
 
 
-@media only screen and (min-width: 509px) and (max-width: 955px)
+@media only screen and (min-width: 502px) and (max-width: 955px)
 {
   body 
   {
    overflow: hidden;
+  }
+
+  #resultbox
+  {
+    height: 20vh;
   }
 
   .trigmode
@@ -62,10 +67,27 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     color: green;
   }
 
+  .resultboxMiddle > div
+  {
+    margin-left:0.5%;
+    margin-top:2%;
+    margin-bottom:2.1vh;
+  }
+
   #buttonbox input, #buttonbox .btn
   {
     width: 55px;
     height:55px;
+  }
+
+  #history
+  {
+    width: 520px;
+  }
+
+  #bottomhistory
+  {
+    width: 520px;
   }
 
   .utilitybuttons
@@ -94,10 +116,18 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   {
     margin-top: 1%;
   }
+
+
 }
 
-@media only screen and (max-width: 502px) 
+
+/* smallest */
+@media only screen and (max-width: 501px) 
 {
+  .trigmode
+  {
+    color: black;
+  }
   #help .close
   {
 
@@ -158,7 +188,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   {
     margin-left:0.5%;
     margin-top:2%;
-    margin-bottom:2.1vh;
+    margin-bottom:2.4vh;
   }
 
   .instantAnswer
