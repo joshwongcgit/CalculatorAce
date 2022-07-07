@@ -309,16 +309,31 @@ input #backspace
   color: #fff;
   text-align: left;
   border-radius: 6px;
-  padding: 5px 0px;
+  padding: 6px 2px;
 
   /* Position the tooltip */
   position: absolute;
-  z-index: 144444444444444;
+  z-index: 10;
+}
+
+.tool 
+{
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
 .tool:hover .tooltiptext 
 {
   visibility: visible;
+}
+
+.tool .tooltiptext {
+    /* Position the tooltip */
+  position: absolute;
+  z-index: 11;
+  top: -5px;
+  right:85%;
 }
 
 .utilitybuttons button
