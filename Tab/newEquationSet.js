@@ -89,7 +89,7 @@
         activeTab();
         renamingTab();
         initiateKeydown();
-        //autofocus();
+        autofocus();
     }
   
 
