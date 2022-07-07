@@ -60,7 +60,7 @@ function caretRelocating()
   {
     newCaretPosition =  newCalculationLength;
     $currentCalc.caret("pos",newCaretPosition);
-    //hideKeyboard($(".resultTab"))
+    hideKeyboard($(".resultTab"))
   }
 
   else
@@ -68,7 +68,7 @@ function caretRelocating()
     var diff = calculationLength - caretPosition;
     newCaretPosition = newCalculationLength - diff;
     $currentCalc.caret("pos",newCaretPosition);
-    //hideKeyboard($(".resultTab"))
+    hideKeyboard($(".resultTab"))
   }
 
    
