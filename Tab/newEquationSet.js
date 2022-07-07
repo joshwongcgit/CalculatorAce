@@ -49,7 +49,7 @@
 
       $(".resultboxMiddle  .tab-pane").removeClass("active");
       // create tab content to store calculation
-      $(".resultboxMiddle").append("<div contenteditable = 'true' inputmode = 'none' id = 'calculation "  + idValue + "' class = 'tab-pane active resultTab resultTab" + tabNumber + "'> </div>");
+      $(".resultboxMiddle").append("<div contenteditable = 'true' id = 'calculation "  + idValue + "' class = 'tab-pane active resultTab resultTab" + tabNumber + "'> </div>");
       $currentCalc = $('.resultTab' + tabNumber);
       $currentCalc.css("outline","0px solid transparent");
       $currentCalc.focus();
