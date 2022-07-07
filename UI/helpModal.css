@@ -11,6 +11,11 @@
   opacity:1;
 }
 
+#help .close
+{
+  
+}
+
 .close:hover
 {
   color:#e8061d;
