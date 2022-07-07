@@ -49,26 +49,35 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
 <style type="text/css">
 
-  @media only screen and (max-height: 720px) 
-  {
-    .trigmode
-    {
-      color: red;
-    }
 
-    .instantAnswer
-    {
-      margin-top: 1%;
-    }
+@media only screen and (min-width: 502px) and (max-width: 955px)
+{
+  .trigmode
+  {
+    color: green;
+  }
+}
+
+@media only screen and (max-height: 720px) 
+{
+  .trigmode
+  {
+    color: red;
   }
 
-@media only screen and (max-width: 955px) 
-{
+  .instantAnswer
+  {
+    margin-top: 1%;
+  }
+}
 
+@media only screen and (max-width: 502px) 
+{
   #help .close
   {
 
   }
+
   #help .modal-content
   {
     width:370px;

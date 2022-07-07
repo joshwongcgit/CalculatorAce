@@ -595,6 +595,8 @@ span
 .functionTabs
 {
   margin-right:5%;
+  display: flex;
+  flex-direction: column;
 }
 
 .functionTabs a

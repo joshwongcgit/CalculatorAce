@@ -42,15 +42,7 @@
   height:600px;
 }
 
-.key-body #myCarousel
-{
-  height:470px;
-}
 
-.key-body .carousel-inner
-{
-  height:470px;
-}
 
 #keyCarousel .header
 {
@@ -124,12 +116,6 @@
   position: relative;
   top:0px;
   left:5px;
-}
-
-.key-body .carousel-control
-{
-  position: absolute;
-  top:420px;
 }
 
 .key-body .bottom
