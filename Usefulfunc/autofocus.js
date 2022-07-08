@@ -1,23 +1,23 @@
 function autofocus()
 {
 
- hideKeyboard($(".resultTab"));
+ //hideKeyboard($(".resultTab"));
   $currentCalc.focus();
-   hideKeyboard($currentCalc);
+   // hideKeyboard($currentCalc);
   // alert("l")
   if (!equalPressed)
   {
 	  $currentCalc.blur(function()
 	  {  
       $currentCalc.focus();
-       hideKeyboard($currentCalc);
+       //hideKeyboard($currentCalc);
       
 	  });
   }
 
   else
   {
-  	$("#calculation").css("caret-color","transparent")
+  	$("#calculation").css("caret-color","blue")
   }
 
  
