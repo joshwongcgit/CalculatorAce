@@ -55,7 +55,6 @@
 #help .modal-header
 {
   display: flex;
-  justify-content: center;
 }
 
 #help .modal-header .close

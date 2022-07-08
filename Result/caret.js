@@ -55,8 +55,7 @@ function caretRelocating()
 
   newLineProcess(newCalculationLength);
 
-  // caret was at the end
-  if (caretPosition == 0)
+  if (caretPosition == 0 && newCalculationLength == 1)
   {
     newCaretPosition =  newCalculationLength;
     $currentCalc.caret("pos",newCaretPosition);
