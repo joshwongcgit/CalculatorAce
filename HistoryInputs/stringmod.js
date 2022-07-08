@@ -29,7 +29,6 @@ function addCommasToEqs(arr)
   {
     var decimalLast = false;
   
-
     // [543,"+",6789]  -->  6789  (this is arr[arr.length-1]) --> 9  this is 
 
     if (arr[arr.length-1] == "" || arr[arr.length-1]  == " ")

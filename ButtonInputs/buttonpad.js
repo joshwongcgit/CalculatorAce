@@ -297,7 +297,6 @@ function processValue(value)
 	calcContent = groupLetters(calcContent);
 	calcContent = groupTrigWithNegativeOne(calcContent);
 	calcContent = processNumbers(calcContent);
-	alert(calcContent)
 	renderContent(calcContent,value);
 }
 
