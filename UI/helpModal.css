@@ -58,9 +58,9 @@
   justify-content: center;
 }
 
-#help .modal-header .item
+#help .modal-header .close
 {
-  margin-left: 240px;
+  margin-left:39%;
 }
 
 #help .modal-title
@@ -69,6 +69,7 @@
   font-family: 'Work Sans', sans-serif;
   font-weight: 900;
   color: white;
+  margin-left:42%;
 }
 
 .help-body
