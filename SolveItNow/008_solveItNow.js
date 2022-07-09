@@ -53,6 +53,7 @@ function getAnswer()
   }
 
   answer = solver(storage);
+  
   //answer = addCommas(answer);
 
   return answer;

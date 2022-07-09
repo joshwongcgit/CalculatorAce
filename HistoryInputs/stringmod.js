@@ -43,14 +43,15 @@ function addCommasToEqs(arr)
       decimalLast = true;
     }
 
-
     for (var i = 0; i < arr.length; i++)
     { 
       var content = arr[i];
     
       if (["1","2","3","4","5","6","7","8","9","0"].includes(content[0]))
       {
-        arr[i] = Number(arr[i]).toLocaleString();
+        arr[i] = Number(arr[i]).toLocaleString(undefined,
+          {minimumFractionDigits: 0,
+           maximumFractionDigits: 16});
       }
     }
 
@@ -81,7 +82,9 @@ function addCommas(ans)
 
   if (ans.search("e") == -1)
   {
-    ans = Number(ans).toLocaleString();
+    ans = Number(ans).toLocaleString(undefined,
+          {minimumFractionDigits: 0,
+           maximumFractionDigits: 16});
   }
 
   // if decimal is last
@@ -89,6 +92,7 @@ function addCommas(ans)
   {
     ans = ans.concat(".");
   }
+
     return ans;
 }
 

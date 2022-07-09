@@ -1,5 +1,14 @@
+
 function solver(arr)
 {
+  for (var j = 0; j < arr.length; j++)
+  {
+    if (arr[j] == "-" &&  !isNaN(arr[j+1]))
+    {
+      arr.splice(j,2,"-" + arr[j+1]);
+    }
+  }
+
   for (var i = 0; i < arr.length; i++)
   {
     if (arr[i] == "*")

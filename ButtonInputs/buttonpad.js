@@ -111,13 +111,14 @@ function processValue(value)
 			{
 				answer = addCommas(answer);
 			}
-			
+	
 			var cont = $currentCalc.text().split("");
 			var diff = checkOpenAndClose(cont);
 		  $instantAnswer.html(answer);
 		  $currentCalc.html("<div class = 'sepEqs'> <div>" + answer + "</div> </div>");
 		  var historyContent = $historyTab.html().splitter("</b>");
 
+		  // if theres is a difference in opening and closing parentheses
 			for (var i = 0; i < diff; i++)
 			{
 				historyContent.splice(historyContent.length-2,0,"<b class = 'paren'>)</b>")
@@ -127,17 +128,42 @@ function processValue(value)
 
 		  if ($digitTab.text() == "Single")
 		  {
-		  	for (var x = 0; x < answer.length; x++)
-		  	{
-		  	  var pos = historyContent.length-2;
-		      historyContent.splice(pos,0,"<b class = 'number'>" + answer[x] + "</b>");
+		  	var ansLength = answer.length;
+		  	var pos = historyContent.length-2;
+		  	var initialCounter = 0;
+
+		  	if (answer < 0)
+				{
+					historyContent.splice(pos,0,"<b class = 'negative'>-</b>");
+					pos++;
+					initialCounter++;
+				}
+
+		  	for (var x = initialCounter; x < answer.length; x++)
+		  	{	
+		      historyContent.splice(pos,0,"<b class = 'number'>" + answer[initialCounter] + "</b>");
 		      pos++;
 		  	}
 		  }
 
 		  else
 		  {
-		  	historyContent.splice(historyContent.length-2,0,"<b class = 'number'>" + answer + "</b>");
+		  	var startingIndex = historyContent.length-2;
+
+		  	if (answer < 0)
+		  	{
+		  		answer = answer.split("");
+		  		answer.shift();
+		  		answer = answer.join("");
+		  		historyContent.splice(startingIndex,0,"<b class = 'negative'>-</b>");
+		  		startingIndex++;	
+		  	}
+
+		  	historyContent.splice(startingIndex,0,"<b class = 'number'>" + answer + "</b>");
+
+		  	answer = answer.split("");
+		  	answer.splice(0,"-");
+		  	answer = answer.join("");
 		  }
 
 		  historyContent = historyContent.join("");

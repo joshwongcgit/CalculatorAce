@@ -215,7 +215,7 @@ function renderContent(content,value)
           $currentCalc.html(str);
           answer = getAnswer();
           answer = addCommas(answer);
-
+          
           var textContent = $currentCalc.text();
           var textLength = textContent.length;
           

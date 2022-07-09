@@ -45,11 +45,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
 </head>
 
-
-
 <style type="text/css">
-
-
 
 /*medium width */
 @media only screen and (min-width: 516px) and (max-width: 955px)
@@ -162,6 +158,10 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 /* smallest width */
 @media only screen and (max-width: 515.99px) 
 {
+  .exitResult
+  {
+
+  }
   #help .modal-header .close
   {
     margin-left:32%;
@@ -247,6 +247,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   {
     margin-left:1vw;
     font-size: 18px;
+    margin-bottom:5%;
   }
 
   #resultbox
@@ -797,14 +798,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
-
-    var ghostInput = document.getElementById("ghostInput");
-    ghostInput.onfocus = function () {
-        ghostInput.blur();
-    }
+ 
    
-
-});
     $('.addTab').off().click(function()
   {
     newEquation();
@@ -832,6 +827,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   {
 
   });
+});
 
 </script>
 
