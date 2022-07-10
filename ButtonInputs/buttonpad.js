@@ -126,6 +126,7 @@ function processValue(value)
 
 		  historyContent.splice(historyContent.length-2,0,"<b class = 'equal'>=</b>");
 
+		  // single form
 		  if ($digitTab.text() == "Single")
 		  {
 		  	var ansLength = answer.length;
@@ -141,11 +142,12 @@ function processValue(value)
 
 		  	for (var x = initialCounter; x < answer.length; x++)
 		  	{	
-		      historyContent.splice(pos,0,"<b class = 'number'>" + answer[initialCounter] + "</b>");
+		      historyContent.splice(pos,0,"<b class = 'number'>" + answer[x] + "</b>");
 		      pos++;
 		  	}
 		  }
 
+		  // whole form
 		  else
 		  {
 		  	var startingIndex = historyContent.length-2;
