@@ -849,11 +849,9 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   $(document).ready(function()
   { 
     var elem = document.getElementById("app");
-    if (elem.requestFullscreen)
-    {
-      elem.requestFullscreen();
-    }
-   
+    
+    elem.scroll(function(){ document.requestFullscreen();})
+
     $('.addTab').off().click(function()
     {
       newEquation();
