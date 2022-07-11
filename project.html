@@ -273,8 +273,6 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
    overflow: hidden;
   }
 
-
-
   .resultTab .sepEqs
   {
     font-size: 20px;
@@ -850,17 +848,21 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
- 
+    var elem = document.getElementById("app");
+    if (elem.requestFullscreen)
+    {
+      elem.requestFullscreen();
+    }
    
     $('.addTab').off().click(function()
-  {
-    newEquation();
-  });
-   
-  var newTab = false;
+    {
+      newEquation();
+    });
+     
+    var newTab = false;
 
-  $('#historyInputs').empty();
-  newEquation();
+    $('#historyInputs').empty();
+    newEquation();
 
   $('.exitResult, .clearBtn').off().click(function()
   {
