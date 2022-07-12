@@ -178,9 +178,14 @@ input #backspace
   font-weight:700;
 }
 
-#buttonbox input:hover
+
+
+@media (hover: hover) {
+  #buttonbox input:hover
 {
   background-color:rgb(32, 71, 135);
+}
+    
 }
 
 #buttonbox input[value = "x&sup2"]

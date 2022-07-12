@@ -21,7 +21,12 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 			processValue(value);
 	  }	
 	}
+
+	$(this).css("background-color", "#2d2d2d;");
 });
+
+
+
 
 $(".left").off().click(function()
 {
