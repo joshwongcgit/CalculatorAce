@@ -123,7 +123,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   }
 }
 
-@media only screen and (max-height: 555px)
+@media only screen and (max-height: 555px) and (max-width:955px)
 {
   #buttonbox
   {
@@ -143,7 +143,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 } 
 
 /*medium height */
-@media only screen and (min-height: 520px) and (max-height: 720px) 
+@media only screen and (min-height: 520px) and (max-height: 720px) and (max-width:955px)
 {
   #resultbox
   {
@@ -515,7 +515,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 </ul>
 
 <div class = "utilitybuttons">  
-   <button class = "btnOpt tool" data-toggle="modal"  title="Settings" data-target = "#preferences"><span>&#9881;</span>  <span class="tooltiptext">Settings (<b>X</b>) </span> </button>  <!--  setting -->
+   <button class = "btnOpt tool" data-toggle="modal"  title="About" data-target = "#about"><span>&#9881;</span>  <span class="tooltiptext">About (<b>X</b>) </span> </button>  <!--  setting -->
    <button class = "btnOpt tool" data-placement="bottom" title="Hotkeys"> <i class=
     "material-icons" data-toggle = "modal" data-target = "#keys" style = "">keyboard </i>  <span class="tooltiptext">Keyboard (<b>K</b>) </span> </button>  <!-- hotkeys -->
    <button class = "btnOpt tool"  data-toggle="modal" data-target = "#help" data-placement="left" title="Info"> <span style> ? </span>  <span class="tooltiptext">Info (<b>V</b>) </span> </button> <!-- help or info -->
@@ -613,7 +613,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
               <div>
                 <p class = "five holder" style = "font-size:25px;"> Using history to reselect </p>
-                <p class = "fifth nested" style = "font-size:15px;"> You can click or tap on any elements to add to your current calculation. It allows you visualize previous results so you  can input them into your next problem
+                <p class = "fifth nested" style = "font-size:15px;"> You can click or tap on any elements to add to your current calculation. It allows you visualize previous results so you  can input them into your next problem. However, you cannot reselect decimals ,any value with a decimal, or any negative numbers. This might be added in the future
                 </p>
               </div>
 
@@ -712,86 +712,51 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   
 
 
-  <div class="modal fade" id="preferences" role="dialog">
+  <div class="modal fade" id="about" role="dialog">
     <div class="modal-dialog modal-dialog preferences-dialog modal-dialog-centered">
 
         <!-- Modal content-->
-        <div class="modal-content preferences">
+        <div class="modal-content about-content">
 
         <div class="modal-header">
-        <h2 class="modal-title preferences-header item" id="exampleModalLongTitle"
-        > Preferences </h2>
-        <button type="button" id = "preferencesX" class="item close" data-dismiss="modal" aria-label="Close">
+        <h2 class="modal-title about-header item" id="exampleModalLongTitle"
+        > About Calculator Ace </h2>
+        <button type="button" id = "aboutX" class="item close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+        </div> <!-- header -->
 
 
-          <div class="preferences-body">
+          <div class="about-body">
+            <p class = "first"> Calculator Ace is a lightweight calculator with an emphasis on tracking calculations. 
+            It features caret positioning, history section, tabs, reselection of mathematical elements, and trignometric functions. </p> 
 
-            <div class = "preferencesContainer">
-              <div class = "preferencesTopics"> Current answer display </div>
-                <div class = "prefer"> <input type = "radio" name = "currentAnswer" value = "show" id = "showCurrentAnswer" checked = "checked"> Show quick answer
-                  <input type = "radio" id = "hideCurrentAnswer" name = "currentAnswer" value = "hide" style = "position:relative;left:35px">
-                  <span style = "position:relative;left:35px"> Hide quick answer </span>
-               
-            </div>
-          </div>
+            <h3> Known issues </h3>
 
-            <div class = "preferencesContainer">
-              <div class = "preferencesTopics"> Guide messages display </div>
-                <div class = "prefer">
-                  <input type = "radio" id = "showConsole" value = "show" name = "consoleDisplay" checked = "checked"> Show console message
-                  <input type = "radio" id = "hideConsole" value = "hide" name = "consoleDisplay" style = "position:relative;left:35px">
-                   <span style = "position:relative;left:35px"> Disable console messages</span>
-                </div>
-            </div>
-       
+            <p> -Some screen sizes might</p>
+            <p> -  </p>
+            <p> -Some screen sizes   </p>
+            <p> -Some screen sizes   </p>
+            <p> -Some screen sizes   </p>
+            <p> -Some screen sizes   </p>
 
-            <div class = "preferencesContainer">  
-              <div class = "preferencesTopics"> History display  </div>
-                <div class = "prefer"> <input type = "radio" id = "showHistory" value = "show" name = "history" checked = "checked"> Show history 
-                   <input type = "radio" id = "hideHistory" value = "hide" name = "history" style = "position:relative;left:15px">
-                    <span style = "position:relative;left:15px"> Hide history </span>
-            </div>
-          </div>
+            
 
-            <!-- <div class = "preferencesContainer">
-              <div class = "preferencesTopics"> Clear history </div>
-                <div class = "prefer">
-                  <input type = "radio" id = "manually" value = "manual" name = "clearHistory" checked = "checked"> Manually clear history</div>
-                <div>
-                  <input type = "radio" id = "autoclearEvery" value = "autoEvery" name = "clearHistory">
-                   <span> Automatically clear whole history for every finished equations </span>
-                </div>
-                <div>
-                  <input type = "radio" id = "autoclearFull" name = "clearHistory" value = "autoTab"> Automatically clear whole history on full set
-                </div>
-            </div>  --> 
-           <div class = "preferencesContainer">  
-              <div class = "preferencesTopics"> Text colors </div>
-                <div class = "prefer"> <input type = "radio" id = "textColor" value = "variety" name = "textColor" checked = "checked"> Show different colors
-                   <input type = "radio" id = "textColor" value = "none" name = "textColor" style = "position:relative;left:15px">
-                    <span style = "position:relative;left:15px"> No colors </span>
-            </div>
-          </div>
+            <h3> Future updates </h3>
 
-            <div class = "preferencesContainer">  
-              <div class = "preferencesTopics"> Button Colors  </div>
-                <div class = "prefer"> <input type = "radio" id = "buttonColor" value = "variety" name = "buttonColor" checked = "checked"> Show different colors
-                   <input type = "radio" id = "buttonColor" value = "none" name = "buttonColor" style = "position:relative;left:15px">
-                    <span style = "position:relative;left:15px"> No colors </span>
-                </div>
-            </div> 
-        
-          <div class = "preferencesButton">
-            <button class = "btn btn-primary apply" data-target = "#preferences" data-toggle = "modal"> Apply </button>
-            <button class = "btn btn-info cancel" data-target = "#preferences" data-toggle = "modal"> Cancel </button>
-            <button class = "btn btn-warning resetSetting"> Reset Settings </button>
-        </div>
-    </div>
-  </div>
-</div>
+            <p> -Some screen sizes might</p>
+            <p> -  </p>
+            <p> -Some screen sizes   </p>
+            <p> -Some screen sizes   </p>
+            <p> -Some screen sizes   </p>
+            <p> -Some screen sizes   </p>
+
+
+          </div> <!-- body -->
+             
+    </div> <!-- content -->
+  </div> <!-- dialog -->
+</div> <!-- modal -->
 
   
 

@@ -1,8 +1,22 @@
 var needed;
 
+function addMultiplyOnClosingParen()
+{
+  var storage = $currentCalc.text().split("");
+
+  for (var i = 0; i < storage.length; i++)
+  {
+    if (storage[i] == ")" && !isNaN(storage[i+1]))
+    {
+      storage.splice(i+1,0,"*")
+    }
+  }
+    return storage;
+}
+
 function filterMultiAndDivide()
 {
-  var storage = $currentCalc.text().split('');
+  var storage = addMultiplyOnClosingParen();
 
   for (var i = 0; i < storage.length; i++)
   {
