@@ -18,7 +18,6 @@ function deviceType()
     return "desktop";
 };
 
-
 $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 {
 	if (!$(this).hasClass("btnOpt"))
@@ -38,12 +37,9 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 
 	if (deviceType() == "mobile")
 	{
-		$(this).css("background-color", "#2d2d2d;");
+		var hoverGone = setTimeOut($(this).css("background-color", "#2d2d2d;"),2000);
 	}
 });
-
-
-
 
 $(".left").off().click(function()
 {
