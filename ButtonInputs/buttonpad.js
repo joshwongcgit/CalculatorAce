@@ -5,6 +5,20 @@ var calculationLength = 0;
 var caretPositionsArr = [];
 var newCaretPosition = 0;
 
+function deviceType()
+{
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) 
+    {
+        return "tablet";
+    }
+    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        return "mobile";
+    }
+    return "desktop";
+};
+
+
 $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 {
 	if (!$(this).hasClass("btnOpt"))
@@ -22,7 +36,10 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 	  }	
 	}
 
-	$(this).css("background-color", "#2d2d2d;");
+	if (deviceType() == "mobile")
+	{
+		$(this).css("background-color", "#2d2d2d;");
+	}
 });
 
 
