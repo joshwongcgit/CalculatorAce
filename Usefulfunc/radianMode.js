@@ -41,6 +41,7 @@ function radianMode(after)
 {
   if ($(".trigMode").text() == "Rad")
   {
+    alert(after)
     after = after*(Math.PI/180);
   }
     return after;

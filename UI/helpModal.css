@@ -50,6 +50,7 @@
 .modal-header
 {
   color: #2054a8;
+  height:50px;
 }
 
 #help .modal-header
@@ -59,7 +60,7 @@
 
 #help .modal-header .close
 {
-  margin-left:39%;
+  margin-left:41%;
 }
 
 #help .modal-title

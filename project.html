@@ -581,11 +581,11 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   </div> <!-- modal -->
 
   <div class="modal fade" id="help" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-toggle="modal">
-  <div class="modal-dialog modal-dialozg-centered modal-lg" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h2 class="modal-title thetitle item" id="exampleModalLongTitle"> About </h2>
+        <h2 class="modal-title thetitle item" id="exampleModalLongTitle"> Guide </h2>
         <button type= "button" class="item close" data-dismiss="modal" aria-label="Close">
           <span class = "close">&times;</span>
         </button>
@@ -704,8 +704,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
         <div class="modal-content about-content">
 
         <div class="modal-header">
-        <h2 class="modal-title about-header item" id="exampleModalLongTitle"
-        > About Calculator Ace </h2>
+         <h2 class="modal-title  item" id=""> <span> About </span> <span> Ace </span> <span> Calculator </span> </h2>
         <button type="button" id = "aboutX" class="item close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -713,7 +712,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
 
           <div class="about-body">
-            <p class = "first"> Calculator Ace is a lightweight calculator designed to make tracking your calculation easiers
+            <p class = "first"> Ace Calculator is a lightweight calculator designed to make tracking your calculation easiers
             It contains unique features that includes caret positioning, a history log, tabs, and reselection of mathematical elements via history. </p> 
 
             <h3> Known issues </h3>
@@ -791,7 +790,6 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
 <script src = "Usefulfunc/backspace.js"> </script>
 <script src = "Usefulfunc/radianMode.js"> </script>
-<script src = "Usefulfunc/resizeCalculation.js"> </script>
 <script src = "Usefulfunc/deleteButton.js"> </script>
 <script src = "Usefulfunc/lk.js"> </script>
 
@@ -799,7 +797,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
-    alert($(window).height())
+    //alert($(window).height())
+    // alert($(window).width())
     var newTab = false;
 
     $('#historyInputs').empty();

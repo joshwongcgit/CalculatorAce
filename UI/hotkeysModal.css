@@ -20,7 +20,9 @@
 #keys .modal-header
 {
   display: flex;
-  justify-content:center; 
+  justify-content:center;
+  height:50px;
+  color:black; 
 }
 
 #keys .modal-header .item
@@ -28,13 +30,6 @@
   margin-left: 110px;
 }
 
-.modal-header
-{
-  height:50px;
-  color:black;
-  display: flex;
-
-}
 
 .key-body
 {
@@ -42,13 +37,6 @@
   height:600px;
 }
 
-
-
-#keyCarousel .header
-{
-  font-size:23px;
-  font-family: 'Oswald', sans-serif;
-}
 
 .key-body p
 {
@@ -160,7 +148,7 @@
 ::-webkit-scrollbar-track 
 {
   background:#2a9beb; 
-    width:8px;
+  width:8px;
   height:6px;
 
 }
