@@ -51,12 +51,12 @@ function backspace()
 	  }
 
 	  calcContent = groupLetters(calcContent);
+	  calcContent = groupTrigWithNegativeOne(calcContent);
 	  calcContent = processNumbers(calcContent);
 
 	  renderContent(calcContent);
 
 	  var newCalculationLength = $currentCalc.text().split("").length;
-
 	  var calc = calculationLength - caretPosition;
 	  newCaretPosition = newCalculationLength - calc;
 	  $currentCalc.caret("pos",newCaretPosition);

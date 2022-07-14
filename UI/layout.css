@@ -15,6 +15,11 @@
   overflow: hidden;
 }
 
+#buttonbox .item
+{
+  margin-right:0%;
+}
+
 body
 {
   overflow: none;
@@ -179,7 +184,7 @@ input #backspace
 
 
 
-  #buttonbox input:hover
+#buttonbox input:hover,#buttonbox button:hover
 {
   background-color:rgb(32, 71, 135);
 }
@@ -225,8 +230,8 @@ input #backspace
 
 #buttonbox .trig:hover
 {
-  font-size: 28px;
-  padding-left:2px;
+  font-size:22px;
+  padding-left:5px;
 }
 
 #buttonbox #longtrig
@@ -238,8 +243,8 @@ input #backspace
 
 #buttonbox #longtrig:hover
 {
-  font-size: 23px;
-  padding-left:0px;
+  font-size:20px;
+  padding-left:4px;
 }
 
 #buttonbox #longertrig
@@ -249,11 +254,7 @@ input #backspace
   padding-left:6px;
 }
 
-#buttonbox #longertrig:hover
-{
-  font-size: 18px;
-  padding-left:0px;
-}
+
 
 #buttonbox .arrow
 {

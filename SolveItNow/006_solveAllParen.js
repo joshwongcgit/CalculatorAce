@@ -52,7 +52,7 @@ function solveAllParen()
 										  	var ans = Math.pow(before,after);
 											deleteCount = deleteCount-2;
 					           				end = end-2;
-										  storage.splice(prevTwo,3,ans);
+										  	storage.splice(prevTwo,3,ans);
 
 										  for (var i = 0; i < storage.length; i++)
 										  {

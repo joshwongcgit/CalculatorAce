@@ -7,18 +7,6 @@ function caretPositionLocations(cont)
   return caretPositionsArr;
 } 
 
- function hideKeyboard(element) {
-    element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
-    element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
-    setTimeout(function() {
-        element.blur();  //actually close the keyboard
-        // Remove readonly attribute after keyboard is hidden.
-        element.removeAttr('readonly');
-        element.removeAttr('disabled');
-    }, 100);
-}
-
-
 function clickCaret(previousPos,caretArr)
 {
   $(".sepEqs").off().click(function()
@@ -52,10 +40,9 @@ function newLineProcess(newCalculationLength)
 function caretRelocating()
 {
   var newCalculationLength = $currentCalc.text().split("").length;
-
   newLineProcess(newCalculationLength);
 
-  if (caretPosition == 0 && newCalculationLength == 1)
+  if (caretPosition == 0 && newCalculationLength >= 1)
   {
     newCaretPosition =  newCalculationLength;
     $currentCalc.caret("pos",newCaretPosition);
@@ -69,8 +56,6 @@ function caretRelocating()
     $currentCalc.caret("pos",newCaretPosition);
     // hideKeyboard($currentCalc);
   }
-
-   
 
   var calcContent = $currentCalc.text().split("");
   calcContent = groupLetters(calcContent);

@@ -43,6 +43,7 @@ function initiatePostRenderEvents()
 
 function renderContent(content,value) 
 {
+  alert(content)
   $(".historyInputs").scrollTop(50000000);
 
   if ($digitTab.text() == "Single")
