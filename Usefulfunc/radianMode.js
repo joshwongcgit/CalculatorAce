@@ -37,14 +37,13 @@ $(".trigswitch").off().click(function()
     $instantAnswer.html(answer);
 });
 
-function radianMode(after)
+function radianMode(value)
 {
   if ($(".trigMode").text() == "Rad")
   {
-    alert(after)
-    after = after*(Math.PI/180);
+    value = value*(Math.PI/180);
   }
-    return after;
+    return value;
 }
 
 function radianModeForArcTrig(answer)
