@@ -39,8 +39,11 @@ $(".trigswitch").off().click(function()
 
 function radianMode(value)
 {
-  if ($(".trigMode").text() == "Rad")
+  var trigMode = $(".trigMode").text().trim();
+
+  if (trigMode == "Rad")
   {
+
     value = value*(Math.PI/180);
   }
     return value;
@@ -48,7 +51,9 @@ function radianMode(value)
 
 function radianModeForArcTrig(answer)
 {
-  if ($(".switchMode") == "Deg")
+  var trigMode = $(".trigMode").text().trim();
+
+  if (trigMode == "Deg")
   {
     answer = answer*57.2957795131;
   }
