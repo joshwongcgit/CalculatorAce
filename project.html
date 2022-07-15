@@ -47,78 +47,6 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
 <style type="text/css">
 
-/*medium width */
-@media only screen and (min-width: 516px) and (max-width: 955px)
-{
-  body 
-  {
-   overflow: hidden;
-  }
-
-  .historia
-  {
-    font-size:2.6vh;
-  }
-
-  #history
-  {
-    height:3.8vh;
-  }
-
-
-  #resultbox
-  {
-    height: 20vh;
-  }
-
-  .trigmode
-  {
-    color: green;
-  }
-
-  .resultboxMiddle > div
-  {
-    margin-left:0.5%;
-    margin-top:2%;
-    margin-bottom:2em;
-  }
-
-  .btn-group
-  {
-    display: flex;
-    flex-direction: row;
-    height: 20%;
-  }
-
-  #buttonbox input, #buttonbox .btn
-  {
-    width: 55px;
-  }
-
-  #history
-  {
-    width: 520px;
-  }
-
-  #bottomhistory
-  {
-    width: 520px;
-  }
-
-  .utilitybuttons
-  {
-      
-  }
-
-  #app
-  {
-    flex-direction: column;
-    margin-left:0%;
-    margin-top: 0%;
-    flex-wrap: wrap;
-  }
-}
-
 @media only screen and (max-height: 555px) and (max-width:955px)
 {
   #buttonbox
@@ -171,7 +99,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   }
 }
 
-@media only screen and (max-width: 412px) 
+@media only screen and (max-width:412px) 
 {
   .trigmode
   {
@@ -184,21 +112,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   }
 }
 
-@media only screen and (max-width: 375px) 
-{
-  .log2
-  {
-    font-size: 10px;
-  }
-
-  .trigmode
-  {
-    color: black;
-  }
-}
-
-
-@media only screen and (min-width: 320px) and (max-width: 516px) 
+/* smallest width */
+@media only screen and (max-width:399px) 
 {
   .exitResult
   {
@@ -359,9 +274,243 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   }
 }
 
+/* medium width */
+@media only screen and (min-width: 400px) and (max-width: 516px) 
+{
+  .exitResult
+  {
+
+  }
+
+  #help .modal-header .close
+  {
+    margin-left:32%;
+  }
+
+  #help .modal-title
+  {
+    margin-left:37%;
+  }
+
+  .trigmode
+  {
+    color: pink;
+  }
+
+  #help .modal-content
+  {
+    width:370px;
+  }
+
+  #help .digitimg
+  {
+    height:40vh;
+  }
+
+  #preferences .modal-content
+  {
+    width:370px;
+  }
+
+  #buttonbox input, #buttonbox .btn
+  {
+    width:11.5vw;
+    /*height:13.4vh;
+    width:11.4vw */  
+  }
+
+  .btn-group
+  {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+  }
+
+  #bottomhistory
+  {
+    height: 45.5vh;
+  }
+
+  .historia
+  {
+    font-size:2.6vh;
+  }
+
+  #history
+  {
+    height: 3vh;
+  }
+
+  body 
+  {
+   overflow: hidden;
+  }
+
+  .resultTab .sepEqs
+  {
+    font-size: 20px;
+  }
+
+  .utilitybuttons
+  {
+    margin-left:3.6vw;
+  }
+
+  .utilitybuttons button
+  {
+    width:10.5vw;
+  }
+
+  .resultboxMiddle > div
+  {
+    margin-left:0.5%;
+    margin-top:2%;
+    margin-bottom:2.7vh;
+  }
+
+  .resultboxMiddle .instantAnswer
+  {
+    margin-left:0.6vw;
+    font-size: 18px;
+  }
+
+  #resultbox
+  {
+    width:100vw;
+    height:14vh;
+  }
+
+  #buttonbox
+  {
+    width: 100vw;
+  }
+
+  #buttonbox button, #buttonbox input
+  {
+
+  }
+
+  .functionTabs
+  {
+
+  }
+
+  .functionTabs 
+  {
+    margin-right:11%;
+  }
+
+  #app
+  {
+    flex-direction: column;
+    margin-left:0%;
+    margin-top: 0%;
+    flex-wrap: wrap;
+  }
+
+  #historySection
+  {
+    width: 100vw;
+    display: flex;
+  }
+
+  
+  #historia
+  {
+    justify-content: center;
+  }
+
+  #history
+  {
+    width: 100vw;
+  }
+
+  #bottomhistory
+  {
+    width: 100vw;
+  }
+
+  .exitLine
+  {
+    margin-bottom: 0%;
+  }
+}
+
+/*tablet width */
+@media only screen and (min-width: 516px) and (max-width: 1024px)
+{
+  body 
+  {
+   overflow: hidden;
+  }
+
+  .historia
+  {
+    font-size:2.6vh;
+  }
+
+  #history
+  {
+    height:3.8vh;
+  }
+
+
+  #resultbox
+  {
+    height: 20vh;
+  }
+
+  .trigmode
+  {
+    color: green;
+  }
+
+  .resultboxMiddle > div
+  {
+    margin-left:0.5%;
+    margin-top:2%;
+    margin-bottom:2em;
+  }
+
+  .btn-group
+  {
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+  }
+
+  #buttonbox input, #buttonbox .btn
+  {
+    width: 55px;
+  }
+
+  #history
+  {
+    width: 520px;
+  }
+
+  #bottomhistory
+  {
+    width: 520px;
+  }
+
+  .utilitybuttons
+  {
+      
+  }
+
+  #app
+  {
+    flex-direction: column;
+    margin-left:0%;
+    margin-top: 0%;
+    flex-wrap: wrap;
+  }
+}
+
 
 /* longest width */
-@media only screen and (min-width: 946px) 
+@media only screen and (min-width: 1025px) 
 {
   #buttonbox input, #buttonbox .btn
   {
