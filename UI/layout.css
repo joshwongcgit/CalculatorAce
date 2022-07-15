@@ -254,6 +254,10 @@ input #backspace
   padding-left:6px;
 }
 
+.trigswitch
+{
+  font-size:19px;
+}
 
 
 #buttonbox .arrow
