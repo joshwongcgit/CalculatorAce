@@ -11,8 +11,6 @@
   opacity:1;
 }
 
-
-
 .close:hover
 {
   color:#e8061d;
@@ -60,7 +58,7 @@
 
 #help .modal-header .close
 {
-
+  margin-left:41%;
 }
 
 #help .modal-title
