@@ -74,7 +74,6 @@
         removeTab();
 
         listOfTabNumbers.splice(0,1);
-
       }
 
       // if the numbers of tabs are not full
