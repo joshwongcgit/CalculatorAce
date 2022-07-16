@@ -19,9 +19,7 @@
 
 #keys .modal-header
 {
-  display: flex;
-  justify-content:center;
-  height:50px;
+ 
   color:black; 
 }
 
