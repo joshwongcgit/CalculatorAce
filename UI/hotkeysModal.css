@@ -11,6 +11,8 @@
 
 #keys .modal-title
 {
+  position: absolute;
+  left:0%;
   margin-top:-10px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 900;
