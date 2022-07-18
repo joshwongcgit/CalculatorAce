@@ -15,7 +15,6 @@ function activeTab()
     $(".resultTab").removeClass("active")
     $(".resultTab" + value).addClass("active");
 
-
     $(".instantAnswerTab").removeClass("active")
     $(".instantAnswerTab" + value).addClass("active");
 
@@ -190,7 +189,8 @@ function tabRemoval(thisTab)
     {
       $(".tab" + tabNumber).remove();
       $(".historyTab" + tabNumber).remove();
-      $(".result" + tabNumber).remove();
+      $(".resultTab" + tabNumber).remove();
+      $(".instantAnswerTab" + tabNumber).remove();
 
       var $prevTab = $activeTab.prev();
       $prevTab.addClass('active');
@@ -199,29 +199,33 @@ function tabRemoval(thisTab)
 
       $(".result" + prevTabNumber).addClass("active");
       $(".historyTab" + prevTabNumber).addClass("active");
+      $(".resultTab" + prevTabNumber).addClass("active");
+      $(".instantAnswerTab" + prevTabNumber).addClass("active");
 
       tabObjects(prevTabNumber);
-
       hideHistoria();
     }
 
     // deleting the active tabs transfer active status to the tab right of it
     else
     {
-
       $(".tab" + tabNumber).remove();
       $(".historyTab" + tabNumber).remove();
-      $(".result" + tabNumber).remove();
+      $(".resultTab" + tabNumber).remove();
+      $(".instantAnswerTab" + tabNumber).remove();
     
       var $nextTab = $activeTab.next();
       $nextTab.addClass('active');
       var nextTabNumber = $nextTab.children('a').attr('data-value');
       $('#tabNumber' + tabNumber).addClass('active');
-      hideHistoria();
-
-
+  
       $(".tab" + nextTabNumber).addClass("active");
       $(".historyTab" + nextTabNumber).addClass("active");
+      $(".resultTab" + nextTabNumber).addClass("active");
+      $(".instantAnswerTab" + nextTabNumber).addClass("active");
+
+      hideHistoria();
+      tabObjects(nextTabNumber);
     }
 
     if (thisTab !== undefined)
@@ -240,7 +244,6 @@ function tabRemoval(thisTab)
     // erases the + next to each tab, then add a + on the last child tab again and position it
     $('#addTab').remove();
     addTab();
-    checkPreferences();
     // if you exit an active tab, the one left to it will have an active
   }
 }
