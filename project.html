@@ -585,7 +585,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   #bottomhistory
   {
     width: 520px;
-    height: 50vh;
+    height: 40vh;
   }
 
   .utilitybuttons
@@ -600,8 +600,12 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     margin-top: 0%;
     flex-wrap: wrap;
   }
-}
 
+  #buttonbox
+  {
+    height: 40vh;
+  }
+}
 
 /* longest width */
 @media only screen and (min-width: 1025px)
@@ -614,10 +618,6 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 }
 
 </style>
-
-
-
-
 
 <body>
 
@@ -1050,8 +1050,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   $(document).ready(function()
   { 
     var newTab = false;
-    alert($(window).height());
-    alert($(window).width());
+    //alert($(window).height());
+    //alert($(window).width());
     $('#historyInputs').empty();
     newEquation();
 
