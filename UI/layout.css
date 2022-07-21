@@ -568,6 +568,7 @@ span
   border-radius:0px;
   font-size:15px;
   color:black;
+  border: 1px white solid;
 }
 
 .tabby li a:hover
