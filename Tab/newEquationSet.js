@@ -31,15 +31,15 @@
         // it either stays on current tab or goes on to the next tab
         if (val == "no")
         {
-          $('.tabby').append('<li> <a data-toggle="tab" data-value =' + tabNumber + ' class = "tabs" href =' + hrefValue + '>  <input class = ' + tabNumber + ' maxlength = "5"/> <button class = "exitTab"> &times; </button> </a> </li>'); // make it a button
+          $('.tabby').append('<li> <a data-toggle="tab" data-value =' + tabNumber + ' class = "tabs" href =' + hrefValue + '> <span> </span> <button class = "exitTab"> &times; </button> </a> </li>'); // make it a button
         }
 
         else
         {
-          $('.tabby').append('<li class = "active"> <a data-toggle="tab" data-value =' + tabNumber + ' class = "tabs" href =' + hrefValue + '> <input class = ' + tabNumber + ' maxlength = "5"/> <button class = "exitTab"> &times; </button> </a> </li>');
+          $('.tabby').append('<li class = "active"> <a data-toggle="tab" data-value =' + tabNumber + ' class = "tabs" href =' + hrefValue + '> <span> </span> <button class = "exitTab"> &times; </button> </a> </li>');
         }
 
-        $("input[class*=" + tabNumber +"]").val(tabNumber);
+        $("a[data-value*=" + tabNumber+"] span").html(tabNumber);
 
         // creates new history
         $(".historyInputs .tab-pane").removeClass("active");

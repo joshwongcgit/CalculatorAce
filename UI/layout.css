@@ -549,9 +549,15 @@ span
   font-family:'Oswald', sans-serif;
   color:black;
   font-weight:900;
+  position: absolute;
+  left: 40%;
+  top: 20%;
 }
 
- 
+.nav-tabs>li.active>a
+{
+  color: black;
+}
 
 .tabby li a
 {
@@ -560,6 +566,8 @@ span
   width:80px;
   background-color:#7a7a7a;
   border-radius:0px;
+  font-size:15px;
+  color:black;
 }
 
 .tabby li a:hover
