@@ -701,7 +701,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   {
     font-size:3.8vh;
     position: absolute;
-    top:69%;
+    top:67%; /* 58 */
     z-index: 10;
   }
 
@@ -1171,7 +1171,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     $(window).on("orientationchange",function(event)
     {
       alert("hey")
-      if (window.innerWidth > window.innerHeight && deviceType == "tablet"  )
+      if (window.innerWidth > window.innerHeight && deviceType == "tablet")
       { 
         alert("1")
         $("#app").css("display","none");
