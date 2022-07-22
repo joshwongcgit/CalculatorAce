@@ -19,6 +19,7 @@ function deviceType()
     return "desktop";
 };
 
+alert("hello")
 var deviceType = deviceType();
 alert(deviceType)
 alert(window.innerWidth);
