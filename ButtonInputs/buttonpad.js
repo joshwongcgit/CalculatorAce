@@ -25,6 +25,8 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 	  }	
 	}
 
+	 $(this).removeClass("ui-state-focus ui-state-hover");
+
 	if (deviceType() == "mobile")
 	{
 	  var hoverGone = setTimeOut($(this).css("background-color", "#2d2d2d"),1000);
