@@ -540,8 +540,6 @@ span
   height:14px;
 }
 
-
-
 .tabby #addTab:hover
 {
   color:red;
@@ -731,8 +729,8 @@ span
   font-weight:900;
   color:red;
   position: absolute;
-  left:81%;
-  top:8%;
+  left:83%;
+  top:10%;
 }
 
 .tabby .exitTab:hover
