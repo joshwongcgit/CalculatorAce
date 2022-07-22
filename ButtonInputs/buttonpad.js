@@ -10,27 +10,6 @@ var newCaretPosition = 0;
 
 $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 {
-	function deviceType()
-    {
-        const ua = navigator.userAgent;
-
-        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) 
-        {
-            return "tablet";
-        }
-        else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-            return "mobile";
-        }
-        return "desktop";
-    }
-    var deviceType = deviceType();
-    alert(deviceType)
-    if(window.innerWidth > window.innerHeight && deviceType  == "tablet")
-    { 
-       $("#app").css("display","none");
-       alert("Please use potrait mode on your tablet!");
-    }
-
 	if (!$(this).hasClass("btnOpt"))
 	{
 	  var value = $(this).val();
