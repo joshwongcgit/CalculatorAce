@@ -1164,6 +1164,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
+    alert($(window).height());
+    alert($(window).width())
     $(window).on("orientationchange",function(event)
     {
       if (window.innerWidth > window.innerHeight && deviceType == "tablet"  )
