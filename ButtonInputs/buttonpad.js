@@ -21,6 +21,8 @@ function deviceType()
 
 var deviceType = deviceType();
 alert(deviceType)
+alert(window.innerWidth);
+alert(window.innerHeight)
 if(window.innerWidth > window.innerHeight && deviceType  == "tablet")
 {	
    $("#app").css("display","none");
