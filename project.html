@@ -709,6 +709,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   .tabby .exitTab
   {
     font-size: 2.45vh;
+    position: absolute;
+    top:5%;
   }
 
   .tabby li a input
@@ -1163,12 +1165,14 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     {
       if (window.innerWidth > window.innerHeight && deviceType == "tablet"  )
       { 
+        alert("1")
         $("#app").css("display","none");
         alert("Please use potrait mode on your tablet!");
       }
 
       if (event.orientation == "landscape" && deviceType == "tablet")
       { 
+        alert("2")
         $("#app").css("display","none");
         alert("Please use potrait mode on your tablet!");
       }
