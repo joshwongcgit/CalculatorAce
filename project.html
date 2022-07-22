@@ -1159,9 +1159,15 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
-    $(window).on("orientationchange",function()
+    $(window).on("orientationchange",function(event)
     {
-      if (window.innerWidth > window.innerHeight && deviceType == "tablet")
+      if (window.innerWidth > window.innerHeight && deviceType == "tablet"  )
+      { 
+        $("#app").css("display","none");
+        alert("Please use potrait mode on your tablet!");
+      }
+
+      if (event.orientation == "landscape" && deviceType == "tablet")
       { 
         $("#app").css("display","none");
         alert("Please use potrait mode on your tablet!");
