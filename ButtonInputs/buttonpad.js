@@ -16,16 +16,19 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 	
 	  if ($(this).hasClass("backspace"))
 	  {
-			backspace();
+	    backspace();
 	  }
 
 	  else
 	  {
-			processValue(value);
+		processValue(value);
 	  }	
 	}
 
-	 $(this).removeClass("ui-state-focus ui-state-hover");
+	$(this).mouseleave(function()
+	{
+	  $(this).css("background-color","#2d2d2d");
+	});
 
 	if (deviceType() == "mobile")
 	{
