@@ -38,6 +38,8 @@ function tabObjects(value)
   getData(value);
 }
 
+
+// determines if equal is pressed and sets caret position
 function getData(value)
 {
   var len = $currentCalc.text().split("").length;
@@ -191,6 +193,8 @@ function tabRemoval(thisTab)
       $(".historyTab" + tabNumber).remove();
       $(".resultTab" + tabNumber).remove();
       $(".instantAnswerTab" + tabNumber).remove();
+      $(".digitsTab" + tabNumber).remove();
+      $(".trigTab" + tabNumber).remove();
 
       var $prevTab = $activeTab.prev();
       $prevTab.addClass('active');
@@ -201,6 +205,8 @@ function tabRemoval(thisTab)
       $(".historyTab" + prevTabNumber).addClass("active");
       $(".resultTab" + prevTabNumber).addClass("active");
       $(".instantAnswerTab" + prevTabNumber).addClass("active");
+      $("digitsTab" + prevTabNumber).addClass("active");
+      $("trigTab" + prevTabNumber).addClass("active");
 
       tabObjects(prevTabNumber);
       hideHistoria();

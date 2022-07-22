@@ -8,6 +8,7 @@ var newCaretPosition = 0;
 function deviceType()
 {
     const ua = navigator.userAgent;
+    
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) 
     {
         return "tablet";
@@ -17,6 +18,14 @@ function deviceType()
     }
     return "desktop";
 };
+
+var deviceType = deviceType();
+
+if(window.innerWidth > window.innerHeight && deviceType  == "tablet")
+{	
+   $("#app").css("display","none");
+   alert("Please use potrait mode on your tablet!");
+}
 
 $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 {

@@ -237,7 +237,7 @@ input #backspace
 
 #buttonbox #longtrig
 {
-  font-size:15px;
+  font-size:17px;
   color:orange;
   padding-left:8px;
 }
@@ -250,12 +250,17 @@ input #backspace
 
 #buttonbox #longertrig
 {
-  font-size:13px;
+  font-size:15px;
   color:orange;
   padding-left:6px;
 }
 
-
+#buttonbox #longesttrig
+{
+  font-size:15px;
+  color:orange;
+  padding-left:10px;
+}
 
 
 #buttonbox .arrow
@@ -551,7 +556,7 @@ span
   font-weight:900;
   position: absolute;
   left: 40%;
-  top: 20%;
+  top:16%;
 }
 
 .nav-tabs>li.active>a
@@ -720,12 +725,12 @@ span
 .tabby .exitTab
 {
   /* dont delete yet */
-  font-size: 16px;
+  font-size: 18px;
   font-weight:900;
   color:red;
   position: absolute;
-  left:85%;
-  top:-5%;
+  left:81%;
+  top:8%;
 }
 
 .tabby .exitTab:hover
