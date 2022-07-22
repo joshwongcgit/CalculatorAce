@@ -8,7 +8,7 @@ var newCaretPosition = 0;
 function deviceType()
 {
     const ua = navigator.userAgent;
-    
+
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) 
     {
         return "tablet";
@@ -20,7 +20,7 @@ function deviceType()
 };
 
 var deviceType = deviceType();
-
+alert(deviceType)
 if(window.innerWidth > window.innerHeight && deviceType  == "tablet")
 {	
    $("#app").css("display","none");
