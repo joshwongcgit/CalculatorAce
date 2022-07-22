@@ -701,8 +701,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   {
     font-size:3.8vh;
     position: absolute;
-    top:67%; /* 58 */
-    left:15%;
+    top:58%%; /* 58 */
+    
     z-index: 10;
   }
 
@@ -720,7 +720,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 }
 
 /* longest width */
-@media only screen and (min-width: 1025px)
+@media only screen and (min-width: 1025px) and 
 {
   #app
   {
@@ -1164,9 +1164,6 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
-    alert($(window).height());
-    alert($(window).width())
-
     $(window).on("orientationchange",function(event)
     {
       alert("hey")
