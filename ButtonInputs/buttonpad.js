@@ -27,6 +27,7 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 
 	$(this).mouseleave(function()
 	{
+		alert("hey")
 	  $(this).css("background-color","#2d2d2d");
 	});
 
