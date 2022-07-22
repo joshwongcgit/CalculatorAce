@@ -1159,7 +1159,19 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
+    function deviceType()
+    {
+        const ua = navigator.userAgent;
 
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) 
+        {
+            return "tablet";
+        }
+        else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+            return "mobile";
+        }
+        return "desktop";
+    }
     var deviceType = deviceType();
     alert(deviceType)
     if(window.innerWidth > window.innerHeight && deviceType  == "tablet")
