@@ -6,9 +6,22 @@ function addMultiplyOnClosingParen()
 
   for (var i = 0; i < storage.length; i++)
   {
-    if (storage[i] == ")" && !isNaN(storage[i+1]))
+    var first = storage[i];
+    var second = storage[i+1];
+
+    if (first == ")" && !isNaN(second))
     {
       storage.splice(i+1,0,"*")
+    }
+
+    if (!isNaN(first) && second == pieChar)
+    {
+      storage.splice(i+1,0,"*");
+    }
+
+    if (!isNaN(first) && second == "e")
+    {
+      storage.splice(i+1,0,"*");
     }
   }
     return storage;
@@ -34,7 +47,13 @@ function filterMultiAndDivide()
     {
       storage[i] = Math.PI.toString();
     }
+
+    if (storage[i] == "e")
+    {
+      storage[i] = Math.E.toString();
+    }
   }
+  
     return storage;
   }
 

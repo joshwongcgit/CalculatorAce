@@ -199,14 +199,14 @@ function tabRemoval(thisTab)
       var $prevTab = $activeTab.prev();
       $prevTab.addClass('active');
       var prevTabNumber = $prevTab.children('a').attr('data-value');
-      $('#tabNumber' + prevTabNumber).addClass('active');
 
+      $('#tabNumber' + prevTabNumber).addClass('active');
       $(".result" + prevTabNumber).addClass("active");
       $(".historyTab" + prevTabNumber).addClass("active");
       $(".resultTab" + prevTabNumber).addClass("active");
       $(".instantAnswerTab" + prevTabNumber).addClass("active");
-      $("digitsTab" + prevTabNumber).addClass("active");
-      $("trigTab" + prevTabNumber).addClass("active");
+      $(".digitsTab" + prevTabNumber).addClass("active");
+      $(".trigTab" + prevTabNumber).addClass("active");
 
       tabObjects(prevTabNumber);
       hideHistoria();

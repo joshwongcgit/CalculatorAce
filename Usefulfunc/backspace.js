@@ -4,7 +4,7 @@ function backspace()
 
   if (calculationLength == 0)
   {
-  	
+  
   }
 
   else
@@ -17,6 +17,7 @@ function backspace()
 	  
 	  var calcContentCopy = $currentCalc.text().split("");
 	  calcContentCopy = groupLetters(calcContentCopy);
+	  calcContentCopy = groupTrigWithNegativeOne(calcContentCopy);
 	  calcContentCopy = addFillerElemOnFunc(calcContentCopy);
 
 	 // [1,2,3,sin,(,34)]
@@ -24,10 +25,11 @@ function backspace()
 	  {
 	  	calcContent.splice(pos-1,1);
 	  	calcContent.splice(pos-2,1);
-      }
+    }
 
 	  else if (calcContentCopy[pos-1] == "(" && calcContentCopy[pos-2] == "filler")
 	  {
+
 	  	calcContent.splice(pos-1,1);
 	  	calcContent.splice(pos-2,1);
 

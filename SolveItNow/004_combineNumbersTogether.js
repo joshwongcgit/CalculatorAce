@@ -16,14 +16,31 @@ function changeE()
   txt = stripCommas(txt).join("");
   var storage = combineNumbersTogether(txt);
 
-  for (var i = 0; i < storage.length; i++)
+  return storage;
+}
+
+// alert(splitPowerWithNumbers(["5","4","^2","9"])
+function groupTrigWithNegativeOne(arr)
+{
+  for (var i = 0; i < arr.length; i++)
   {
-    if (storage[i] == "e")
+    if (shortenTrigArray.includes(arr[i]) && arr[i+1] == "-" && arr[i+2] == "1")
     {
-      storage[i] = Math.E;
+      arr[i+1] = arr[i+1].concat(arr[i+2]);
+      arr[i]= arr[i].concat(arr[i+1]);
+      arr.splice(i,3,arr[i]);
+    }
+
+    if (arr[i] == "log" && arr[i+1] != undefined)
+    {
+      if (arr[i+1].includes("2"))
+      {
+        arr[i] = arr[i].concat("2");
+        arr.splice(i,2,arr[i]);
+      }
     }
   }
-    return storage;
+    return arr;
 }
 
 function addMultiplyOnSpecialFunc()

@@ -533,7 +533,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
 
 /*tablets */
-@media only screen and (min-width: 516px) and (max-width: 954px) and (max-aspect-ratio: 1/1)
+@media only screen and (min-width: 516px) and (max-width: 800px) 
 {
   body 
   {
@@ -617,13 +617,13 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   .utilitybuttons
   {
-    margin-left: 22vw;
-    margin-right:3vw;
+    position:relative;
+    left:7%;
   }
 
   .utilitybuttons button
   {
-    font-size:5.2vw;  
+    font-size:24px;  
     height: 16.6%;
     width:6.6vh;
   }
@@ -667,7 +667,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   .functionTabs a
   {
     font-size:3vw;
-    height:10.0vh;
+    height:11.3vh;
     width:4.5vw;
     padding-left:2px;
   }
@@ -699,7 +699,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   .addTab
   {
-    font-size:3.8vh;
+    font-size:32px;
   }
 
   .addingTab
@@ -709,7 +709,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   .tabby .exitTab
   {
-    font-size: 2.45vh;
+    font-size: 20px;
     position: absolute;
     top: -2%;
   }
@@ -720,12 +720,20 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   }
 }
 
+@media only screen and (min-width:801px) and (max-width:  954px)
+{
+  #app
+  {
+    display: none;
+  }
+}
+
 /* longest width */
 @media only screen and (min-width:955px)
 {
   #app
   {
-    margin-top:5.5%;
+    margin-top:4.5%;
     margin-left:1%;
   }
   #buttonbox input, #buttonbox .btn
@@ -738,6 +746,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 </style>
 
 <body>
+
+  <div> Change your display to portrait mode when using mobile </div>
 
 <div class = 'app' id = 'app'>
 
@@ -1165,26 +1175,22 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
-    alert($(window).width())
-    alert($(window).height())
+    //alert($(window).width())
+    //alert($(window).height())
     $(window).on("orientationchange",function(event)
     {
-
-      alert("hey")
       if (window.innerWidth > window.innerHeight && deviceType == "tablet")
       { 
-        alert("1")
         $("#app").css("display","none");
         alert("Please use potrait mode on your tablet!");
       }
 
       if (event.orientation == "landscape" && deviceType == "tablet")
       { 
-        alert("2")
         $("#app").css("display","none");
         alert("Please use potrait mode on your tablet!");
       }
-    });
+  });
 
     function deviceType()
     {
@@ -1202,7 +1208,10 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
         return "desktop";
     }
 
-
+    if (deviceType() == "mobile")
+    {
+      var hoverGone = setTimeOut($(this).css("background-color", "#2d2d2d"),1000);
+    }
 
     var newTab = false;
     //alert($(window).height());

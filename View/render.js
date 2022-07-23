@@ -43,7 +43,8 @@ function initiatePostRenderEvents()
 
 function renderContent(content,value) 
 {
-  $(".historyInputs").scrollTop(50000000);
+  alert(content)
+  $(".historyInputs").scrollTop(500000000);
 
   if ($digitTab.text() == "Single")
   {
@@ -113,7 +114,7 @@ function renderContent(content,value)
 
         else if (pi.indexOf(elem) != -1)
         {
-          str = str.concat('<b class = "pieInHistory">' + elem + '</b>');
+          str = str.concat('<b class = "pi">' + elem + '</b>');
         }
 
         /*if (elem == " ")
