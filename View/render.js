@@ -43,7 +43,6 @@ function initiatePostRenderEvents()
 
 function renderContent(content,value) 
 {
-  alert(content)
   $(".historyInputs").scrollTop(500000000);
 
   if ($digitTab.text() == "Single")
@@ -112,9 +111,14 @@ function renderContent(content,value)
           str = str.concat('<b class = "commas">&comma;</b>');
         }
 
-        else if (pi.indexOf(elem) != -1)
+        else if (elem == pieChar)
         {
           str = str.concat('<b class = "pi">' + elem + '</b>');
+        }
+
+        else if (elem == "e")
+        {
+          str = str.concat('<b class = "log">e</b>');
         }
 
         /*if (elem == " ")

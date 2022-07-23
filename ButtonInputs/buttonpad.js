@@ -5,9 +5,6 @@ var calculationLength = 0;
 var caretPositionsArr = [];
 var newCaretPosition = 0;
 
-
-
-
 $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 {
 	if (!$(this).hasClass("btnOpt"))
@@ -71,7 +68,7 @@ function processValue(value)
 	var calcContent;
 	var lastValue = "";
 	var nextValue = "";
-  caretPosition = $currentCalc.caret("pos");
+  	caretPosition = $currentCalc.caret("pos");
 
 	if (!equalPressed)
 	{
@@ -117,9 +114,9 @@ function processValue(value)
 	
 			var cont = $currentCalc.text().split("");
 			var diff = checkOpenAndClose(cont);
-		  $instantAnswer.html(answer);
-		  $currentCalc.html("<div class = 'sepEqs'> <div>" + answer + "</div> </div>");
-		  var historyContent = $historyTab.html().splitter("</b>");
+			$instantAnswer.html(answer);
+			$currentCalc.html("<div class = 'sepEqs'> <div>" + answer + "</div> </div>");
+			var historyContent = $historyTab.html().splitter("</b>");
 
 		  // if theres is a difference in opening and closing parentheses
 			for (var i = 0; i < diff; i++)
@@ -228,18 +225,16 @@ function processValue(value)
 		  	}
 		  }
 
-		  
 		  for (k = 0; k < typeArray.length; k++)
 		  {
 		  	// value is inside the array 
 		  	if ((typeArray[k].includes(value) || (typeArray[k].includes(value[value.length-1]) && !shortenInverseTrigArray.includes(value) && !shortenLogArray.includes(value))) && ((typeBool[k] && typeBool2[k]) || equalPressed))
 		  	{
-
 				  if (equalPressed)
 				  {
 				  	equalPressed = false;
     				equalArray[activeTabNumber] = false;
-						calcContent = [];
+					calcContent = [];
 				  	$currentCalc.empty();
 				  	$instantAnswer.empty();
 		
@@ -254,16 +249,19 @@ function processValue(value)
 				  	  {
 				  	  	calcContent.push(answer[x]);
 				  	  }
-						  	calculationLength = answer.length; 
-						  	caretPosition += calculationLength;
+						calculationLength = answer.length; 
+						caretPosition += calculationLength;
 				  	}
 
 				  	else
 				  	{
 				  	  $historyTab.append("<div class = 'sepEqs'>" + value);
 				  	}
+
 				  		// insert value in the set caretposition	 
 				  		calcContent.splice(caretPosition,0,value); 
+
+				  		
 				  }
 
 				  else if (value == "." || value.includes("."))
@@ -277,13 +275,14 @@ function processValue(value)
 							{
 								for (var j = 0; j < value.length; j++)
 								{
-									calcContent.splice(caretPosition + j,0,value[j]);
+								  calcContent.splice(caretPosition + j,0,value[j]);
 								}	
 							}
 
 							else
 							{
 								calcContent.splice(caretPosition,0,value);
+							
 							}
 						}
 
@@ -297,31 +296,31 @@ function processValue(value)
 					{
 						if (isElemNumeric(value) && value.length > 1)
 						{
-							for (var i = 0; i < value.length; i++)
-							{
-								calcContent.splice(caretPosition + i,0,value[i]);
-							}	
+						  for (var i = 0; i < value.length; i++)
+						  {
+							calcContent.splice(caretPosition + i,0,value[i]);
+							
+						  }	
 						}
 
 						else
 						{
-							var duplicate = cloneArray(calcContent)
-			  	  	duplicate.splice(caretPosition,0,value); 
+						  var duplicate = cloneArray(calcContent)
+			  	  		  duplicate.splice(caretPosition,0,value); 
 
-			  	  	if (checkNumLength(duplicate))
-							{
+					  	  if (checkNumLength(duplicate))
+						  {
+							calcContent.splice(caretPosition,0,value)
+						  }
 
-								calcContent.splice(caretPosition,0,value)
-							}
-
-							else
-							{
-							
-							}
-			  	  }
-					}
+						  else
+						  {
+									
+						  }
+					  	}
 			  }
 			}
+		}
 	}
 
 	calcContent = splitPowerWithNumbers(calcContent);
