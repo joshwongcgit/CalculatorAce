@@ -32,7 +32,7 @@ function initiatePostRenderEvents()
       {
         newContentLength++;
       }
-  */
+      */
   resetBoolType();
   deleteLines();
   historyClicking();
