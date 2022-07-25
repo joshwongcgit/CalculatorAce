@@ -530,8 +530,6 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 }
 
 
-
-
 /*tablets */
 @media only screen and (min-width: 516px) and (max-width: 800px) and (min-height:740px)
 {
@@ -720,7 +718,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   }
 }
 
-@media only screen and (min-width:801px) and (max-width:954px)
+/* imaginary screen */
+@media only screen and (min-width:801px) and (max-width:954px) and (max-height: 780px)
 {
   #app
   {
@@ -1359,8 +1358,6 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
-    alert($(window).width())
-    alert($(window).height())
     $(window).on("orientationchange",function(event)
     {
       if (window.innerWidth > window.innerHeight && deviceType == "tablet")

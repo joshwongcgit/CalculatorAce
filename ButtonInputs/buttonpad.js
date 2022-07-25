@@ -1,4 +1,5 @@
 var equalPressed = false;
+var answerArray = [0,0,0,0,0];
 var answer;
 var caretPosition = 0;
 var calculationLength = 0;
@@ -107,9 +108,11 @@ function processValue(value)
 	{
 		if (!equalPressed)
 		{
+			answer = $instantAnswer.text();
 			if (!answer.includes(","))
 			{
-				answer = addCommas(answer);
+
+			 answer = addCommas(answer);
 			}
 	
 			var cont = $currentCalc.text().split("");
