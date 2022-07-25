@@ -531,7 +531,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
 
 /*tablets */
-@media only screen and (min-width: 516px) and (max-width: 800px) and (min-height:740px)
+@media only screen and (min-width: 516px) and (max-width: 800px) 
 {
   body 
   {
@@ -556,7 +556,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   .trigmode
   {
-    color:pink;
+    color:white;
     font-size: 2.8vw;
   }
 
@@ -577,28 +577,28 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   #buttonbox input, #buttonbox .btn
   {
     width:10vw;
-    font-size:4vw;
+    font-size:3.4vh;
   }
 
   #buttonbox .trig
   {
-    font-size:4vw !important;
+    font-size:3.4vh !important;
   }
 
   #buttonbox .longtrig
   {
-    font-size:3.8vw !important;
+    font-size:3.2vh !important;
   }
 
   #buttonbox .verylongtrig
   {
-    font-size:3.6vw !important;
+    font-size:3.0vh !important;
     padding-left:5px !important;
   }
 
   #buttonbox .longesttrig
   {
-    font-size:3.4vw !important;
+    font-size:2.8vh !important;
     padding-left:3px !important;
   }
 
@@ -642,17 +642,17 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   .resultTab .sepEqs
   {
-    font-size: 4.5vw;
+    font-size: 3.4vh;
   }
 
   .sepEqs
   {
-    font-size: 3.8vw;
+    font-size: 3.0vw;
   }
 
   .instantAnswer
   {
-    font-size: 4.2vw;
+    font-size: 3.2vh;
     position: absolute;
     top:14%;
   }
@@ -664,7 +664,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   .functionTabs a
   {
-    font-size:3vw;
+    font-size:2.7vh;
     height:11.3vh;
     width:4.5vw;
     padding-left:2px;
@@ -749,7 +749,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   .trigmode
   {
-    color:blue;
+    color:white;
     font-size: 2.8vw;
   }
 
@@ -770,28 +770,28 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   #buttonbox input, #buttonbox .btn
   {
     width:10vw;
-    font-size:4vw;
+    font-size:25px;
   }
 
   #buttonbox .trig
   {
-    font-size:4vw !important;
+    font-size:25px !important;
   }
 
   #buttonbox .longtrig
   {
-    font-size:3.8vw !important;
+    font-size:24px !important;
   }
 
   #buttonbox .verylongtrig
   {
-    font-size:3.6vw !important;
+    font-size:23px !important;
     padding-left:5px !important;
   }
 
   #buttonbox .longesttrig
   {
-    font-size:3.4vw !important;
+    font-size:22px !important;
     padding-left:3px !important;
   }
 
@@ -835,19 +835,19 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   .resultTab .sepEqs
   {
-    font-size: 4.5vw;
+    font-size:27px;
   }
 
   .sepEqs
   {
-    font-size: 3.8vw;
+    font-size:22px;
   }
 
   .instantAnswer
   {
-    font-size: 4.2vw;
+    font-size:22px;
     position: absolute;
-    top:14%;
+    top:13%;
   }
 
   .functionTabs
@@ -858,7 +858,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   .functionTabs a
   {
     font-size:3vw;
-    height:11.3vh;
+    height:90px;
     width:4.5vw;
     padding-left:2px;
   }
@@ -1275,18 +1275,14 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
           <div class="about-body">
             <p class = "first"> Ace Calculator is a lightweight calculator designed to make tracking your calculation easiers
-            It contains unique features that includes caret positioning, a history log, tabs, and reselection of mathematical elements via history. </p> 
+            It contains unique features that includes caret positioning, a history log, tabs, and reselection of mathematical elements via history. This application is currently on work in progress stage. It is fully developed and designed by Joshua Wong</p> 
+
 
             <h3> Known issues </h3>
 
-            <p> -Some screen sizes might not be compatible with the application </p>
-            <p> -   </p>
-            <p>    </p>
-            <p> </p>
-            <p>   </p>
-            <p>    </p>
-
-            
+            <p> -Some screen sizes are not responsive with incorrect positioning of UI elements </p>
+            <p> -Equations in the history might skip a line if users continuously erase them </p>
+           
 
             <h3> Future updates </h3>
 
@@ -1358,6 +1354,8 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
 
   $(document).ready(function()
   { 
+    alert($(window).width());
+    alert($(window).height());
     $(window).on("orientationchange",function(event)
     {
       if (window.innerWidth > window.innerHeight && deviceType == "tablet")
@@ -1413,10 +1411,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     $historyTab.empty();
   });
 
-  $(".functionTabs li a ").off().click(function()
-  {
-
-  });
+  
 });
 
 </script>
