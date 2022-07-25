@@ -31,11 +31,12 @@
         // it either stays on current tab or goes on to the next tab
         if (val == "no")
         {
+          alert(1)
           $('.tabby').append('<li> <a data-toggle="tab" data-value =' + tabNumber + ' class = "tabs" href =' + hrefValue + '> <span> </span> <button class = "exitTab"> &times; </button> </a> </li>'); // make it a button
         }
 
         else
-        {
+        {alert(2)
           $('.tabby').append('<li class = "active"> <a data-toggle="tab" data-value =' + tabNumber + ' class = "tabs" href =' + hrefValue + '> <span> </span> <button class = "exitTab"> &times; </button> </a> </li>');
         }
 
