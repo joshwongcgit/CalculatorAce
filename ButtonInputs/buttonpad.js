@@ -111,8 +111,7 @@ function processValue(value)
 			answer = $instantAnswer.text();
 			if (!answer.includes(","))
 			{
-
-			 answer = addCommas(answer);
+			  answer = addCommas(answer);
 			}
 	
 			var cont = $currentCalc.text().split("");
@@ -124,7 +123,7 @@ function processValue(value)
 		  // if theres is a difference in opening and closing parentheses
 			for (var i = 0; i < diff; i++)
 			{
-				historyContent.splice(historyContent.length-2,0,"<b class = 'paren'>)</b>")
+			  historyContent.splice(historyContent.length-2,0,"<b class = 'paren'>)</b>")
 			}
 
 		  historyContent.splice(historyContent.length-2,0,"<b class = 'equal'>=</b>");
@@ -137,11 +136,11 @@ function processValue(value)
 		  	var initialCounter = 0;
 
 		  	if (answer < 0)
-				{
-					historyContent.splice(pos,0,"<b class = 'negative'>-</b>");
-					pos++;
-					initialCounter++;
-				}
+			{
+			  historyContent.splice(pos,0,"<b class = 'negative'>-</b>");
+			  pos++;
+			  initialCounter++;
+			}
 
 		  	for (var x = initialCounter; x < answer.length; x++)
 		  	{	
@@ -175,7 +174,7 @@ function processValue(value)
 		  $historyTab.html(historyContent);
 		  equalPressed = true;
 		  equalArray[activeTabNumber] = true;
-			initiatePostRenderEvents();
+		  initiatePostRenderEvents();
 		  //$currentCalc.blur();
 		}
 	}

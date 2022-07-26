@@ -23,7 +23,7 @@ function activeTab()
 
     tabObjects(value);
 
-    $currentCalc.focus();
+    //$currentCalc.focus();
   });
 }
 
@@ -44,7 +44,7 @@ function getData(value)
 {
   var len = $currentCalc.text().split("").length;
   $currentCalc.caret("pos",len);
-  $currentCalc.focus();
+  //$currentCalc.focus();
 
   var bool = equalArray[value];
 

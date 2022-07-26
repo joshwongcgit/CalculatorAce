@@ -49,6 +49,7 @@ function renamingTab()
   {
     $(this).css("color","transparent");
     $currentCalc.focus();
+    autofocus();
     tabBeingFocused = false;
   });
 }
