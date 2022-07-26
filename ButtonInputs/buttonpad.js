@@ -290,7 +290,7 @@ function processValue(value)
 
 						else
 						{		
-							// $currentCalc.caret("pos",caretPosition);
+							$currentCalc.caret("pos",caretPosition);
 						}
 					}
 
