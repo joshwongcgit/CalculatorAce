@@ -1364,7 +1364,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
   { 
     //alert($(window).width());
     //alert($(window).height());
-    $(window).on("orientationchange",function(event)
+    /*$(window).on("orientationchange",function(event)
     {
       if (window.innerWidth > window.innerHeight && deviceType == "tablet")
       { 
@@ -1377,7 +1377,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
         $("#app").css("display","none");
         alert("Please use potrait mode on your tablet!");
       }
-  });
+  }); */
 
     function deviceType()
     {
@@ -1395,10 +1395,7 @@ ogleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
         return "desktop";
     }
 
-    if (deviceType() == "mobile")
-    {
-      var hoverGone = setTimeOut($(this).css("background-color", "#2d2d2d"),1000);
-    }
+ 
 
     var newTab = false;
     //alert($(window).height());
