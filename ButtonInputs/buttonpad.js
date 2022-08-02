@@ -205,9 +205,9 @@ function processValue(value)
 	  }
 
 	  else if (signArray.includes(value) && signArray.includes(lastValue))
-		{
-			calcContent.splice(caretPosition-1,1,value);
-		}
+	  {
+		calcContent.splice(caretPosition-1,1,value);
+	  }
 
 	  else
 	  {
