@@ -16,6 +16,11 @@
   left:38%;
 }
 
+#about span
+{
+   font-family: 'Coda', cursive;
+}
+
 #aboutX:hover
 {
   color:#b50000;
@@ -26,7 +31,7 @@
   margin-top:3%;
 }
 
-#about h3
+#about h3, #about h4
 {
   font-weight: 900;
   font-family: 'Ledger', serif;
@@ -87,7 +92,7 @@
 	color:white;
 	height:600px;
 	font-size:14.5px;
-	font-family:'Ledger', serif;
+	font-family: 'Coda', cursive;
 	overflow-y: scroll;
 }
 
@@ -96,7 +101,7 @@
 	position: relative;
 	left:30px;
 	top:25px;
-  font-family:'Ledger', serif;
+  font-family: 'Coda', cursive;
   font-weight: 900;
   font-size:15px;
 }
