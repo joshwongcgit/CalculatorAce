@@ -9,7 +9,7 @@ function autofocus()
 	  $currentCalc.blur(function()
 	  {  
 
-      $currentCalc.focus();
+        $currentCalc.focus();
        //hideKeyboard($currentCalc);
       
 	  });

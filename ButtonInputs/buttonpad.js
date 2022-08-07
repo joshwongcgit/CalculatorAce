@@ -24,30 +24,6 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 	}
 });
 
-$(".left").off().click(function()
-{
-	 var index = caretPositionsArr.indexOf(newCaretPosition);
-
-	 newCaretPosition = caretPositionsArr[index-1];
-				
-	if (newCaretPosition == undefined)
-	{
-		newCaretPosition = caretPositionsArr[index];
-	}
-		$currentCalc.caret("pos",newCaretPosition);
-});
-
-$(".right").off().click(function()
-{
-	var index = caretPositionsArr.indexOf(newCaretPosition);
-	newCaretPosition = caretPositionsArr[index+1];
-				
-	if (newCaretPosition == undefined)
-	{
-		newCaretPosition = caretPositionsArr[index];
-	}
-		$currentCalc.caret("pos",newCaretPosition);
-});
 
 
 function resetBoolType()

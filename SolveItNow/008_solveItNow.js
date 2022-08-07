@@ -3,43 +3,43 @@
 
 function negAfterMinus()
 {
-  var storage = withoutParen();
+  var equation = withoutParen();
 
-  for (var i = 0; i < storage.length-1; i++)
+  for (var i = 0; i < equation.length-1; i++)
   {
-    if (storage[i] == "-" && storage[i+1].includes("-"))
+    if (equation[i] == "-" && equation[i+1].includes("-"))
     {
-      storage[i] = "+";
-      storage[i+1] = -storage[i+1];
+      equation[i] = "+";
+      equation[i+1] = -equation[i+1];
     }
   }
-      return storage;
+      return equation;
 }
 
 function convertNumberToString()
 {
-  var storage = negAfterMinus();
+  var equation = negAfterMinus();
 
-  for (var i = 0; i < storage.length; i++)
+  for (var i = 0; i < equation.length; i++)
   {
-    if (typeof(storage[i]) == "Number");
+    if (typeof(equation[i]) == "Number");
     {
-      storage[i] = storage[i].toString();
+      equation[i] = equation[i].toString();
     }
   }
-    return storage;
+    return equation;
 }
 
 // returns a answer in string with commas
 function getAnswer()
 {
-  var storage = convertNumberToString();
+  var equation = convertNumberToString();
   
-  for (var i = 0; i < storage.length; i++)
+  for (var i = 0; i < equation.length; i++)
   {
-    if (storage[i].search(","))
+    if (equation[i].search(","))
     {
-      var split = storage[i].split("");
+      var split = equation[i].split("");
 
       for (var j = 0; j < split.length; j++)
       {
@@ -48,11 +48,11 @@ function getAnswer()
           split.splice(j,1);
         }
       }
-        storage[i] = split.join("");
+        equation[i] = split.join("");
     }
   }
 
-  answer = solver(storage);
+  answer = solver(equation);
   
   //answer = addCommas(answer);
 

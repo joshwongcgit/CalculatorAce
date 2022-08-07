@@ -1,20 +1,20 @@
 function withoutParen()
 {
-  var storage = solveAllParen();
+  var equation = solveAllParen();
 
-  var size = storage.length;
+  var size = equation.length;
 
   for (var i = 0; i < size; i++)
   {
     for (var j = 0; j < specialSigns.length; j++)
     {
-        if (storage[i] == specialSigns[j])  // found out if equation contains a special sign
+        if (equation[i] == specialSigns[j])  // found out if equation contains a special sign
         {
           // if it does get the elements before and after the special signs
           var prev = i-1;
           var next = i+1;
-          var before = storage[prev];
-          var after = storage[next];
+          var before = equation[prev];
+          var after = equation[next];
           var whatSign = specialSigns[j]; // figure out which special sign was found
 
           switch (whatSign)
@@ -22,22 +22,22 @@ function withoutParen()
             case '^':
             function powerRule()
             {
-              var i = storage.lastIndexOf('^');
-              var before = storage[i-1];
-              var after = storage[i+1];
+              var i = equation.lastIndexOf('^');
+              var before = equation[i-1];
+              var after = equation[i+1];
 
               if (after == "-")
               {
-                after = -storage[i+2]
+                after = -equation[i+2]
               }
 
               var ans = Math.pow(before,after);
               size = size-2;
-              storage.splice(i-1,3,ans);
+              equation.splice(i-1,3,ans);
 
-              for (var i = 0; i < storage.length; i++)
+              for (var i = 0; i < equation.length; i++)
               {
-                  if (storage[i] == "^")
+                  if (equation[i] == "^")
                   {
                     powerRule();
                   }
@@ -49,43 +49,43 @@ function withoutParen()
 
             case 'squared':
             var ans = Math.pow(before,2);
-            storage.splice(prev,3,ans);
+            equation.splice(prev,3,ans);
             size = size-2;
             break;
 
             case "!":
             var ans = factorial(before);
-            storage.splice(prev,2,ans);
+            equation.splice(prev,2,ans);
             size = size-1;
             break;
 
             case rootChar:
             var ans = Math.sqrt(after);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
             case cubeRootChar:
             var ans = Math.cbrt(after);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
             case 'log':
             var ans = Math.log10(after);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
             case 'log2':
             var ans = Math.log2(after);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
             case 'ln':
             var ans = Math.log(after);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -93,7 +93,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.sin(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -101,7 +101,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.cos(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -109,7 +109,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.tan(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -117,7 +117,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = 1/Math.cos(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -125,7 +125,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = 1/Math.sin(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -133,7 +133,7 @@ function withoutParen()
             radianMode(after);
             var ans = 1/Math.tan(after)
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -141,7 +141,7 @@ function withoutParen()
             var ans = Math.asin(after);
             ans = radianModeForArcTrig(ans);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -149,7 +149,7 @@ function withoutParen()
             var ans = Math.acos(after);
             ans = radianModeForArcTrig(ans);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -157,7 +157,7 @@ function withoutParen()
             var ans = Math.atan(after);
             ans = radianModeForArcTrig(ans);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -165,7 +165,7 @@ function withoutParen()
             var ans = 1/Math.asin(after);
             ans = radianModeForArcTrig(ans);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -173,7 +173,7 @@ function withoutParen()
             var ans = 1/Math.acos(after);
             ans = radianModeForArcTrig(ans);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -181,7 +181,7 @@ function withoutParen()
             var ans = 1/Math.atan(after);
             ans = radianModeForArcTrig(ans);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -189,7 +189,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.sinh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -197,7 +197,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.cosh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -205,7 +205,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.tanh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -213,7 +213,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = 1/Math.asinh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -221,7 +221,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = 1/Math.acosh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -229,7 +229,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = 1/Math.atanh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -237,7 +237,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.asinh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -245,7 +245,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.acosh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -253,7 +253,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = Math.atanh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -261,7 +261,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = 1/Math.asinh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -269,7 +269,7 @@ function withoutParen()
             var after = radianMode(after);
             var ans = 1/Math.acosh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
 
@@ -277,26 +277,26 @@ function withoutParen()
             var after = radianMode(after);
             var ans = 1/Math.atanh(after);
             ans = makeAnswerZero(ans);
-            storage.splice(i,2,ans);
+            equation.splice(i,2,ans);
             size = size-1;
             break;
           }
         }
     }
   }
-    for (var j = 0; j < storage.length; j++)
+    for (var j = 0; j < equation.length; j++)
     {
-      if (storage[j] == undefined)
+      if (equation[j] == undefined)
       {
         continue;
       }
 
-      else if (storage[j].toString().length > 16 && !storage[j].toString().includes("."))
+      else if (equation[j].toString().length > 16 && !equation[j].toString().includes("."))
       {
-        storage[i] = undefined;
+        equation[i] = undefined;
       }
     }
-      return storage;
+      return equation;
 }
 
 

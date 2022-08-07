@@ -171,7 +171,7 @@ function initiateKeydown()
 				  processValue(sign);
 				}	
 
-				else if (event.keyCode == 37) // <--
+				/*else if (event.keyCode == 37) // <--
 				{
 				  var index = caretPositionsArr.indexOf(newCaretPosition);
 				  newCaretPosition = caretPositionsArr[index-1];
@@ -196,7 +196,7 @@ function initiateKeydown()
 					}
 
 					$currentCalc.caret("pos",newCaretPosition);
-				}
+				} */
 
 			  else if (event.keyCode == 76) // l
 				{
@@ -204,7 +204,7 @@ function initiateKeydown()
 				  processValue(func);
 				}
 
-			    else if (event.keyCode == 78) // n
+			   else if (event.keyCode == 78) // n
 				{
 				  var func = "ln";
 				  processValue(func);
@@ -216,7 +216,7 @@ function initiateKeydown()
 				  processValue(func);
 				}
 
-			    else if (event.keyCode == 83) // s
+			  else if (event.keyCode == 83) // s
 				{
 				  var func = "sin";
 				  processValue(func);

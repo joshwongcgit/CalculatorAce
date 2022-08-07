@@ -2,75 +2,75 @@ var needed;
 
 function addMultiplyOnClosingParen()
 {
-  var storage = $currentCalc.text().split("");
+  var equation = $currentCalc.text().split("");
 
-  for (var i = 0; i < storage.length; i++)
+  for (var i = 0; i < equation.length; i++)
   {
-    var first = storage[i];
-    var second = storage[i+1];
+    var first = equation[i];
+    var second = equation[i+1];
 
     if (first == ")" && !isNaN(second))
     {
-      storage.splice(i+1,0,"*")
+      equation.splice(i+1,0,"*")
     }
 
     if (!isNaN(first) && second == pieChar)
     {
-      storage.splice(i+1,0,"*");
+      equation.splice(i+1,0,"*");
     }
 
     if (!isNaN(first) && second == "e")
     {
-      storage.splice(i+1,0,"*");
+      equation.splice(i+1,0,"*");
     }
   }
-    return storage;
+    return equation;
 }
 
 function filterMultiAndDivide()
 {
-  var storage = addMultiplyOnClosingParen();
+  var equation = addMultiplyOnClosingParen();
 
-  for (var i = 0; i < storage.length; i++)
+  for (var i = 0; i < equation.length; i++)
   {
-    if (storage[i] == multiplyChar)
+    if (equation[i] == multiplyChar)
     {
-      storage[i] = "*";
+      equation[i] = "*";
     }
 
-    if (storage[i] == divideChar)
+    if (equation[i] == divideChar)
     {
-      storage[i] = "/";
+      equation[i] = "/";
     }
 
-    if (storage[i] == pieChar)
+    if (equation[i] == pieChar)
     {
-      storage[i] = Math.PI.toString();
+      equation[i] = Math.PI.toString();
     }
 
-    if (storage[i] == "e")
+    if (equation[i] == "e")
     {
-      storage[i] = Math.E.toString();
+      equation[i] = Math.E.toString();
     }
   }
   
-    return storage;
+    return equation;
   }
 
 function addParenAtEnd()
 {
-  var storage = filterMultiAndDivide();
+  var equation = filterMultiAndDivide();
   open = 0;
   close = 0;
 
-  for (var j = 0; j < storage.length; j++)
+  for (var j = 0; j < equation.length; j++)
   {
-    if (storage[j] == "(")
+    if (equation[j] == "(")
     {
       open++;
     }
 
-    else if (storage[j] == ")")
+    else if (equation[j] == ")")
     {
       close++;
     }
@@ -82,8 +82,8 @@ function addParenAtEnd()
   {
     for (var i = 0; i < needed; i++)
     {
-      storage.push(')');
+      equation.push(')');
     }
   }
-    return storage;
+    return equation;
 }

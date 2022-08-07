@@ -22,7 +22,7 @@ function activeTab()
     $(".digitsTab" + value).addClass("active");
 
     tabObjects(value);
-
+    
     $currentCalc.focus();
   });
 }

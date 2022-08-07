@@ -18,7 +18,7 @@ var fiveLetterTrig = ['asinh','acosh','atanh','asech','acsch','acoth'];
 
 function combineNumbersOnly()
 {
-  var storage = $currentCalc.text().split('');
+  var equation = $currentCalc.text().split('');
   var regexp = /[0-9,.]*/g;
   var newForm = $currentCalc.text().match(regexp);
   var historyText = $historyTab.html().split('');
@@ -29,16 +29,16 @@ function combineNumbersOnly()
     if (newForm[i] !== '')
     {
       var length = newForm[i].length;
-      storage.splice(i,length,newForm[i]);
+      equation.splice(i,length,newForm[i]);
     }
   }
 
   // goes through the newly formed array and checks for each element.
   // examines if the element is big enough.
-  for (var i = 0; i < storage.length; i++)
+  for (var i = 0; i < equation.length; i++)
   {
     var currentCalculation = $currentCalc.text();
-    var answer = storage[i];
+    var answer = equation[i];
     checkAnswerValue(answer);
 
     if (shortenAnswer)
