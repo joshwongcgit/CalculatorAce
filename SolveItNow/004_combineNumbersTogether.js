@@ -15,7 +15,6 @@ function changeE()
   var txt = $currentCalc.text();
   txt = stripCommas(txt).join("");
   var equation = combineNumbersTogether(txt);
-
   return equation;
 }
 
@@ -82,7 +81,7 @@ function addMultiplyOnSpecialFunc()
     }
   }
   
-    return equation;
+  return equation;
 }
 
 function powerNegatives(equation)

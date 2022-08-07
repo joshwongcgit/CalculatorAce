@@ -158,7 +158,6 @@ function initiateKeydown()
 				  processValue(sign);
 				}
 
-
 				else if (event.keyCode == 190) // .
 				{
 				  var deci = ".";
