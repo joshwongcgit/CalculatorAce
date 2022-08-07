@@ -1,5 +1,13 @@
 // remove commas in history
 // returns array
+function addCommasAlt(str)
+{
+  for (var i = 0; i < str.length; i++)
+  {
+    
+  }
+}
+
 function processNumbers(content)
 {
   content = removeParenFromFunc(content);
@@ -43,15 +51,24 @@ function addCommasToEqs(arr)
       decimalLast = true;
     }
 
+
     for (var i = 0; i < arr.length; i++)
     { 
       var content = arr[i];
     
       if (["1","2","3","4","5","6","7","8","9","0"].includes(content[0]))
       {
-        arr[i] = Number(arr[i]).toLocaleString(undefined,
+         var decimalIndex = content.indexOf(".");
+         var zeroIndex = content.indexOf("0");
+
+          arr[i] = Number(arr[i]).toLocaleString(undefined,
           {minimumFractionDigits: 0,
            maximumFractionDigits: 16});
+
+         if (content.includes(".") && decimalIndex < zeroIndex)
+         {
+           alert(typeof arr[i])
+         }
       }
     }
 
