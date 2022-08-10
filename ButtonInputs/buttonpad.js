@@ -19,7 +19,7 @@ $("#buttonbox input, #buttonbox button").not(".exitLine").off().click(function()
 
 	  else
 	  {
-		processValue(value);
+			processValue(value);
 	  }	
 	}
 });
