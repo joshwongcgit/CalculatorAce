@@ -1,12 +1,8 @@
 // remove commas in history
 // returns array
-function addCommasAlt(str)
-{
-  for (var i = 0; i < str.length; i++)
-  {
-    
-  }
-}
+
+
+
 
 function processNumbers(content)
 {
@@ -67,7 +63,7 @@ function addCommasToEqs(arr)
 
          if (content.includes(".") && decimalIndex < zeroIndex)
          {
-           alert(typeof arr[i])
+         
          }
       }
     }
